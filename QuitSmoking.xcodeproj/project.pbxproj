@@ -16,7 +16,27 @@
 		8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1D2C662471009F50C3 /* ContentView.swift */; };
 		8F2BAE202C662473009F50C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1F2C662473009F50C3 /* Assets.xcassets */; };
 		8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */; };
+		E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */; };
+		E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */; };
+		E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */; };
+		E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */; };
+		E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F9B2C6B53B100EBC763 /* PricePerPackViewController.swift */; };
+		E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FAD2C6C99D700EBC763 /* QuitReasonView.swift */; };
+		E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */; };
+		E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */; };
+		E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */; };
+		E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB52C6CAB4800EBC763 /* NameView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E03A3FA72C6B61E300EBC763 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F2BAE102C662471009F50C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F2BAE172C662471009F50C3;
+			remoteInfo = QuitSmoking;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTechniqueView.swift; sourceTree = "<group>"; };
@@ -28,6 +48,17 @@
 		8F2BAE1D2C662471009F50C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F2BAE1F2C662473009F50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitReasonViewController.swift; sourceTree = "<group>"; };
+		E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerDayViewController.swift; sourceTree = "<group>"; };
+		E03A3F9B2C6B53B100EBC763 /* PricePerPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerPackViewController.swift; sourceTree = "<group>"; };
+		E03A3FA32C6B61E300EBC763 /* QuitSmokingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03A3FAD2C6C99D700EBC763 /* QuitReasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitReasonView.swift; sourceTree = "<group>"; };
+		E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerDayView.swift; sourceTree = "<group>"; };
+		E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerPackView.swift; sourceTree = "<group>"; };
+		E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		E03A3FB52C6CAB4800EBC763 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				8F2BAE182C662471009F50C3 /* QuitSmoking.app */,
+				E03A3FA32C6B61E300EBC763 /* QuitSmokingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +93,10 @@
 		8F2BAE1A2C662471009F50C3 /* QuitSmoking */ = {
 			isa = PBXGroup;
 			children = (
+				E03A3FAC2C6C99BC00EBC763 /* View */,
+				E03A3F962C6B52E700EBC763 /* ViewController */,
+				E03A3F8F2C6B452300EBC763 /* ViewModel */,
+				E03A3F8C2C6B44E000EBC763 /* Model */,
 				8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */,
 				8F2BAE1D2C662471009F50C3 /* ContentView.swift */,
 				4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */,
@@ -79,6 +115,44 @@
 				8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E03A3F8C2C6B44E000EBC763 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E03A3F8F2C6B452300EBC763 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E03A3F962C6B52E700EBC763 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */,
+				E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */,
+				E03A3F9B2C6B53B100EBC763 /* PricePerPackViewController.swift */,
+				E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E03A3FAC2C6C99BC00EBC763 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3FAD2C6C99D700EBC763 /* QuitReasonView.swift */,
+				E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */,
+				E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */,
+				E03A3FB52C6CAB4800EBC763 /* NameView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +178,23 @@
 			productReference = 8F2BAE182C662471009F50C3 /* QuitSmoking.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E03A3FA22C6B61E300EBC763 /* QuitSmokingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E03A3FA92C6B61E300EBC763 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */;
+			buildPhases = (
+				E03A3F9F2C6B61E300EBC763 /* Sources */,
+				E03A3FA12C6B61E300EBC763 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E03A3FA82C6B61E300EBC763 /* PBXTargetDependency */,
+			);
+			name = QuitSmokingTests;
+			productName = QuitSmokingTests;
+			productReference = E03A3FA32C6B61E300EBC763 /* QuitSmokingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,11 +202,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					8F2BAE172C662471009F50C3 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					E03A3FA22C6B61E300EBC763 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 8F2BAE172C662471009F50C3;
 					};
 				};
 			};
@@ -136,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				8F2BAE172C662471009F50C3 /* QuitSmoking */,
+				E03A3FA22C6B61E300EBC763 /* QuitSmokingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +246,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E03A3FA12C6B61E300EBC763 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -161,12 +264,37 @@
 				4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
 				4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */,
+				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
+				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
+				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
+				E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */,
+				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
+				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
 				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
+				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
+				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
+				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
+				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03A3F9F2C6B61E300EBC763 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E03A3FA82C6B61E300EBC763 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F2BAE172C662471009F50C3 /* QuitSmoking */;
+			targetProxy = E03A3FA72C6B61E300EBC763 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8F2BAE242C662473009F50C3 /* Debug */ = {
@@ -296,7 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
-				DEVELOPMENT_TEAM = A23N5QDWR3;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -304,7 +432,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
-				DEVELOPMENT_TEAM = A23N5QDWR3;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -334,7 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +473,44 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E03A3FAA2C6B61E300EBC763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nizoe.QuitSmokingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuitSmoking";
+			};
+			name = Debug;
+		};
+		E03A3FAB2C6B61E300EBC763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nizoe.QuitSmokingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuitSmoking";
 			};
 			name = Release;
 		};
@@ -365,6 +531,15 @@
 			buildConfigurations = (
 				8F2BAE272C662473009F50C3 /* Debug */,
 				8F2BAE282C662473009F50C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E03A3FA92C6B61E300EBC763 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E03A3FAA2C6B61E300EBC763 /* Debug */,
+				E03A3FAB2C6B61E300EBC763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
