@@ -7,21 +7,6 @@
 
 import SwiftUI
 
-struct QuitReasonView: View {
-    @StateObject private var viewModel = OnBoardingViewModel()
-
-    var body: some View {
-        NavigationStack {
-            VStack {
-                QuitReason(viewModel: viewModel)
-                NavigationLink(destination: CigsPerDayView(viewModel: viewModel), label: {
-                    Text("Next")
-                })
-            }
-        }
-    }
-}
-
 struct QuitReason: UIViewControllerRepresentable {
     var viewModel: OnBoardingViewModel
 
@@ -35,5 +20,5 @@ struct QuitReason: UIViewControllerRepresentable {
 }
 
 #Preview {
-    QuitReasonView()
+    QuitReason(viewModel: OnBoardingViewModel())
 }
