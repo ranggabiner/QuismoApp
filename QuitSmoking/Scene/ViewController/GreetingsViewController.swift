@@ -13,8 +13,8 @@ class GreetingsViewController: UIViewController {
     private let greetingsLabel: UILabel = {
         let label = UILabel()
         label.text = "Quit smoking is the best decision for you! Ready to start your journey?"
-        label.textColor = .white
-        label.font = UIFont(name: "SF Pro Rounded", size: 16)
+        label.textColor = UIColor(named: "button")
+        label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -26,7 +26,7 @@ class GreetingsViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Yes", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = UIColor(named: "button")
         button.layer.cornerRadius = 15
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -41,12 +41,12 @@ class GreetingsViewController: UIViewController {
         return stackView
     }()
     
-    private let bubbleChatView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemCyan
-        view.layer.cornerRadius = 15
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    private let imageMascott: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Mascott")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     override func viewDidLoad() {
@@ -55,28 +55,43 @@ class GreetingsViewController: UIViewController {
         setupUI()
     }
     
+    //    nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    
     private func setupUI() {
-        view.addSubview(bubbleChatView)
+        view.addSubview(imageMascott)
         view.addSubview(greetingsLabel)
         view.addSubview(nextButtonView)
         
         NSLayoutConstraint.activate([
             
-            bubbleChatView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            bubbleChatView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bubbleChatView.widthAnchor.constraint(equalToConstant: 300),
-            bubbleChatView.heightAnchor.constraint(equalToConstant: 80),
+            imageMascott.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            imageMascott.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10),
+            imageMascott.widthAnchor.constraint(equalToConstant: 240),
+            imageMascott.heightAnchor.constraint(equalToConstant: 240),
             
-            greetingsLabel.centerXAnchor.constraint(equalTo: bubbleChatView.centerXAnchor),
-            greetingsLabel.centerYAnchor.constraint(equalTo: bubbleChatView.centerYAnchor),
-            greetingsLabel.widthAnchor.constraint(equalTo: bubbleChatView.widthAnchor),
+            greetingsLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 320),
+            greetingsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            greetingsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 53),
+            greetingsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -53),
             
-            nextButtonView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            nextButtonView.bottomAnchor.constraint(equalTo: greetingsLabel.bottomAnchor, constant: 70),
             nextButtonView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nextButtonView.widthAnchor.constraint(equalToConstant: 300),
+            nextButtonView.widthAnchor.constraint(equalToConstant: 80),
             
-            nextButton.heightAnchor.constraint(equalToConstant: 50),
+            nextButton.widthAnchor.constraint(equalToConstant: 100),
+            nextButton.heightAnchor.constraint(equalToConstant: 42),
             
         ])
+        
+        let rotationAngle: CGFloat = .pi / 6
+                imageMascott.transform = CGAffineTransform(rotationAngle: rotationAngle)
     }
+    
+    //    @objc private func nextButtonTapped() {
+    //        let quitReasonView = QuitReasonView() // Initialize your QuitReasonView
+    //        quitReasonView.modalPresentationStyle = .fullScreen
+    //        present(quitReasonView, animated: true, completion: nil)
+    //
+    //        navigationController?.pushViewController(quitReasonView, animated: true)
+    //    }
 }
