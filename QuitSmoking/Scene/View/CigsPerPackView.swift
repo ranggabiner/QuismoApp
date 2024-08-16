@@ -1,14 +1,14 @@
 //
-//  NameView.swift
+//  CigsPerPackView.swift
 //  QuitSmoking
 //
-//  Created by Nur Nisrina on 14/08/24.
+//  Created by PadilKeren on 16/08/24.
 //
 
 import SwiftUI
 
-struct NameView: View {
-    @State private var name: String = ""
+struct CigsPerPackView: View {
+    @State private var cigsPerPack: String = ""
     let userDefault = UserDefaults.standard
     
     var body: some View {
@@ -16,7 +16,9 @@ struct NameView: View {
             Spacer()
             VStack {
                 HStack {
-                    NavigationLink(destination: PricePerPackView()) {
+                    
+                    
+                    NavigationLink(destination: CigsPerDayView()) {
                         Image("back")
                             .resizable()
                             .frame(width:12, height: 20)
@@ -42,7 +44,7 @@ struct NameView: View {
                     .frame(width: 120, height: 120)
                     .foregroundStyle(.tint)
                 
-                Text("I appreciate you sharing this with me. By the way, what’s your name?")
+                Text("And how many cigarettes are in a pack??")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
                     .foregroundColor(Color("button"))
@@ -51,9 +53,9 @@ struct NameView: View {
                     .padding(.horizontal, 39)
                     .padding()
                 
-                TextField("Type I WANT TO QUIT", text: $name)
+                TextField("Type here", text: $cigsPerPack)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .frame(width: 200, height: 42)
+                    .frame(width: 100, height: 42)
                     .background(Color.white)
                     .cornerRadius(10)
                     .overlay(
@@ -64,7 +66,7 @@ struct NameView: View {
                     .padding(.bottom)
                 
 //                    .padding()
-                NavigationLink(destination: CommitmentView()) {
+                    NavigationLink(destination: CigsPerDayView()) {
                         Text("Next")
                             .fontWeight(.semibold)
                             .frame(width: 100, height: 42)
@@ -72,8 +74,8 @@ struct NameView: View {
                             .cornerRadius(10)
                             .foregroundColor(Color.white)
                             .onTapGesture {
-                                userDefault.set(name, forKey: "userName")
-                                print(userDefault.string(forKey: "userName") ?? "Error")
+                                userDefault.set(cigsPerPack, forKey: "userCigsPerPack")
+                                print(userDefault.string(forKey: "userCigsPerPack") ?? "Error")
                             }
                     }
             }
@@ -85,5 +87,5 @@ struct NameView: View {
 }
 
 #Preview {
-    NameView()
+    CigsPerPackView()
 }

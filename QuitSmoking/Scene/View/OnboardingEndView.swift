@@ -1,15 +1,13 @@
 //
-//  NameView.swift
+//  OnboardingEnd.swift
 //  QuitSmoking
 //
-//  Created by Nur Nisrina on 14/08/24.
+//  Created by PadilKeren on 16/08/24.
 //
 
 import SwiftUI
 
-struct NameView: View {
-    @State private var name: String = ""
-    let userDefault = UserDefaults.standard
+struct OnboardingEndView: View {
     
     var body: some View {
         NavigationStack {
@@ -42,7 +40,10 @@ struct NameView: View {
                     .frame(width: 120, height: 120)
                     .foregroundStyle(.tint)
                 
-                Text("I appreciate you sharing this with me. By the way, what’s your name?")
+                Spacer()
+                    .padding()
+                
+                Text("Well done. You’ve taken the first step toward a smoke-free life. I’m here to support you every step of the way.")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
                     .foregroundColor(Color("button"))
@@ -50,18 +51,6 @@ struct NameView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 39)
                     .padding()
-                
-                TextField("Type I WANT TO QUIT", text: $name)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .frame(width: 200, height: 42)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color("radioCircle"), lineWidth: 2)
-                    )
-                    .padding(.horizontal, 39)
-                    .padding(.bottom)
                 
 //                    .padding()
                 NavigationLink(destination: CommitmentView()) {
@@ -71,10 +60,6 @@ struct NameView: View {
                             .background(Color("button"))
                             .cornerRadius(10)
                             .foregroundColor(Color.white)
-                            .onTapGesture {
-                                userDefault.set(name, forKey: "userName")
-                                print(userDefault.string(forKey: "userName") ?? "Error")
-                            }
                     }
             }
             Spacer()
@@ -85,5 +70,5 @@ struct NameView: View {
 }
 
 #Preview {
-    NameView()
+    OnboardingEndView()
 }

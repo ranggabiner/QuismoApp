@@ -1,15 +1,16 @@
 //
-//  NameView.swift
+//  CommitmentView.swift
 //  QuitSmoking
 //
-//  Created by Nur Nisrina on 14/08/24.
+//  Created by PadilKeren on 16/08/24.
 //
 
 import SwiftUI
 
-struct NameView: View {
-    @State private var name: String = ""
+struct CommitmentView: View {
+    @State private var commitment: String = ""
     let userDefault = UserDefaults.standard
+    @State private var comName: String = ""
     
     var body: some View {
         NavigationStack {
@@ -42,7 +43,7 @@ struct NameView: View {
                     .frame(width: 120, height: 120)
                     .foregroundStyle(.tint)
                 
-                Text("I appreciate you sharing this with me. By the way, what’s your name?")
+                Text("Nice to meet you, \(comName). Now, let’s solidify your commitment to quitting. Write down your pledge to yourself.")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
                     .foregroundColor(Color("button"))
@@ -51,9 +52,9 @@ struct NameView: View {
                     .padding(.horizontal, 39)
                     .padding()
                 
-                TextField("Type I WANT TO QUIT", text: $name)
+                TextField("Type here", text: $commitment)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .frame(width: 200, height: 42)
+                    .frame(width: 320, height: 42)
                     .background(Color.white)
                     .cornerRadius(10)
                     .overlay(
@@ -64,7 +65,7 @@ struct NameView: View {
                     .padding(.bottom)
                 
 //                    .padding()
-                NavigationLink(destination: CommitmentView()) {
+                NavigationLink(destination: PricePerPackView()) {
                         Text("Next")
                             .fontWeight(.semibold)
                             .frame(width: 100, height: 42)
@@ -72,10 +73,16 @@ struct NameView: View {
                             .cornerRadius(10)
                             .foregroundColor(Color.white)
                             .onTapGesture {
-                                userDefault.set(name, forKey: "userName")
-                                print(userDefault.string(forKey: "userName") ?? "Error")
+                                userDefault.set(commitment, forKey: "userCommitment")
+                                print(userDefault.string(forKey: "userCommitment") ?? "Error")
                             }
                     }
+                .onAppear() {
+                    let commitmentUserDefault = UserDefaults.standard
+                    let commitmentName = commitmentUserDefault.string(forKey: "userName")
+                    
+                    comName = commitmentName ?? "error"
+                }
             }
             Spacer()
                 .padding()
@@ -85,5 +92,5 @@ struct NameView: View {
 }
 
 #Preview {
-    NameView()
+    CommitmentView()
 }
