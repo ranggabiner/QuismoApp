@@ -1,15 +1,16 @@
 //
-//  NameView.swift
+//  SetDateView.swift
 //  QuitSmoking
 //
-//  Created by Nur Nisrina on 14/08/24.
+//  Created by PadilKeren on 16/08/24.
 //
 
 import SwiftUI
 
-struct NameView: View {
-    @State private var name: String = ""
+struct SetDateView: View {
+    @State private var setDate: String = ""
     let userDefault = UserDefaults.standard
+    @State private var selectedDate = Date() // Holds the selected date
     
     var body: some View {
         NavigationStack {
@@ -51,39 +52,45 @@ struct NameView: View {
                     .padding(.horizontal, 39)
                     .padding()
                 
-                TextField("Type I WANT TO QUIT", text: $name)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .frame(width: 200, height: 42)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color("radioCircle"), lineWidth: 2)
-                    )
-                    .padding(.horizontal, 39)
-                    .padding(.bottom)
+                VStack {
+                    // Native iOS DatePicker
+                    DatePicker("Select a date", selection: $selectedDate, displayedComponents: .date)
+                        .datePickerStyle(WheelDatePickerStyle()) // Choose the style you prefer
+                        .labelsHidden() // Hides the label to only show the picker
+                        .padding()
+                    
+                    // Optional: Display the selected date
+                    Text("Selected Date: \(selectedDate, formatter: dateFormatter)")
+                        .padding()
+                }
                 
-//                    .padding()
+                //                    .padding()
                 NavigationLink(destination: CommitmentView()) {
-                        Text("Next")
-                            .fontWeight(.semibold)
-                            .frame(width: 100, height: 42)
-                            .background(Color("button"))
-                            .cornerRadius(10)
-                            .foregroundColor(Color.white)
-                            .onTapGesture {
-                                userDefault.set(name, forKey: "userName")
-                                print(userDefault.string(forKey: "userName") ?? "Error")
-                            }
-                    }
+                    Text("Next")
+                        .fontWeight(.semibold)
+                        .frame(width: 100, height: 42)
+                        .background(Color("button"))
+                        .cornerRadius(10)
+                        .foregroundColor(Color.white)
+                        .onTapGesture {
+                            userDefault.set(setDate, forKey: "userSetDate")
+                            print(userDefault.string(forKey: "userSetDate") ?? "Error")
+                        }
+                }
             }
             Spacer()
                 .padding()
         }
         .navigationBarBackButtonHidden(true)
+        
+    }
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
     }
 }
 
 #Preview {
-    NameView()
+    SetDateView()
 }

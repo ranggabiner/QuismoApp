@@ -86,9 +86,10 @@ struct QuitReasonView: View {
                 }
                 
                 .padding()
-                NavigationLink(destination: CigsPerDay(viewModel: OnBoardingViewModel())) {
+                NavigationLink(destination: CigsPerDayView()) {
                     Text("Next")
-                        .frame(width: 80, height: 50)
+                        .fontWeight(.semibold)
+                        .frame(width: 100, height: 42)
                         .background(Color("button"))
                         .cornerRadius(10)
                         .foregroundColor(Color.white)
@@ -104,8 +105,6 @@ struct QuitReasonView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
-
-
 
 #Preview {
     QuitReasonView()
