@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Greetings: UIViewControllerRepresentable {
+struct GreetingsView: UIViewControllerRepresentable {
     var viewModel: OnBoardingViewModel
 
     func makeUIViewController(context: Context) -> GreetingsViewController {
@@ -20,5 +20,5 @@ struct Greetings: UIViewControllerRepresentable {
 }
 
 #Preview {
-    Greetings(viewModel: OnBoardingViewModel())
+    GreetingsView(viewModel: OnBoardingViewModel())
 }
