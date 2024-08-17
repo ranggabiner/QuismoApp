@@ -49,7 +49,7 @@ struct QuitReasonView: View {
                 Text("Great to hear. Before we begin, I’d like to understand what’s driving you to quit. What’s your main reason?")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("button"))
+                    .foregroundColor(Color("Blue1"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 39)
@@ -69,16 +69,16 @@ struct QuitReasonView: View {
                                     .font(.system(size: 16, weight: .medium, design: .default))
                                 Spacer()
                                 Image(systemName: selectedOptions.contains(option) ? "checkmark.circle.fill" : "circle")
-                                    .foregroundColor(Color("radioCircle"))
+                                    .foregroundColor(Color("Blue2"))
                             }
                             .padding(.vertical, 10)
                             .padding(.horizontal, 16)
-                            .background(selectedOptions.contains(option) ? Color("radioButton") : Color("radioButton"))
-                            .foregroundColor(Color("button"))
+                            .background(selectedOptions.contains(option) ? Color("Blue5") : Color("Blue5"))
+                            .foregroundColor(Color("Blue1"))
                             .cornerRadius(10)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("radioCircle"), lineWidth: selectedOptions.contains(option) ? 2 : 0)
+                                    .stroke(Color("Blue2"), lineWidth: selectedOptions.contains(option) ? 2 : 0)
                             )
                         }
                         .frame(width: 320)
@@ -90,7 +90,7 @@ struct QuitReasonView: View {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(Color("button"))
+                        .background(Color("Blue1"))
                         .cornerRadius(10)
                         .foregroundColor(Color.white)
                         .onTapGesture {
