@@ -26,7 +26,7 @@ class GreetingsViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Yes", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(named: "button")
+        button.backgroundColor = UIColor(named: "blue1")
         button.layer.cornerRadius = 15
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.translatesAutoresizingMaskIntoConstraints = false

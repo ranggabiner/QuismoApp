@@ -46,7 +46,7 @@ struct CommitmentView: View {
                 Text("Nice to meet you, \(comName). Now, let’s solidify your commitment to quitting. Write down your pledge to yourself.")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("button"))
+                    .foregroundColor(Color("Blue1"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 39)
@@ -59,17 +59,17 @@ struct CommitmentView: View {
                     .cornerRadius(10)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color("radioCircle"), lineWidth: 2)
+                            .stroke(Color("Blue2"), lineWidth: 2)
                     )
                     .padding(.horizontal, 39)
                     .padding(.bottom)
                 
 //                    .padding()
-                NavigationLink(destination: PricePerPackView()) {
+                NavigationLink(destination: SetDateView()) {
                         Text("Next")
                             .fontWeight(.semibold)
                             .frame(width: 100, height: 42)
-                            .background(Color("button"))
+                            .background(Color("Blue1"))
                             .cornerRadius(10)
                             .foregroundColor(Color.white)
                             .onTapGesture {

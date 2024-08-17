@@ -46,18 +46,18 @@ struct OnboardingEndView: View {
                 Text("Well done. You’ve taken the first step toward a smoke-free life. I’m here to support you every step of the way.")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("button"))
+                    .foregroundColor(Color("Blue1"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 39)
                     .padding()
                 
 //                    .padding()
-                NavigationLink(destination: CommitmentView()) {
+                NavigationLink(destination: DashboardView()) {
                         Text("Next")
                             .fontWeight(.semibold)
                             .frame(width: 100, height: 42)
-                            .background(Color("button"))
+                            .background(Color("Blue1"))
                             .cornerRadius(10)
                             .foregroundColor(Color.white)
                     }

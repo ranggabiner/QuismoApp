@@ -45,7 +45,7 @@ struct PricePerPackView: View {
                 Text("And how much do you spend on a pack?")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("button"))
+                    .foregroundColor(Color("Blue1"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 39)
@@ -58,12 +58,12 @@ struct PricePerPackView: View {
                             .frame(width: 90, height: 42)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color("radioCircle"), lineWidth: 2) // Same stroke as TextField
+                                    .stroke(Color("Blue2"), lineWidth: 2) // Same stroke as TextField
                             )
                             .padding(.horizontal, 2)
                         
                         Text("Rp")
-                            .foregroundColor(Color("button")) // Matching color with stroke
+                            .foregroundColor(Color("Blue1")) // Matching color with stroke
                             .font(.system(size: 16, weight: .medium))
                     }
                     
@@ -74,7 +74,7 @@ struct PricePerPackView: View {
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color("radioCircle"), lineWidth: 2)
+                                .stroke(Color("Blue2"), lineWidth: 2)
                         )
                         .padding(.horizontal, 2)
                 }
@@ -84,7 +84,7 @@ struct PricePerPackView: View {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(Color("button"))
+                        .background(Color("Blue1"))
                         .cornerRadius(10)
                         .foregroundColor(Color.white)
                         .onTapGesture {

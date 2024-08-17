@@ -46,7 +46,7 @@ struct SetDateView: View {
                 Text("I appreciate you sharing this with me. By the way, what’s your name?")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("button"))
+                    .foregroundColor(Color("Blue1"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 39)
@@ -65,11 +65,11 @@ struct SetDateView: View {
                 }
                 
                 //                    .padding()
-                NavigationLink(destination: CommitmentView()) {
+                NavigationLink(destination: OnboardingEndView()) {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(Color("button"))
+                        .background(Color("Blue1"))
                         .cornerRadius(10)
                         .foregroundColor(Color.white)
                         .onTapGesture {
