@@ -207,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				4A7851E62C7241E2009409B9 /* PersistantStorages */,
-				E03A3FBA2C6DF59800EBC763 /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -215,8 +214,9 @@
 		E03A3FB82C6DF52C00EBC763 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4A7851ED2C7246BF009409B9 /* UseCases */,
 				4A7851DE2C724176009409B9 /* Models */,
+				E03A3FBA2C6DF59800EBC763 /* Repositories */,
+				4A7851ED2C7246BF009409B9 /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
