@@ -19,6 +19,13 @@ struct GreetingsView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: GreetingsViewController, context: Context) {}
 }
 
+struct GreetingsViewView: View {
+    var body: some View {
+        GreetingsView(viewModel: OnBoardingViewModel())
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
 #Preview {
-    GreetingsView(viewModel: OnBoardingViewModel())
+    GreetingsViewView()
 }

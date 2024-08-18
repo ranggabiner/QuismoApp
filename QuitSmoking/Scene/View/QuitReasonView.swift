@@ -15,95 +15,95 @@ struct QuitReasonView: View {
     
     var body: some View {
         NavigationStack {
-            Spacer()
-            VStack {
-                HStack {
-                    
-                    
-                    NavigationLink(destination: GreetingsView(viewModel: OnBoardingViewModel())) {
-                        Image("back")
+            ZStack {
+                Color("Primary")
+                    .ignoresSafeArea()
+                
+                VStack {
+                    HStack {
+                        
+                        NavigationLink(destination: GreetingsView(viewModel: OnBoardingViewModel())) {
+                            Image("Back")
+                                .resizable()
+                                .frame(width:12, height: 20)
+                                .padding(.horizontal, 21)
+                        }
+                        
+                        Spacer()
+                        
+                        Image("OnboardingProgress1")
                             .resizable()
-                            .frame(width:12, height: 20)
-                            .padding(.horizontal, 21)
+                            .frame(width: 196, height: 15)
+                        
+                        Spacer()
+                        Spacer()
+                        
                     }
                     
-                    Spacer()
-                    
-                    Image("progressBar1")
+                    Image("OnboardingPoppy")
                         .resizable()
-                        .frame(width: 196, height: 15)
+                        .frame(width: 176, height: 175)
+                        .foregroundStyle(.tint)
                     
-                    Spacer()
-                    Spacer()
+                    Text("Great to hear. Before we begin, I’d like to understand what’s driving you to quit. What’s your main reason?")
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(Color("White"))
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 70)
                     
-                }
-                
-                Spacer()
-                    .padding()
-                
-                Image("Mascott")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .foregroundStyle(.tint)
-                
-                Text("Great to hear. Before we begin, I’d like to understand what’s driving you to quit. What’s your main reason?")
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .foregroundColor(Color("Blue1"))
-                    .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 39)
-                    .padding()
-                
-                VStack(alignment: .leading, spacing: 7) {
-                    ForEach(options, id: \.self) { option in
-                        Button(action: {
-                            if selectedOptions.contains(option) {
-                                selectedOptions.remove(option)
-                            } else {
-                                selectedOptions.insert(option)
+                    VStack {
+                        ForEach(options, id: \.self) { option in
+                            Button(action: {
+                                if selectedOptions.contains(option) {
+                                    selectedOptions.remove(option)
+                                } else {
+                                    selectedOptions.insert(option)
+                                }
+                            }) {
+                                HStack {
+                                    Text(option)
+                                        .font(.system(size: 16, weight: .semibold))
+                                    Spacer()
+                                    Image(systemName: selectedOptions.contains(option) ? "checkmark.circle.fill" : "circle")
+                                        .foregroundColor(Color("Blue066ACC"))
+                                }
+                                .padding(.vertical, 14)
+                                .padding(.horizontal, 15)
+                                .background(selectedOptions.contains(option) ? Color("YellowTint3") : Color("White"))
+                                .foregroundColor(Color("Blue055099"))
+                                .cornerRadius(12)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color("Blue2"), lineWidth: selectedOptions.contains(option) ? 2 : 0)
+                                )
                             }
-                        }) {
-                            HStack {
-                                Text(option)
-                                    .font(.system(size: 16, weight: .medium, design: .default))
-                                Spacer()
-                                Image(systemName: selectedOptions.contains(option) ? "checkmark.circle.fill" : "circle")
-                                    .foregroundColor(Color("Blue2"))
-                            }
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 16)
-                            .background(selectedOptions.contains(option) ? Color("Blue5") : Color("Blue5"))
-                            .foregroundColor(Color("Blue1"))
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("Blue2"), lineWidth: selectedOptions.contains(option) ? 2 : 0)
-                            )
+                            .frame(width: 320)
                         }
-                        .frame(width: 320)
                     }
-                }
-                
-                .padding()
-                NavigationLink(destination: CigsPerDayView()) {
-                    Text("Next")
-                        .fontWeight(.semibold)
-                        .frame(width: 100, height: 42)
-                        .background(Color("Blue1"))
-                        .cornerRadius(10)
-                        .foregroundColor(Color.white)
-                        .onTapGesture {
-                            userDefault.set(reason, forKey: "userReason")
-                            print(userDefault.string(forKey: "userReason") ?? "Error")
-                        }
+                    
+                    NavigationLink(destination: CigsPerDayView()) {
+                        Text("Next")
+                            .fontWeight(.semibold)
+                            .frame(width: 100, height: 42)
+                            .background(selectedOptions.isEmpty ? Color("Gray1") : Color("White"))
+                            .cornerRadius(10)
+                            .foregroundColor(selectedOptions.isEmpty ? (Color("White")) : (Color("Blue066ACC")))
+                            .onTapGesture {
+                                if !selectedOptions.isEmpty {
+                                    userDefault.set(reason, forKey: "userReason")
+                                    print(userDefault.string(forKey: "userReason") ?? "Error")
+                                }
+                            }
+                    }
+                    .disabled(selectedOptions.isEmpty)
                 }
             }
-            Spacer()
-                .padding()
         }
         .navigationBarBackButtonHidden(true)
     }
+    
 }
 
 #Preview {
