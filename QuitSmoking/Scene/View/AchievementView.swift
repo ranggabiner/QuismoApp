@@ -9,34 +9,55 @@ import SwiftUI
 
 struct AchievementView: View {
     @ObservedObject var viewModel: AchievementViewModel
+        @State private var showCardDetail = false
+        @State private var selectedAchievement: Achievement?
 
-    var body: some View {
-        VStack(alignment: .leading) {
-            SectionView(title: "Health", achievements: viewModel.healthAchievements)
-            SectionView(title: "Money", achievements: viewModel.moneyAchievements)
-            SectionView(title: "Time", achievements: viewModel.timeAchievements)
+        var body: some View {
+            ZStack {
+                VStack(alignment: .leading) {
+                    SectionView(title: "Health", achievements: viewModel.healthAchievements, showCardDetail: $showCardDetail, selectedAchievement: $selectedAchievement)
+                    SectionView(title: "Money", achievements: viewModel.moneyAchievements, showCardDetail: $showCardDetail, selectedAchievement: $selectedAchievement)
+                    SectionView(title: "Time", achievements: viewModel.timeAchievements, showCardDetail: $showCardDetail, selectedAchievement: $selectedAchievement)
+                }
+                .navigationTitle("Achievements")
+                .onAppear {
+                    viewModel.loadAchievements()
+                }
+
+                if showCardDetail, let achievement = selectedAchievement {
+                    AchievementModal(achievement: achievement, isPresented: $showCardDetail)
+                        .transition(.opacity)
+                        .zIndex(1)
+                }
+            }
         }
-        .navigationTitle("Achievements")
-        .onAppear {
-            viewModel.loadAchievements()
-        }
-    }
 }
 
 struct SectionView: View {
     let title: String
     let achievements: [Achievement]
+    @Binding var showCardDetail: Bool
+    @Binding var selectedAchievement: Achievement?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(title)
                 .font(.title)
                 .bold()
+                .padding(.vertical, 10)
                 .padding(.horizontal)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(achievements) { achievement in
-                        AchievementCardView(achievement: achievement)
+                        AchievementCard(achievement: achievement)
+                            .padding(.trailing, 10)
+                            .onTapGesture {
+                                selectedAchievement = achievement
+                                showCardDetail = true
+                            }
+                    }
+                    .onTapGesture {
+                        showCardDetail = true
                     }
                 }
                 .padding(.horizontal)
@@ -53,5 +74,3 @@ struct AchievementView_Previews: PreviewProvider {
         AchievementView(viewModel: viewModel)
     }
 }
-
-
