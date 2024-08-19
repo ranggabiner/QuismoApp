@@ -38,14 +38,6 @@
 		E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */; };
 		E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */; };
 		E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB52C6CAB4800EBC763 /* NameView.swift */; };
-		E03A3FBF2C71C47B00EBC763 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FBE2C71C47B00EBC763 /* AchievementModel.swift */; };
-		E03A3FC12C71C49F00EBC763 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FC02C71C49F00EBC763 /* Achievement.swift */; };
-		E03A3FC32C71C4EC00EBC763 /* AchievementRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FC22C71C4EC00EBC763 /* AchievementRepository.swift */; };
-		E03A3FC52C71C67800EBC763 /* FetchAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FC42C71C67800EBC763 /* FetchAchievements.swift */; };
-		E03A3FC72C71C6A400EBC763 /* AchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FC62C71C6A400EBC763 /* AchievementViewModel.swift */; };
-		E03A3FC92C71C6DD00EBC763 /* AchievementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FC82C71C6DD00EBC763 /* AchievementCard.swift */; };
-		E03A3FCB2C71C72100EBC763 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FCA2C71C72100EBC763 /* AchievementView.swift */; };
-		E03A3FCF2C7319AE00EBC763 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FCE2C7319AE00EBC763 /* AchievementModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,14 +83,6 @@
 		E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerPackView.swift; sourceTree = "<group>"; };
 		E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		E03A3FB52C6CAB4800EBC763 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
-		E03A3FBE2C71C47B00EBC763 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
-		E03A3FC02C71C49F00EBC763 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		E03A3FC22C71C4EC00EBC763 /* AchievementRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementRepository.swift; path = QuitSmoking/Data/AchievementRepository.swift; sourceTree = SOURCE_ROOT; };
-		E03A3FC42C71C67800EBC763 /* FetchAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAchievements.swift; sourceTree = "<group>"; };
-		E03A3FC62C71C6A400EBC763 /* AchievementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewModel.swift; sourceTree = "<group>"; };
-		E03A3FC82C71C6DD00EBC763 /* AchievementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCard.swift; sourceTree = "<group>"; };
-		E03A3FCA2C71C72100EBC763 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
-		E03A3FCE2C7319AE00EBC763 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,20 +171,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E03A3F8C2C6B44E000EBC763 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */,
-				E03A3FBE2C71C47B00EBC763 /* AchievementModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		E03A3F8F2C6B452300EBC763 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */,
-				E03A3FC62C71C6A400EBC763 /* AchievementViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -225,7 +199,6 @@
 				E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */,
 				E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */,
 				E03A3FB52C6CAB4800EBC763 /* NameView.swift */,
-				E03A3FCA2C71C72100EBC763 /* AchievementView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,37 +231,6 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		E03A3FBA2C6DF59800EBC763 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				E03A3FC22C71C4EC00EBC763 /* AchievementRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		E03A3FBB2C6DF5A900EBC763 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				E03A3FC02C71C49F00EBC763 /* Achievement.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		E03A3FBC2C6DF5B200EBC763 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				E03A3FC42C71C67800EBC763 /* FetchAchievements.swift */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		E03A3FBD2C6DF5DA00EBC763 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				E03A3FC82C71C6DD00EBC763 /* AchievementCard.swift */,
-				E03A3FCE2C7319AE00EBC763 /* AchievementModal.swift */,
-			);
-			path = Components;
 		E03A3FBA2C6DF59800EBC763 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,38 +347,29 @@
 				4A7851EC2C7244CB009409B9 /* UserRepository.swift in Sources */,
 				8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */,
 				8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */,
-				E03A3FBF2C71C47B00EBC763 /* AchievementModel.swift in Sources */,
-				E03A3FC72C71C6A400EBC763 /* AchievementViewModel.swift in Sources */,
 				4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */,
 				4A7851E52C724176009409B9 /* UserModel.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
 				4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */,
-				E03A3FCB2C71C72100EBC763 /* AchievementView.swift in Sources */,
-				E03A3FC52C71C67800EBC763 /* FetchAchievements.swift in Sources */,
 				4A7851EA2C724483009409B9 /* SwiftDataManager.swift in Sources */,
 				4A3A81FD2C724C85004C27A6 /* CigaretteLogUseCase.swift in Sources */,
 				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
 				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
 				4A7851E82C724204009409B9 /* UserStorage.swift in Sources */,
 				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
-				E03A3FC12C71C49F00EBC763 /* Achievement.swift in Sources */,
-				E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */,
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
 				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
-				E03A3FCF2C7319AE00EBC763 /* AchievementModal.swift in Sources */,
 				4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
 				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
 				4A7851E32C724176009409B9 /* MessageModel.swift in Sources */,
 				4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */,
 				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
-				E03A3FC92C71C6DD00EBC763 /* AchievementCard.swift in Sources */,
 				4A7851E42C724176009409B9 /* OnBoardingModel.swift in Sources */,
 				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
 				4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */,
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
-				E03A3FC32C71C4EC00EBC763 /* AchievementRepository.swift in Sources */,
 				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
 				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
 			);
