@@ -11,7 +11,11 @@ struct AddSmokeView: View {
     
     @State private var numberText: String = ""
     
+    @StateObject var viewModel = AddSmokeViewModel(cigaretteLogUseCase: CigaretteLogUseCase(repository: LocalUserRepository()))
+    
     var body: some View {
+        
+        Text("\(viewModel.cigaretteLog?.cigarettesSmoked.count)")
         Text("How many cigarettes are you planning to smoke?")
         
         TextField("Enter number", text: $numberText)
@@ -19,7 +23,13 @@ struct AddSmokeView: View {
             .padding()
             .textFieldStyle(RoundedBorderTextFieldStyle())
         
-        
+        Button(action: {
+            viewModel.addSmoke()
+            
+            print("\(viewModel.cigaretteLog?.cigarettesSmoked.count)")
+        }, label: {
+            Text("Add Smoke")
+        })
         
     }
 }

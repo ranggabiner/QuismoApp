@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OnBoardingModel {
+struct OnBoardingModel : Codable {
     var quitReason: String = ""
     var cigsPerDay: Int = 0
     var pricePerPack: Int = 0

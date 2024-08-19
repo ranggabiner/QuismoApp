@@ -9,17 +9,17 @@ import SwiftUI
 import OpenAI
 
 class ChatController: ObservableObject {
-    @Published var messages: [Message] = []
+    @Published var messages: [MessageModel] = []
 
     let openAI = OpenAI(apiToken: "Secret API")
     
     init() {
-        let initialBotMessage = Message(content: "Hai! 😊 Gw ChatPadil, konselor lo. Gw di sini buat bantu lo berhenti ngerokok pake pendekatan Cognitive Behavioral Therapy (CBT). Nama lo siapa nih? 🤗", isUser: false)
+        let initialBotMessage = MessageModel(content: "Hai! 😊 Gw ChatPadil, konselor lo. Gw di sini buat bantu lo berhenti ngerokok pake pendekatan Cognitive Behavioral Therapy (CBT). Nama lo siapa nih? 🤗", isUser: false)
         self.messages.append(initialBotMessage)
     }
     
     func sendNewMessage(content: String) {
-        let userMessage = Message(content: content, isUser: true)
+        let userMessage = MessageModel(content: content, isUser: true)
         self.messages.append(userMessage)
         getBotReply()
     }
@@ -30,7 +30,7 @@ class ChatController: ObservableObject {
     Ketika sesi pertama sudah selesai, rangkum percakapan dan berikan solusi serta motivasi. Kasih tau klien bahwa sesi pertama CBT sudah selesai
     """
         
-        let combinedMessages = [Message(content: initialPrompt, isUser: false)] + self.messages
+        let combinedMessages = [MessageModel(content: initialPrompt, isUser: false)] + self.messages
         
         let query = ChatQuery(
             messages: combinedMessages.map({
@@ -47,7 +47,7 @@ class ChatController: ObservableObject {
                 }
                 guard let message = choice.message.content?.string else { return }
                 DispatchQueue.main.async {
-                    self.messages.append(Message(content: message, isUser: false))
+                    self.messages.append(MessageModel(content: message, isUser: false))
                 }
             case .failure(let failure):
                 print(failure)
@@ -56,11 +56,7 @@ class ChatController: ObservableObject {
     }
 }
 
-struct Message: Identifiable {
-    var id: UUID = .init()
-    var content: String
-    var isUser: Bool
-}
+
 
 struct ContentView: View {
     @StateObject var chatController: ChatController = .init()
@@ -92,7 +88,7 @@ struct ContentView: View {
 }
 
 struct MessageView: View {
-    var message: Message
+    var message: MessageModel
     var body: some View {
         Group {
             if message.isUser {
