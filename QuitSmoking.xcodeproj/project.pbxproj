@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3A81FD2C724C85004C27A6 /* CigaretteLogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */; };
+		4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */; };
+		4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D82C724176009409B9 /* BadgeModel.swift */; };
+		4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D92C724176009409B9 /* ChatLogModel.swift */; };
+		4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */; };
+		4A7851E32C724176009409B9 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851DB2C724176009409B9 /* MessageModel.swift */; };
+		4A7851E42C724176009409B9 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851DC2C724176009409B9 /* OnBoardingModel.swift */; };
+		4A7851E52C724176009409B9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851DD2C724176009409B9 /* UserModel.swift */; };
+		4A7851E82C724204009409B9 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851E72C724204009409B9 /* UserStorage.swift */; };
+		4A7851EA2C724483009409B9 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851E92C724483009409B9 /* SwiftDataManager.swift */; };
+		4A7851EC2C7244CB009409B9 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851EB2C7244CB009409B9 /* UserRepository.swift */; };
 		4ADDBB252C6B425E003531B3 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADDBB242C6B425E003531B3 /* OpenAI */; };
 		4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */; };
 		4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */; };
@@ -18,7 +29,6 @@
 		8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */; };
 		8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */; };
 		8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD1B2C6DF03400E9A157 /* GreetingsViewController.swift */; };
-		E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */; };
 		E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */; };
 		E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */; };
 		E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */; };
@@ -41,6 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigaretteLogUseCase.swift; sourceTree = "<group>"; };
+		4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSmokeViewModel.swift; sourceTree = "<group>"; };
+		4A7851D82C724176009409B9 /* BadgeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeModel.swift; sourceTree = "<group>"; };
+		4A7851D92C724176009409B9 /* ChatLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogModel.swift; sourceTree = "<group>"; };
+		4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CigaretteLogModel.swift; sourceTree = "<group>"; };
+		4A7851DB2C724176009409B9 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		4A7851DC2C724176009409B9 /* OnBoardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		4A7851DD2C724176009409B9 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4A7851E72C724204009409B9 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		4A7851E92C724483009409B9 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		4A7851EB2C7244CB009409B9 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTechniqueView.swift; sourceTree = "<group>"; };
 		4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikeTestingView.swift; sourceTree = "<group>"; };
 		4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSmokingView.swift; sourceTree = "<group>"; };
@@ -52,7 +73,6 @@
 		8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		8FB2DD1B2C6DF03400E9A157 /* GreetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewController.swift; sourceTree = "<group>"; };
-		E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitReasonViewController.swift; sourceTree = "<group>"; };
 		E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerDayViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +97,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7851DE2C724176009409B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A7851D82C724176009409B9 /* BadgeModel.swift */,
+				4A7851D92C724176009409B9 /* ChatLogModel.swift */,
+				4A7851DD2C724176009409B9 /* UserModel.swift */,
+				4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */,
+				4A7851DB2C724176009409B9 /* MessageModel.swift */,
+				4A7851DC2C724176009409B9 /* OnBoardingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A7851E62C7241E2009409B9 /* PersistantStorages */ = {
+			isa = PBXGroup;
+			children = (
+				4A7851E72C724204009409B9 /* UserStorage.swift */,
+				4A7851E92C724483009409B9 /* SwiftDataManager.swift */,
+			);
+			path = PersistantStorages;
+			sourceTree = "<group>";
+		};
+		4A7851ED2C7246BF009409B9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		8F2BAE0F2C662471009F50C3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,15 +147,15 @@
 		8F2BAE1A2C662471009F50C3 /* QuitSmoking */ = {
 			isa = PBXGroup;
 			children = (
-				E03A3FBD2C6DF5DA00EBC763 /* Components */,
-				E03A3FB92C6DF56400EBC763 /* Scene */,
-				E03A3FB82C6DF52C00EBC763 /* Domain */,
 				E03A3FB72C6DF52600EBC763 /* Data */,
+				E03A3FB82C6DF52C00EBC763 /* Domain */,
+				E03A3FB92C6DF56400EBC763 /* Scene */,
 				8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */,
 				8F2BAE1D2C662471009F50C3 /* ContentView.swift */,
 				4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */,
 				4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */,
 				4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */,
+				4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */,
 				4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */,
 				8F2BAE1F2C662473009F50C3 /* Assets.xcassets */,
 				8F2BAE212C662473009F50C3 /* Preview Content */,
@@ -119,14 +169,6 @@
 				8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E03A3F8C2C6B44E000EBC763 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E03A3F8F2C6B452300EBC763 /* ViewModel */ = {
@@ -164,8 +206,7 @@
 		E03A3FB72C6DF52600EBC763 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				E03A3FBA2C6DF59800EBC763 /* Repository */,
-				E03A3F8C2C6B44E000EBC763 /* Model */,
+				4A7851E62C7241E2009409B9 /* PersistantStorages */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -173,8 +214,9 @@
 		E03A3FB82C6DF52C00EBC763 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				E03A3FBC2C6DF5B200EBC763 /* UseCase */,
-				E03A3FBB2C6DF5A900EBC763 /* Entity */,
+				4A7851DE2C724176009409B9 /* Models */,
+				E03A3FBA2C6DF59800EBC763 /* Repositories */,
+				4A7851ED2C7246BF009409B9 /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -189,32 +231,12 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		E03A3FBA2C6DF59800EBC763 /* Repository */ = {
+		E03A3FBA2C6DF59800EBC763 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				4A7851EB2C7244CB009409B9 /* UserRepository.swift */,
 			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		E03A3FBB2C6DF5A900EBC763 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		E03A3FBC2C6DF5B200EBC763 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		E03A3FBD2C6DF5DA00EBC763 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,21 +344,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7851EC2C7244CB009409B9 /* UserRepository.swift in Sources */,
 				8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */,
 				8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */,
 				4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */,
+				4A7851E52C724176009409B9 /* UserModel.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
 				4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */,
+				4A7851EA2C724483009409B9 /* SwiftDataManager.swift in Sources */,
+				4A3A81FD2C724C85004C27A6 /* CigaretteLogUseCase.swift in Sources */,
 				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
 				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
+				4A7851E82C724204009409B9 /* UserStorage.swift in Sources */,
 				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
-				E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */,
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
 				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
+				4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
+				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
+				4A7851E32C724176009409B9 /* MessageModel.swift in Sources */,
+				4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */,
 				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
+				4A7851E42C724176009409B9 /* OnBoardingModel.swift in Sources */,
 				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
+				4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */,
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
 				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
 				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
