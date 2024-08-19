@@ -45,4 +45,13 @@ class LocalUserRepository: UserRepository{
             fatalError(error.localizedDescription)
         }
     }
+    
+    @MainActor func deleteAllData(){
+        do {
+            try self.container?.mainContext.delete(model: UserStorage.self)
+        } catch {
+            print("Failed to delete all data.")
+        }
+
+    }
 }
