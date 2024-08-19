@@ -11,7 +11,8 @@ import SwiftUI
 struct QuitSmokingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            @State var step = 1
+            GreetingsViewView()
         }
     }
 }

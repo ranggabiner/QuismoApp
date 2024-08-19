@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class GreetingsViewController: UIViewController {
     var viewModel: OnBoardingViewModel!
@@ -41,7 +42,7 @@ class GreetingsViewController: UIViewController {
         return stackView
     }()
     
-    private let imageMascott: UIImageView = {
+    private let poppy: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "GreetingsPoppy")
         imageView.contentMode = .scaleAspectFit
@@ -52,50 +53,54 @@ class GreetingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Extend the layout to cover the entire screen, including safe areas
         self.edgesForExtendedLayout = .all
         
-        // Set the background color
         if let backgroundColor = UIColor(named: "Primary") {
             self.view.backgroundColor = backgroundColor
         }
         
-        // Add the UI elements and set constraints
         setupUI()
         
-        // Add action for the next button
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
     private func setupUI() {
-        view.addSubview(imageMascott)
+        view.addSubview(poppy)
         view.addSubview(greetingsLabel)
         view.addSubview(nextButtonView)
         
         NSLayoutConstraint.activate([
-            // Greetings label positioning
-            greetingsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 208),
+            greetingsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 183),
             greetingsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
             greetingsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -55),
             
-            // Next button positioning
-            nextButtonView.topAnchor.constraint(equalTo: greetingsLabel.bottomAnchor, constant: 42),
+            nextButtonView.topAnchor.constraint(equalTo: greetingsLabel.bottomAnchor, constant: 41),
             nextButtonView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             nextButtonView.widthAnchor.constraint(equalToConstant: 100),
             nextButton.widthAnchor.constraint(equalToConstant: 100),
             nextButton.heightAnchor.constraint(equalToConstant: 42),
             
-            // Image mascot positioning
-            imageMascott.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-            imageMascott.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageMascott.widthAnchor.constraint(equalToConstant: 393),
-            imageMascott.heightAnchor.constraint(equalToConstant: 393)
+            poppy.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            poppy.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            poppy.widthAnchor.constraint(equalToConstant: 393),
         ])
     }
     
     @objc private func nextButtonTapped() {
-        let quitReasonView = QuitReasonViewController() // Initialize your QuitReasonViewController
-        quitReasonView.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(quitReasonView, animated: true)
+        let onboardingView = OnboardingView()
+            let hostingController = UIHostingController(rootView: onboardingView)
+            
+            // Ensure the view controller is embedded in a navigation controller
+            if let navigationController = navigationController {
+                navigationController.pushViewController(hostingController, animated: true)
+            } else {
+                // Fallback to modal presentation if there's no navigation controller
+                hostingController.modalPresentationStyle = .fullScreen
+                present(hostingController, animated: true, completion: nil)
+            }
     }
+}
+
+#Preview {
+    GreetingsViewController()
 }
