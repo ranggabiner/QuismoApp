@@ -11,7 +11,13 @@ import SwiftUI
 struct QuitSmokingApp: App {
     var body: some Scene {
         WindowGroup {
-            AddSmokeView()
+            AchievementView(
+                viewModel: AchievementViewModel(
+                    fetchAchievements: FetchAchievements(
+                        repository: AchievementRepositories()
+                    )
+                )
+            )
         }
     }
 }
