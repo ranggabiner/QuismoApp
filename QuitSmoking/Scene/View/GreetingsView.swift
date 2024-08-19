@@ -13,6 +13,7 @@ struct GreetingsView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> GreetingsViewController {
         let viewController = GreetingsViewController()
         viewController.viewModel = viewModel
+        
         return viewController
     }
 
@@ -22,7 +23,9 @@ struct GreetingsView: UIViewControllerRepresentable {
 struct GreetingsViewView: View {
     var body: some View {
         GreetingsView(viewModel: OnBoardingViewModel())
+//            .ignoresSafeArea()
             .edgesIgnoringSafeArea(.all)
+            .navigationBarBackButtonHidden(true)
     }
 }
 
