@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4A3A81FD2C724C85004C27A6 /* CigaretteLogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */; };
 		4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */; };
+		4A3A82012C733BCC004C27A6 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82002C733BCC004C27A6 /* TrackView.swift */; };
+		4A3A82032C733C25004C27A6 /* MonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82022C733C25004C27A6 /* MonthModel.swift */; };
+		4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82042C733E32004C27A6 /* TrackViewModel.swift */; };
+		4A3A82072C735A2C004C27A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82062C735A2C004C27A6 /* HomeView.swift */; };
 		4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D82C724176009409B9 /* BadgeModel.swift */; };
 		4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D92C724176009409B9 /* ChatLogModel.swift */; };
 		4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */; };
@@ -53,6 +57,10 @@
 /* Begin PBXFileReference section */
 		4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigaretteLogUseCase.swift; sourceTree = "<group>"; };
 		4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSmokeViewModel.swift; sourceTree = "<group>"; };
+		4A3A82002C733BCC004C27A6 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		4A3A82022C733C25004C27A6 /* MonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthModel.swift; sourceTree = "<group>"; };
+		4A3A82042C733E32004C27A6 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		4A3A82062C735A2C004C27A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4A7851D82C724176009409B9 /* BadgeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeModel.swift; sourceTree = "<group>"; };
 		4A7851D92C724176009409B9 /* ChatLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogModel.swift; sourceTree = "<group>"; };
 		4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CigaretteLogModel.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 				4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */,
 				4A7851DB2C724176009409B9 /* MessageModel.swift */,
 				4A7851DC2C724176009409B9 /* OnBoardingModel.swift */,
+				4A3A82022C733C25004C27A6 /* MonthModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */,
+				4A3A82042C733E32004C27A6 /* TrackViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +209,8 @@
 				E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */,
 				E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */,
 				E03A3FB52C6CAB4800EBC763 /* NameView.swift */,
+				4A3A82002C733BCC004C27A6 /* TrackView.swift */,
+				4A3A82062C735A2C004C27A6 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +359,7 @@
 				4A7851EC2C7244CB009409B9 /* UserRepository.swift in Sources */,
 				8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */,
 				8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */,
+				4A3A82032C733C25004C27A6 /* MonthModel.swift in Sources */,
 				4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */,
 				4A7851E52C724176009409B9 /* UserModel.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
@@ -356,10 +369,12 @@
 				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
 				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
 				4A7851E82C724204009409B9 /* UserStorage.swift in Sources */,
+				4A3A82072C735A2C004C27A6 /* HomeView.swift in Sources */,
 				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
 				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
+				4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */,
 				4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
 				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
@@ -372,6 +387,7 @@
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
 				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
 				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
+				4A3A82012C733BCC004C27A6 /* TrackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

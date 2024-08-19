@@ -14,22 +14,25 @@ struct AddSmokeView: View {
     @StateObject var viewModel = AddSmokeViewModel(cigaretteLogUseCase: CigaretteLogUseCase(repository: LocalUserRepository()))
     
     var body: some View {
-        
-        Text("\(viewModel.cigaretteLog?.cigarettesSmoked.count)")
-        Text("How many cigarettes are you planning to smoke?")
-        
-        TextField("Enter number", text: $numberText)
-            .keyboardType(.numberPad)
-            .padding()
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-        
-        Button(action: {
-            viewModel.addSmoke()
+        VStack{
             
-            print("\(viewModel.cigaretteLog?.cigarettesSmoked.count)")
-        }, label: {
-            Text("Add Smoke")
-        })
+            Text("\(viewModel.cigaretteLog?.cigarettesSmoked.count)")
+//            Text("How many cigarettes are you planning to smoke?")
+//            
+//            TextField("Enter number", text: $numberText)
+//                .keyboardType(.numberPad)
+//                .padding()
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            Button(action: {
+                viewModel.addSmoke()
+                
+                print("\(viewModel.cigaretteLog?.cigarettesSmoked.count)")
+            }, label: {
+                Text("Add Smoke")
+            })
+        }
+        
         
     }
 }

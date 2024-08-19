@@ -28,6 +28,7 @@ class LocalUserRepository: UserRepository{
         }
     }
     
+    //harus dipanggil 1x, no more, no less
     @MainActor func insert(user: UserModel){
         let newUser = UserStorage(id: user.id, onBoarding: user.onBoarding, cigaretteLog: user.cigaretteLog, chatBuddy: user.chatBuddy, chatSessions: user.chatSessions, badges: user.badges)
         container?.mainContext.insert(newUser)
