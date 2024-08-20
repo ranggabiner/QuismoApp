@@ -12,6 +12,7 @@ struct CigsPerPackView: View {
     let userDefault = UserDefaults.standard
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -31,14 +32,16 @@ struct CigsPerPackView: View {
                     .foregroundColor(Color("White"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 70)
+                    .padding(.horizontal, 60)
                     .frame(height: 83)
                 
-                Spacer(minLength: 28)
+                    .padding(.bottom, 10)
                 
                 // nih gimana cara centernya :)
-                TextField(" ", text: $cigsPerPack)
+                TextField("Type here...", text: $cigsPerPack)
+                    .keyboardType(.numberPad)
                     .textFieldStyle(PlainTextFieldStyle())
+                    .multilineTextAlignment(.center)
                     .frame(width: 120, height: 42)
                     .padding(.horizontal, 10)
                     .background(Color("Primary"))
@@ -53,7 +56,6 @@ struct CigsPerPackView: View {
                     .font(.system(size: 16, weight: .medium))
                 
                 Spacer()
-                    .padding()
                 
                 Button(action: {
                     withAnimation {
@@ -66,13 +68,32 @@ struct CigsPerPackView: View {
                         .background(cigsPerPack.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(cigsPerPack.isEmpty ? Color("White") : Color("Blue066ACC"))
-                        .onTapGesture {
-                            userDefault.set(Int(cigsPerPack), forKey: "userCigsPerPack")
+//                        .onTapGesture {
+//                            userDefault.set(Int(cigsPerPack), forKey: "userCigsPerPack")
                             //                            print(userDefault.integer(forKey: "userCigsPerPack"))
-                        }
+//                        }
                 }
                 .padding(.top, 20)
                 .disabled(cigsPerPack.isEmpty)
+            }
+            .onAppear {
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
+                    if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+                        withAnimation {
+                            keyboardHeight = keyboardFrame.height - -50 // Subtract some padding if needed
+                        }
+                    }
+                }
+                
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
+                    withAnimation {
+                        keyboardHeight = 0
+                    }
+                }
+            }
+            .onDisappear {
+                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
             }
         }
         .navigationBarBackButtonHidden(true)
