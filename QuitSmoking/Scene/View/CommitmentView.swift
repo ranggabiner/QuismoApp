@@ -68,20 +68,21 @@ struct CommitmentView: View {
                         .background(commitment.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(commitment.isEmpty ? Color("White") : Color("Blue066ACC"))
-//                        .onTapGesture {
-//                            userDefault.set(Int(commitment), forKey: "userCommitment")
-                            //                            print(userDefault.integer(forKey: "userCommitment"))
-//                        }
+                    //                        .onTapGesture {
+                    //                            userDefault.set(Int(commitment), forKey: "userCommitment")
+                    //                            print(userDefault.integer(forKey: "userCommitment"))
+                    //                        }
                 }
                 .padding(.top, 20)
                 .disabled(commitment.isEmpty)
                 
             }
             .onAppear() {
-                let commitmentUserDefault = UserDefaults.standard
-                let commitmentName = commitmentUserDefault.string(forKey: "userName")
-                
-                comName = commitmentName ?? "error"
+                if let commitmentName = UserDefaults.standard.string(forKey: "userName") {
+                    comName = commitmentName
+                } else {
+                    comName = "error"
+                }
                 
                 NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
                     if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {

@@ -64,7 +64,7 @@ struct QuitReasonView: View {
                 
                 Button(action: {
                     if !selectedOptions.isEmpty {
-                        userDefault.set(reason, forKey: "userReason")
+                        userQuitReason()
                         withAnimation {
                             currentStep += 1  // Move to the next step
                         }
@@ -82,10 +82,15 @@ struct QuitReasonView: View {
         }
         .navigationBarBackButtonHidden(true)
     }
+    
+    private func userQuitReason() {
+        let selectedReasons = Array(selectedOptions)
+        UserDefaults.standard.set(Array(selectedOptions), forKey: "userReason")
+    }
 }
 
 
 #Preview {
     @State var step = 1
-        QuitReasonView(currentStep: $step)
+    QuitReasonView(currentStep: $step)
 }

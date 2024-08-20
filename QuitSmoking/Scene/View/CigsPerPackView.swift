@@ -54,6 +54,9 @@ struct CigsPerPackView: View {
                     .padding(.bottom)
                     .foregroundColor(Color("White"))
                     .font(.system(size: 16, weight: .medium))
+                    .onChange(of: cigsPerPack) { newValue in
+                        UserDefaults.standard.set(newValue, forKey: "userCigsPerPack")
+                                        }
                 
                 Spacer()
                 

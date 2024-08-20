@@ -79,6 +79,10 @@ struct PricePerPackView: View {
                         .padding(.bottom)
                         .foregroundColor(Color("White"))
                         .font(.system(size: 16, weight: .medium))
+                        .onChange(of: pricePerPack) { newValue in
+                            UserDefaults.standard.set(newValue, forKey: "userPricePerPack")
+                                            }
+                    
                     Spacer()
                 }
                 

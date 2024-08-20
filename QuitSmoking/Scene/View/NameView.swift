@@ -53,6 +53,9 @@ struct NameView: View {
                     .padding(.bottom)
                     .foregroundColor(Color("White"))
                     .font(.system(size: 16, weight: .medium))
+                    .onChange(of: name) { newValue in
+                        UserDefaults.standard.set(newValue, forKey: "userName")
+                                        }
                 
                 Spacer()
                 
