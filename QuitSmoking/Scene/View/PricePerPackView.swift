@@ -89,6 +89,7 @@ struct PricePerPackView: View {
                 Spacer()
                 
                 Button(action: {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     withAnimation {
                         currentStep += 1  // Move to the next step
                     }
@@ -104,14 +105,14 @@ struct PricePerPackView: View {
                             //                            print(userDefault.integer(forKey: "userPricePerPack"))
 //                        }
                 }
-                .padding(.top, 20)
+                .padding(.bottom, keyboardHeight)
                 .disabled(pricePerPack.isEmpty)
             }
             .onAppear {
                 NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
                     if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
                         withAnimation {
-                            keyboardHeight = keyboardFrame.height - -50 // Subtract some padding if needed
+                            keyboardHeight = keyboardFrame.height - 20 // Subtract some padding if needed
                         }
                     }
                 }

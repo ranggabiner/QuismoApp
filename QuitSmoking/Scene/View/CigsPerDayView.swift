@@ -56,9 +56,9 @@ struct CigsPerDayView: View {
                     .padding(.vertical, 18)
                     .onChange(of: cigsPerDay) { newValue in
                         UserDefaults.standard.set(newValue, forKey: "userCigsPerDay")
-                                        }
+                    }
                 
-                    Spacer()
+                Spacer()
                 
                 Button(action: {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -72,12 +72,12 @@ struct CigsPerDayView: View {
                         .background(cigsPerDay.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(cigsPerDay.isEmpty ? Color("White") : Color("Blue066ACC"))
-//                        .onTapGesture {
-//                            userDefault.set(Int(cigsPerDay), forKey: "userCigPerDay")
-                            //                            print(userDefault.integer(forKey: "userCigPerDay"))
-//                        }
+                    //                        .onTapGesture {
+                    //                            userDefault.set(Int(cigsPerDay), forKey: "userCigPerDay")
+                    //                            print(userDefault.integer(forKey: "userCigPerDay"))
+                    //                        }
                 }
-//                .padding(.top, 20)
+                //                .padding(.top, 20)
                 .disabled(cigsPerDay.isEmpty)
                 .padding(.bottom, keyboardHeight)
             }
