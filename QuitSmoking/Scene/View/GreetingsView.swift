@@ -22,7 +22,7 @@ struct GreetingsView: UIViewControllerRepresentable {
 
 struct GreetingsViewView: View {
     var body: some View {
-        GreetingsView(viewModel: OnBoardingViewModel())
+        GreetingsView(viewModel: OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository())))
 //            .ignoresSafeArea()
             .edgesIgnoringSafeArea(.all)
             .navigationBarBackButtonHidden(true)

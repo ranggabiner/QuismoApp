@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuitReasonView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var reason: String = ""
     let userDefault = UserDefaults.standard
     @State private var selectedOptions: Set<String> = []
