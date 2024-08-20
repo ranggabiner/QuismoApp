@@ -51,3 +51,7 @@ class CigsPerDayViewController: UIViewController {
         viewModel.form.cigsPerDay = Int(cigarettesTextField.text ?? "0") ?? 0
     }
 }
+
+#Preview {
+    CigsPerDayViewController()
+}

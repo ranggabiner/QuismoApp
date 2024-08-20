@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class GreetingsViewController: UIViewController {
     var viewModel: OnBoardingViewModel!
@@ -13,8 +14,8 @@ class GreetingsViewController: UIViewController {
     private let greetingsLabel: UILabel = {
         let label = UILabel()
         label.text = "Quit smoking is the best decision for you! Ready to start your journey?"
-        label.textColor = .white
-        label.font = UIFont(name: "SF Pro Rounded", size: 16)
+        label.textColor = UIColor(named: "White")
+        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -25,8 +26,8 @@ class GreetingsViewController: UIViewController {
     private let nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Yes", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemBlue
+        button.setTitleColor(UIColor(named: "Primary"), for: .normal)
+        button.backgroundColor = UIColor(named: "White")
         button.layer.cornerRadius = 15
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -41,42 +42,65 @@ class GreetingsViewController: UIViewController {
         return stackView
     }()
     
-    private let bubbleChatView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemCyan
-        view.layer.cornerRadius = 15
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    private let poppy: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "GreetingsPoppy")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
+        self.edgesForExtendedLayout = .all
+        
+        if let backgroundColor = UIColor(named: "Primary") {
+            self.view.backgroundColor = backgroundColor
+        }
+        
         setupUI()
+        
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     
     private func setupUI() {
-        view.addSubview(bubbleChatView)
+        view.addSubview(poppy)
         view.addSubview(greetingsLabel)
         view.addSubview(nextButtonView)
         
         NSLayoutConstraint.activate([
+            greetingsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 183),
+            greetingsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
+            greetingsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -55),
             
-            bubbleChatView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            bubbleChatView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bubbleChatView.widthAnchor.constraint(equalToConstant: 300),
-            bubbleChatView.heightAnchor.constraint(equalToConstant: 80),
-            
-            greetingsLabel.centerXAnchor.constraint(equalTo: bubbleChatView.centerXAnchor),
-            greetingsLabel.centerYAnchor.constraint(equalTo: bubbleChatView.centerYAnchor),
-            greetingsLabel.widthAnchor.constraint(equalTo: bubbleChatView.widthAnchor),
-            
-            nextButtonView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            nextButtonView.topAnchor.constraint(equalTo: greetingsLabel.bottomAnchor, constant: 41),
             nextButtonView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nextButtonView.widthAnchor.constraint(equalToConstant: 300),
+            nextButtonView.widthAnchor.constraint(equalToConstant: 100),
+            nextButton.widthAnchor.constraint(equalToConstant: 100),
+            nextButton.heightAnchor.constraint(equalToConstant: 42),
             
-            nextButton.heightAnchor.constraint(equalToConstant: 50),
-            
+            poppy.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            poppy.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            poppy.widthAnchor.constraint(equalToConstant: 393),
         ])
     }
+    
+    @objc private func nextButtonTapped() {
+        let onboardingView = OnboardingView()
+            let hostingController = UIHostingController(rootView: onboardingView)
+            
+            // Ensure the view controller is embedded in a navigation controller
+            if let navigationController = navigationController {
+                navigationController.pushViewController(hostingController, animated: true)
+            } else {
+                // Fallback to modal presentation if there's no navigation controller
+                hostingController.modalPresentationStyle = .fullScreen
+                present(hostingController, animated: true, completion: nil)
+            }
+    }
+}
+
+#Preview {
+    GreetingsViewController()
 }
