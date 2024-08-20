@@ -16,6 +16,7 @@ struct ProgressBarView: View {
         HStack {
             // Back Button
             Button(action: {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 onBackButtonPressed()
             }) {
                 Image("Back")
@@ -33,7 +34,7 @@ struct ProgressBarView: View {
                         .foregroundColor(currentStep >= step ? Color("Secondary") : Color("White"))
                         .font(.system(size: currentStep == step ? 16 : 16))
                         .scaleEffect(currentStep == step ? 1.2 : 1.0)
-                        .animation(.easeInOut(duration: 0.3), value: currentStep)
+                        .animation(.easeInOut(duration: 0.4), value: currentStep)
                         .bold()
                 }
             }

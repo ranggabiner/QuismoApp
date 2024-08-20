@@ -13,6 +13,7 @@ struct CommitmentView: View {
     @State private var comName: String = ""
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -35,11 +36,12 @@ struct CommitmentView: View {
                     .padding(.horizontal, 40)
                     .frame(height: 83)
                 
-                Spacer(minLength: 28)
+                    .padding(.bottom, 10)
                 
                 // nih gimana cara centernya :)
-                TextField(" ", text: $commitment)
+                TextField("I want to QUIT!", text: $commitment)
                     .textFieldStyle(PlainTextFieldStyle())
+                    .multilineTextAlignment(.center)
                     .frame(width: 290, height: 42)
                     .padding(.horizontal, 10)
                     .background(Color("Primary"))
@@ -54,7 +56,6 @@ struct CommitmentView: View {
                     .font(.system(size: 16, weight: .medium))
                 
                 Spacer()
-                    .padding()
                 
                 Button(action: {
                     withAnimation {
@@ -67,10 +68,10 @@ struct CommitmentView: View {
                         .background(commitment.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(commitment.isEmpty ? Color("White") : Color("Blue066ACC"))
-                        .onTapGesture {
-                            userDefault.set(Int(commitment), forKey: "userCommitment")
+//                        .onTapGesture {
+//                            userDefault.set(Int(commitment), forKey: "userCommitment")
                             //                            print(userDefault.integer(forKey: "userCommitment"))
-                        }
+//                        }
                 }
                 .padding(.top, 20)
                 .disabled(commitment.isEmpty)
@@ -81,6 +82,24 @@ struct CommitmentView: View {
                 let commitmentName = commitmentUserDefault.string(forKey: "userName")
                 
                 comName = commitmentName ?? "error"
+                
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
+                    if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+                        withAnimation {
+                            keyboardHeight = keyboardFrame.height - -50 // Subtract some padding if needed
+                        }
+                    }
+                }
+                
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
+                    withAnimation {
+                        keyboardHeight = 0
+                    }
+                }
+            }
+            .onDisappear {
+                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
             }
         }
         .navigationBarBackButtonHidden(true)

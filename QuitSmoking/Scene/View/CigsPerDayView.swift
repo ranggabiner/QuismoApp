@@ -12,6 +12,7 @@ struct CigsPerDayView: View {
     let userDefault = UserDefaults.standard
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -19,7 +20,6 @@ struct CigsPerDayView: View {
                 .ignoresSafeArea()
             
             VStack {
-                
                 Image("OnboardingPoppy")
                     .resizable()
                     .frame(width: 176, height: 175)
@@ -31,14 +31,16 @@ struct CigsPerDayView: View {
                     .foregroundColor(Color("White"))
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 70)
+                    .padding(.horizontal, 60)
                     .frame(height: 83)
                 
-                Spacer(minLength: 28)
+                    .padding(.bottom, 10)
                 
                 // nih gimana cara centernya :)
                 TextField("type here...", text: $cigsPerDay)
+                    .keyboardType(.numberPad)
                     .textFieldStyle(PlainTextFieldStyle())
+                    .multilineTextAlignment(.center)
                     .frame(width: 120, height: 42)
                     .padding(.horizontal, 10)
                     .background(Color("Primary"))
@@ -53,10 +55,10 @@ struct CigsPerDayView: View {
                     .font(.system(size: 16, weight: .medium))
                     .padding(.vertical, 18)
                 
-                Spacer()
-                    .padding()
+                    Spacer()
                 
                 Button(action: {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     withAnimation {
                         currentStep += 1  // Move to the next step
                     }
@@ -67,13 +69,33 @@ struct CigsPerDayView: View {
                         .background(cigsPerDay.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(cigsPerDay.isEmpty ? Color("White") : Color("Blue066ACC"))
-                        .onTapGesture {
-                            userDefault.set(Int(cigsPerDay), forKey: "userCigPerDay")
-//                            print(userDefault.integer(forKey: "userCigPerDay"))
-                        }
+//                        .onTapGesture {
+//                            userDefault.set(Int(cigsPerDay), forKey: "userCigPerDay")
+                            //                            print(userDefault.integer(forKey: "userCigPerDay"))
+//                        }
                 }
-                .padding(.top, 20)
+//                .padding(.top, 20)
                 .disabled(cigsPerDay.isEmpty)
+                .padding(.bottom, keyboardHeight)
+            }
+            .onAppear {
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
+                    if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+                        withAnimation {
+                            keyboardHeight = keyboardFrame.height - 20 // Subtract some padding if needed
+                        }
+                    }
+                }
+                
+                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
+                    withAnimation {
+                        keyboardHeight = 0
+                    }
+                }
+            }
+            .onDisappear {
+                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
             }
         }
         .navigationBarBackButtonHidden(true)
