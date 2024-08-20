@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CigsPerDayView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var cigsPerDay: String = ""
-    let userDefault = UserDefaults.standard
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
@@ -55,7 +56,12 @@ struct CigsPerDayView: View {
                     .font(.system(size: 16, weight: .medium))
                     .padding(.vertical, 18)
                     .onChange(of: cigsPerDay) { newValue in
-                        UserDefaults.standard.set(newValue, forKey: "userCigsPerDay")
+                        if let intValue = Int(newValue) {
+                            user.onBoarding.cigsPerDay = intValue
+                        } else {
+                            user.onBoarding.cigsPerDay = 0
+                        }
+                        print(user)
                     }
                 
                 Spacer()
@@ -105,7 +111,3 @@ struct CigsPerDayView: View {
     }
 }
 
-#Preview {
-    @State var step = 2
-    return CigsPerDayView(currentStep: $step)
-}

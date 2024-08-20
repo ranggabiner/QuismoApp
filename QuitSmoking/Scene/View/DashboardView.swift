@@ -57,12 +57,13 @@ import SwiftUI
 //}
 
 struct DashboardView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var cigAvoided: Int = 0
     @State private var moneySaved: Int = 0
     @State private var smokeFree: Int = 0
     @State private var selectedDate: Date?
     @State private var quitReasons: [String] = []
-    @State private var timeElapsed: Int = 0
+    @Binding var user: UserModel
     
     var body: some View {
         VStack {
@@ -87,65 +88,29 @@ struct DashboardView: View {
                 }
                 Spacer()
             }
-            
-            .padding()
-            
-            HStack {
-                Spacer()
-                Text("Quit Date: \(selectedDate != nil ? dateFormatter.string(from: selectedDate!) : "Not Set")")
-                Spacer()
-                Text("Reason: \(quitReasons.joined(separator: ", "))")
-                Spacer()
-            }
+
         }
-        .onAppear {
-            let dashUserDefault = UserDefaults.standard
-            let dashCigPerDay = dashUserDefault.integer(forKey: "userCigsPerDay")
-            let dashCigPerPack = dashUserDefault.integer(forKey: "userCigsPerPack")
-            let dashPricePerPack = dashUserDefault.integer(forKey: "userPricePerPack")
+        .onAppear() {
+            let insightCigsPerDay = user.onBoarding.cigsPerDay
+            let insightCigsPerPack = user.onBoarding.cigsPerPack
+            let insightPricePerPack = user.onBoarding.pricePerPack
+            let insightQuitDate = user.onBoarding.setDate
             
-            print("Cig Per Day: \(dashCigPerDay)")
-            print("Cig Per Pack: \(dashCigPerPack)")
-            print("Price Per Pack: \(dashPricePerPack)")
-            print("Time Elapsed: \(timeElapsed)")
+            let timeElapsed = calculateTimeElapsed()
             
-            // Retrieve and parse quit date
-            let dashQuitDateStr = dashUserDefault.string(forKey: "userSetDate")
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
+            cigAvoided = Int(insightCigsPerDay * timeElapsed)
+            moneySaved = Int(insightPricePerPack * insightCigsPerPack * timeElapsed)
+            smokeFree = Int(timeElapsed)
+//            cigAvoided = user.onBoarding.cigsPerDay * smokeFree
+//            moneySaved = (user.onBoarding.pricePerPack / user.onBoarding.cigsPerPack) * (user.onBoarding.cigsPerDay * smokeFree)
+//            smokeFree = calculateTimeElapsed()
             
-            if let quitDateStr = dashQuitDateStr {
-                selectedDate = dateFormatter.date(from: quitDateStr)
-            } else {
-                selectedDate = nil
-            }
             
-            // Calculate timeElapsed
-            if let quitDate = selectedDate {
-                let currentDate = Date()
-                let calendar = Calendar.current
-                let components = calendar.dateComponents([.day], from: quitDate, to: currentDate)
-                timeElapsed = components.day ?? 0
-            } else {
-                timeElapsed = 0
-            }
-            
-            // Calculate cigAvoided, moneySaved, and smokeFree
-            cigAvoided = dashCigPerDay * timeElapsed
-            if dashCigPerPack > 0 {
-                moneySaved = (dashPricePerPack / dashCigPerPack) * (dashCigPerDay * timeElapsed)
-            } else {
-                moneySaved = 0
-            }
-            smokeFree = timeElapsed
-            
-            // Retrieve quit reasons
-            quitReasons = dashUserDefault.array(forKey: "userReason") as? [String] ?? []
         }
     }
     
     private func calculateTimeElapsed() -> Int {
-        guard let quitDate = selectedDate else { return 0 }
+        let quitDate = user.onBoarding.setDate
         let components = Calendar.current.dateComponents([.day], from: quitDate, to: Date())
         return components.day ?? 0
     }
@@ -157,6 +122,6 @@ struct DashboardView: View {
     }
 }
 
-#Preview {
-    DashboardView()
-}
+//#Preview {
+//    DashboardView(user: $user)
+//}

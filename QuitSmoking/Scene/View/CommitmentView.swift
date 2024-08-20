@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CommitmentView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var commitment: String = ""
     let userDefault = UserDefaults.standard
     @State private var comName: String = ""
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
@@ -79,7 +81,7 @@ struct CommitmentView: View {
                 
             }
             .onAppear() {
-                if let commitmentName = UserDefaults.standard.string(forKey: "userName") {
+                if let commitmentName = UserDefaults.standard.string(forKey: "name") {
                     comName = commitmentName
                 } else {
                     comName = "error"
@@ -108,7 +110,3 @@ struct CommitmentView: View {
     }
 }
 
-#Preview {
-    @State var step = 6
-    return CommitmentView(currentStep: $step)
-}

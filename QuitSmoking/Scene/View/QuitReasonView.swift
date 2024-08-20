@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct QuitReasonView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var reason: String = ""
     let userDefault = UserDefaults.standard
     @State private var selectedOptions: Set<String> = []
     let options = ["My health", "My family", "My well-being", "To save money", "To have a child", "My freedom"]
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     
     var body: some View {
         ZStack {
@@ -85,12 +87,9 @@ struct QuitReasonView: View {
     
     private func userQuitReason() {
         let selectedReasons = Array(selectedOptions)
-        UserDefaults.standard.set(Array(selectedOptions), forKey: "userReason")
+        user.onBoarding.quitReason = selectedOptions.joined(separator: ", ")
+        print(user)
     }
 }
 
 
-#Preview {
-    @State var step = 1
-    return QuitReasonView(currentStep: $step)
-}

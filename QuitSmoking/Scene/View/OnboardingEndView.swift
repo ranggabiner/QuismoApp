@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct OnboardingEndView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     
     var body: some View {
         ZStack {
@@ -46,7 +48,7 @@ struct OnboardingEndView: View {
                 }
                 .padding(.top, 20)
                 .fullScreenCover(isPresented: $showNextView) {
-                    DashboardView()
+                    DashboardView(user: $user)
                 }
                 
                 Spacer()
@@ -62,7 +64,3 @@ struct OnboardingEndView: View {
     }
 }
 
-#Preview {
-    @State var step = 8
-    return OnboardingEndView(currentStep: $step)
-}

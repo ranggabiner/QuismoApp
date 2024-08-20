@@ -11,6 +11,16 @@ struct OnboardingView: View {
     @State private var currentStep: Int = 1
     private let totalSteps = 8
     
+    @State var user = UserModel(
+        id: UUID(),
+        onBoarding: OnBoardingModel(),
+        cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
+        chatBuddy: ChatLogModel(messages: []),
+        chatSessions: [],
+        badges: [])
+    
+    var viewModel = OnBoardingViewModel()
+    
     var body: some View {
         ZStack {
             Color("Primary")
@@ -46,21 +56,21 @@ struct OnboardingView: View {
     private func viewForStep(_ step: Int) -> some View {
         switch step {
         case 1:
-            QuitReasonView(currentStep: $currentStep)
+            QuitReasonView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 2:
-            CigsPerDayView(currentStep: $currentStep)
+            CigsPerDayView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 3:
-            CigsPerPackView(currentStep: $currentStep)
+            CigsPerPackView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 4:
-            PricePerPackView(currentStep: $currentStep)
+            PricePerPackView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 5:
-            NameView(currentStep: $currentStep)
+            NameView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 6:
-            CommitmentView(currentStep: $currentStep)
+            CommitmentView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 7:
-            SetDateView(currentStep: $currentStep)
+            SetDateView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         case 8:
-            OnboardingEndView(currentStep: $currentStep)
+            OnboardingEndView(viewModel: viewModel, currentStep: $currentStep, user: $user)
         default:
             EmptyView()
         }
