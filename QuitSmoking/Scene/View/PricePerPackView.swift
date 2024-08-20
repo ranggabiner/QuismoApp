@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PricePerPackView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var pricePerPack: String = ""
     let userDefault = UserDefaults.standard
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
@@ -80,8 +82,13 @@ struct PricePerPackView: View {
                         .foregroundColor(Color("White"))
                         .font(.system(size: 16, weight: .medium))
                         .onChange(of: pricePerPack) { newValue in
-                            UserDefaults.standard.set(newValue, forKey: "userPricePerPack")
-                                            }
+                            if let intValue = Int(newValue) {
+                                user.onBoarding.pricePerPack = intValue
+                            } else {
+                                user.onBoarding.pricePerPack = 0
+                            }
+                            print(user)
+                        }
                     
                     Spacer()
                 }
@@ -100,10 +107,10 @@ struct PricePerPackView: View {
                         .background(pricePerPack.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(pricePerPack.isEmpty ? Color("White") : Color("Blue066ACC"))
-//                        .onTapGesture {
-//                            userDefault.set(Int(pricePerPack), forKey: "userPricePerPack")
-                            //                            print(userDefault.integer(forKey: "userPricePerPack"))
-//                        }
+                    //                        .onTapGesture {
+                    //                            userDefault.set(Int(pricePerPack), forKey: "userPricePerPack")
+                    //                            print(userDefault.integer(forKey: "userPricePerPack"))
+                    //                        }
                 }
                 .padding(.bottom, keyboardHeight)
                 .disabled(pricePerPack.isEmpty)
@@ -132,7 +139,3 @@ struct PricePerPackView: View {
     }
 }
 
-#Preview {
-    @State var step = 4
-    return PricePerPackView(currentStep: $step)
-}

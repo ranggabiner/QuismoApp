@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CigsPerPackView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var cigsPerPack: String = ""
     let userDefault = UserDefaults.standard
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
@@ -55,7 +57,12 @@ struct CigsPerPackView: View {
                     .foregroundColor(Color("White"))
                     .font(.system(size: 16, weight: .medium))
                     .onChange(of: cigsPerPack) { newValue in
-                        UserDefaults.standard.set(newValue, forKey: "userCigsPerPack")
+                        if let intValue = Int(newValue) {
+                            user.onBoarding.cigsPerPack = intValue
+                        } else {
+                            user.onBoarding.cigsPerPack = 0
+                        }
+                        print(user)
                     }
                 
                 Spacer()
@@ -104,7 +111,3 @@ struct CigsPerPackView: View {
     }
 }
 
-#Preview {
-    @State var step = 3
-    return CigsPerPackView(currentStep: $step)
-}

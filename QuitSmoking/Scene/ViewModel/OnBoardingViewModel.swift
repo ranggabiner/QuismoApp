@@ -9,7 +9,8 @@ import Combine
 
 class OnBoardingViewModel: ObservableObject {
     @Published var form = OnBoardingModel()
-
+    
+    
     func saveData() {
         print("Form saved: \(form)")
     }

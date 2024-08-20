@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct NameView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var name: String = ""
     let userDefault = UserDefaults.standard
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
@@ -54,8 +56,11 @@ struct NameView: View {
                     .foregroundColor(Color("White"))
                     .font(.system(size: 16, weight: .medium))
                     .onChange(of: name) { newValue in
-                        UserDefaults.standard.set(newValue, forKey: "userName")
-                                        }
+                        user.onBoarding.name = name
+                        UserDefaults.standard.set(name, forKey: "name")
+                        print(user)
+                    }
+                
                 
                 Spacer()
                 
@@ -71,10 +76,10 @@ struct NameView: View {
                         .background(name.isEmpty ? Color("Gray1") : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(name.isEmpty ? Color("White") : Color("Blue066ACC"))
-//                        .onTapGesture {
-//                            userDefault.set(Int(name), forKey: "userName")
-                            //                            print(userDefault.integer(forKey: "userName"))
-//                        }
+                    //                        .onTapGesture {
+                    //                            userDefault.set(Int(name), forKey: "userName")
+                    //                            print(userDefault.integer(forKey: "userName"))
+                    //                        }
                 }
                 .padding(.bottom, keyboardHeight)
                 .disabled(name.isEmpty)
@@ -103,7 +108,3 @@ struct NameView: View {
     }
 }
 
-#Preview {
-    @State var step = 5
-    return NameView(currentStep: $step)
-}

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SetDateView: View {
+    var viewModel = OnBoardingViewModel()
     @State private var setDate: String = ""
     @State private var selectedDate = Date() {
         didSet {
@@ -16,6 +17,7 @@ struct SetDateView: View {
     }
     @State private var showNextView = false
     @Binding var currentStep: Int
+    @Binding var user: UserModel
     
     var body: some View {
         ZStack {
@@ -46,7 +48,9 @@ struct SetDateView: View {
                             .labelsHidden()
                             .padding()
                             .onChange(of: selectedDate) { newDate in
+                                user.onBoarding.setDate = newDate
                                 userSelectedDate()
+                                print(user)
                             }
                     }
                     .cornerRadius(10)
@@ -92,7 +96,3 @@ struct SetDateView: View {
     }
 }
 
-#Preview {
-    @State var step = 7
-    return SetDateView(currentStep: $step)
-}
