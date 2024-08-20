@@ -12,12 +12,19 @@
 		4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */; };
 		4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */; };
 		4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */; };
+		8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */; };
 		8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */; };
 		8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1D2C662471009F50C3 /* ContentView.swift */; };
 		8F2BAE202C662473009F50C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1F2C662473009F50C3 /* Assets.xcassets */; };
 		8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */; };
+		8F8B13F12C6FACE6000C0780 /* CommitmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F02C6FACE6000C0780 /* CommitmentView.swift */; };
+		8F8B13F32C6FAF07000C0780 /* SetDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F22C6FAF07000C0780 /* SetDateView.swift */; };
+		8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */; };
+		8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F82C708375000C0780 /* DashboardView.swift */; };
+		8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */; };
 		8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */; };
 		8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD1B2C6DF03400E9A157 /* GreetingsViewController.swift */; };
+		8FDDF3BB2C73A43400FB2B80 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDF3BA2C73A43300FB2B80 /* OnboardingView.swift */; };
 		E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */; };
 		E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */; };
 		E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */; };
@@ -45,13 +52,20 @@
 		4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikeTestingView.swift; sourceTree = "<group>"; };
 		4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSmokingView.swift; sourceTree = "<group>"; };
 		4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSmokeView.swift; sourceTree = "<group>"; };
+		8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		8F2BAE182C662471009F50C3 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingApp.swift; sourceTree = "<group>"; };
 		8F2BAE1D2C662471009F50C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F2BAE1F2C662473009F50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F8B13F02C6FACE6000C0780 /* CommitmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitmentView.swift; sourceTree = "<group>"; };
+		8F8B13F22C6FAF07000C0780 /* SetDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateView.swift; sourceTree = "<group>"; };
+		8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEndView.swift; sourceTree = "<group>"; };
+		8F8B13F82C708375000C0780 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerPackView.swift; sourceTree = "<group>"; };
 		8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		8FB2DD1B2C6DF03400E9A157 /* GreetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewController.swift; sourceTree = "<group>"; };
+		8FDDF3BA2C73A43300FB2B80 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E03A3F8D2C6B44FE00EBC763 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitReasonViewController.swift; sourceTree = "<group>"; };
@@ -155,8 +169,15 @@
 				8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */,
 				E03A3FAD2C6C99D700EBC763 /* QuitReasonView.swift */,
 				E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */,
+				8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */,
 				E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */,
 				E03A3FB52C6CAB4800EBC763 /* NameView.swift */,
+				8F8B13F02C6FACE6000C0780 /* CommitmentView.swift */,
+				8F8B13F22C6FAF07000C0780 /* SetDateView.swift */,
+				8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */,
+				8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */,
+				8FDDF3BA2C73A43300FB2B80 /* OnboardingView.swift */,
+				8F8B13F82C708375000C0780 /* DashboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,21 +344,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */,
+				8F8B13F32C6FAF07000C0780 /* SetDateView.swift in Sources */,
 				8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */,
 				4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */,
+				8F8B13F12C6FACE6000C0780 /* CommitmentView.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
+				8FDDF3BB2C73A43400FB2B80 /* OnboardingView.swift in Sources */,
 				4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */,
 				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
 				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
 				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
 				E03A3F8E2C6B44FE00EBC763 /* OnBoardingModel.swift in Sources */,
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
+				8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */,
 				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
 				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
 				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
+				8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */,
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
+				8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */,
+				8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */,
 				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
 				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
 			);
@@ -488,7 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				DEVELOPMENT_TEAM = DXHNB7CJR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -518,7 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				DEVELOPMENT_TEAM = DXHNB7CJR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
