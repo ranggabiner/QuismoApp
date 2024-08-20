@@ -54,6 +54,9 @@ struct CigsPerDayView: View {
                     .foregroundColor(Color("White"))
                     .font(.system(size: 16, weight: .medium))
                     .padding(.vertical, 18)
+                    .onChange(of: cigsPerDay) { newValue in
+                        UserDefaults.standard.set(newValue, forKey: "userCigsPerDay")
+                                        }
                 
                     Spacer()
                 

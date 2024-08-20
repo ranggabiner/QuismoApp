@@ -9,8 +9,11 @@ import SwiftUI
 
 struct SetDateView: View {
     @State private var setDate: String = ""
-    let userDefault = UserDefaults.standard
-    @State private var selectedDate = Date()
+    @State private var selectedDate = Date() {
+        didSet {
+            userSelectedDate()
+        }
+    }
     @State private var showNextView = false
     @Binding var currentStep: Int
     
@@ -42,6 +45,9 @@ struct SetDateView: View {
                             .frame(width: 50, height: 200)
                             .labelsHidden()
                             .padding()
+                            .onChange(of: selectedDate) { newDate in
+                                userSelectedDate()
+                            }
                     }
                     .cornerRadius(10)
                     .padding()
@@ -51,6 +57,10 @@ struct SetDateView: View {
                     .padding()
                 
                 Button(action: {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateStyle = .medium
+                    let dateString = dateFormatter.string(from: selectedDate)
+                    UserDefaults.standard.set(dateString, forKey: "userSetDate")
                     withAnimation {
                         currentStep += 1  // Move to the next step or finish
                     }
@@ -72,6 +82,13 @@ struct SetDateView: View {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter
+    }
+    
+    private func userSelectedDate() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        let dateString = formatter.string(from: selectedDate)
+        UserDefaults.standard.set(dateString, forKey: "userSelectedDate")
     }
 }
 
