@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CigsPerPackView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var cigsPerPack: String = ""
     let userDefault = UserDefaults.standard
     @State private var showNextView = false

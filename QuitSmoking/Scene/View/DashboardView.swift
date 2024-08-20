@@ -57,7 +57,7 @@ import SwiftUI
 //}
 
 struct DashboardView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var cigAvoided: Int = 0
     @State private var moneySaved: Int = 0
     @State private var smokeFree: Int = 0

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SetDateView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var setDate: String = ""
     @State private var selectedDate = Date() {
         didSet {

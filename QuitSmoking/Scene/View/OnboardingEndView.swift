@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingEndView: View {
-    var viewModel = OnBoardingViewModel()
+    @StateObject var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var showNextView = false
     @Binding var currentStep: Int
     @Binding var user: UserModel
@@ -35,6 +35,7 @@ struct OnboardingEndView: View {
                 Spacer(minLength: 24)
                 
                 Button(action: {
+                    viewModel.saveData()
                     withAnimation {
                         showNextView = true
                     }

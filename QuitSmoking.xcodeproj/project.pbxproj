@@ -13,6 +13,7 @@
 		4A3A82032C733C25004C27A6 /* MonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82022C733C25004C27A6 /* MonthModel.swift */; };
 		4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82042C733E32004C27A6 /* TrackViewModel.swift */; };
 		4A3A82072C735A2C004C27A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82062C735A2C004C27A6 /* HomeView.swift */; };
+		4A655EF02C749FE500234EDE /* OnBoardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */; };
 		4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D82C724176009409B9 /* BadgeModel.swift */; };
 		4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D92C724176009409B9 /* ChatLogModel.swift */; };
 		4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */; };
@@ -75,6 +76,7 @@
 		4A3A82022C733C25004C27A6 /* MonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthModel.swift; sourceTree = "<group>"; };
 		4A3A82042C733E32004C27A6 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		4A3A82062C735A2C004C27A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingUseCase.swift; sourceTree = "<group>"; };
 		4A7851D82C724176009409B9 /* BadgeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeModel.swift; sourceTree = "<group>"; };
 		4A7851D92C724176009409B9 /* ChatLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogModel.swift; sourceTree = "<group>"; };
 		4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CigaretteLogModel.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */,
+				4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
 				8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */,
 				8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */,
+				4A655EF02C749FE500234EDE /* OnBoardingUseCase.swift in Sources */,
 				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
 				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
 				4A3A82012C733BCC004C27A6 /* TrackView.swift in Sources */,

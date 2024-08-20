@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NameView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var name: String = ""
     let userDefault = UserDefaults.standard
     @State private var showNextView = false

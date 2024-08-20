@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CigsPerDayView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var cigsPerDay: String = ""
     @State private var showNextView = false
     @Binding var currentStep: Int
