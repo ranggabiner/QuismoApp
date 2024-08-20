@@ -63,6 +63,6 @@ struct OnboardingEndView: View {
 }
 
 #Preview {
-    @State var step = 1
-    OnboardingEndView(currentStep: $step)
+    @State var step = 8
+    return OnboardingEndView(currentStep: $step)
 }

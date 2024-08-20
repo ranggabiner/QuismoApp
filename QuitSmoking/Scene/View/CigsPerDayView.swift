@@ -106,6 +106,6 @@ struct CigsPerDayView: View {
 }
 
 #Preview {
-    @State var step = 1
-    CigsPerDayView(currentStep: $step)
+    @State var step = 2
+    return CigsPerDayView(currentStep: $step)
 }

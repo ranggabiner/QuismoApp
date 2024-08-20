@@ -92,5 +92,5 @@ struct QuitReasonView: View {
 
 #Preview {
     @State var step = 1
-    QuitReasonView(currentStep: $step)
+    return QuitReasonView(currentStep: $step)
 }

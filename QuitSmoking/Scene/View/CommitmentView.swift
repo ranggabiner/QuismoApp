@@ -109,6 +109,6 @@ struct CommitmentView: View {
 }
 
 #Preview {
-    @State var step = 1
-    CommitmentView(currentStep: $step)
+    @State var step = 6
+    return CommitmentView(currentStep: $step)
 }

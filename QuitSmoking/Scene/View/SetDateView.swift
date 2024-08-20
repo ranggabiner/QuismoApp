@@ -93,6 +93,6 @@ struct SetDateView: View {
 }
 
 #Preview {
-    @State var step = 1
-    SetDateView(currentStep: $step)
+    @State var step = 7
+    return SetDateView(currentStep: $step)
 }

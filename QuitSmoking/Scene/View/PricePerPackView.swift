@@ -133,6 +133,6 @@ struct PricePerPackView: View {
 }
 
 #Preview {
-    @State var step = 1
-    PricePerPackView(currentStep: $step)
+    @State var step = 4
+    return PricePerPackView(currentStep: $step)
 }

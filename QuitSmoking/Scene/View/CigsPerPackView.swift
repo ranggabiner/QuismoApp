@@ -105,6 +105,6 @@ struct CigsPerPackView: View {
 }
 
 #Preview {
-    @State var step = 1
-    CigsPerPackView(currentStep: $step)
+    @State var step = 3
+    return CigsPerPackView(currentStep: $step)
 }

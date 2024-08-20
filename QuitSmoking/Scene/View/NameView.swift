@@ -104,6 +104,6 @@ struct NameView: View {
 }
 
 #Preview {
-    @State var step = 1
-    NameView(currentStep: $step)
+    @State var step = 5
+    return NameView(currentStep: $step)
 }
