@@ -80,7 +80,7 @@ class GreetingsViewController: UIViewController {
             nextButton.widthAnchor.constraint(equalToConstant: 100),
             nextButton.heightAnchor.constraint(equalToConstant: 42),
             
-            poppy.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            poppy.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 256),
             poppy.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             poppy.widthAnchor.constraint(equalToConstant: 393),
         ])

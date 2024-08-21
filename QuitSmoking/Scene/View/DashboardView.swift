@@ -70,21 +70,39 @@ struct DashboardView: View {
             HStack {
                 Spacer()
                 VStack {
-                    Image(systemName: "star")
+                    Image("CigAvoided")
+                        .resizable()
+                        .frame(width: 45, height: 45)
                     Text("\(cigAvoided)")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Primary"))
                     Text("Cig Avoided")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Primary"))
                 }
                 Spacer()
                 VStack {
-                    Image(systemName: "star")
+                    Image("MoneySaved")
+                        .resizable()
+                        .frame(width: 30, height: 30)
                     Text("Rp. \(moneySaved)")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Primary"))
                     Text("Money Saved")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Primary"))
                 }
                 Spacer()
                 VStack {
-                    Image(systemName: "star")
+                    Image("SmokeFree")
+                        .resizable()
+                        .frame(width: 45, height: 45)
                     Text("\(smokeFree)")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Primary"))
                     Text("Smoke Free")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("Primary"))
                 }
                 Spacer()
             }
