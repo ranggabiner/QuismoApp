@@ -50,13 +50,14 @@
 		E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */; };
 		E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */; };
 		E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FB52C6CAB4800EBC763 /* NameView.swift */; };
-		E03A3FE32C733C0500EBC763 /* AchievementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE22C733C0500EBC763 /* AchievementCard.swift */; };
-		E03A3FE52C733C1700EBC763 /* AchievementModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE42C733C1700EBC763 /* AchievementModal.swift */; };
-		E03A3FE72C733C6700EBC763 /* AchievementRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE62C733C6700EBC763 /* AchievementRepository.swift */; };
+		E03A3FE32C733C0500EBC763 /* BadgeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */; };
+		E03A3FE52C733C1700EBC763 /* BadgeModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */; };
+		E03A3FE72C733C6700EBC763 /* BadgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE62C733C6700EBC763 /* BadgeRepository.swift */; };
 		E03A3FE92C733CA600EBC763 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE82C733CA600EBC763 /* Achievement.swift */; };
-		E03A3FED2C733D0B00EBC763 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FEC2C733D0B00EBC763 /* AchievementView.swift */; };
-		E03A3FEF2C733D3100EBC763 /* AchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FEE2C733D3100EBC763 /* AchievementViewModel.swift */; };
-		E03A3FF12C733D7C00EBC763 /* FetchAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FF02C733D7C00EBC763 /* FetchAchievements.swift */; };
+		E03A3FED2C733D0B00EBC763 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */; };
+		E03A3FEF2C733D3100EBC763 /* BadgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FEE2C733D3100EBC763 /* BadgeViewModel.swift */; };
+		E03A3FF42C75D38000EBC763 /* badgesData.json in Resources */ = {isa = PBXBuildFile; fileRef = E03A3FF32C75D38000EBC763 /* badgesData.json */; };
+		E03A3FF62C75F02F00EBC763 /* BadgeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FF52C75F02F00EBC763 /* BadgeUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,13 +115,14 @@
 		E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerPackView.swift; sourceTree = "<group>"; };
 		E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		E03A3FB52C6CAB4800EBC763 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
-		E03A3FE22C733C0500EBC763 /* AchievementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCard.swift; sourceTree = "<group>"; };
-		E03A3FE42C733C1700EBC763 /* AchievementModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModal.swift; sourceTree = "<group>"; };
-		E03A3FE62C733C6700EBC763 /* AchievementRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementRepository.swift; sourceTree = "<group>"; };
+		E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCardView.swift; sourceTree = "<group>"; };
+		E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeModalView.swift; sourceTree = "<group>"; };
+		E03A3FE62C733C6700EBC763 /* BadgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeRepository.swift; sourceTree = "<group>"; };
 		E03A3FE82C733CA600EBC763 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		E03A3FEC2C733D0B00EBC763 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
-		E03A3FEE2C733D3100EBC763 /* AchievementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewModel.swift; sourceTree = "<group>"; };
-		E03A3FF02C733D7C00EBC763 /* FetchAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAchievements.swift; sourceTree = "<group>"; };
+		E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		E03A3FEE2C733D3100EBC763 /* BadgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewModel.swift; sourceTree = "<group>"; };
+		E03A3FF32C75D38000EBC763 /* badgesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = badgesData.json; sourceTree = "<group>"; };
+		E03A3FF52C75F02F00EBC763 /* BadgeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */,
 				4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */,
+				E03A3FF52C75F02F00EBC763 /* BadgeUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 		8F2BAE1A2C662471009F50C3 /* QuitSmoking */ = {
 			isa = PBXGroup;
 			children = (
+				E03A3FF22C75D35000EBC763 /* Resources */,
 				E03A3FE12C733BDD00EBC763 /* Components */,
 				E03A3FB72C6DF52600EBC763 /* Data */,
 				E03A3FB82C6DF52C00EBC763 /* Domain */,
@@ -218,7 +222,7 @@
 			children = (
 				E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */,
 				4A3A82042C733E32004C27A6 /* TrackViewModel.swift */,
-				E03A3FEE2C733D3100EBC763 /* AchievementViewModel.swift */,
+				E03A3FEE2C733D3100EBC763 /* BadgeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,7 +256,7 @@
 				8F8B13F82C708375000C0780 /* DashboardView.swift */,
 				4A3A82002C733BCC004C27A6 /* TrackView.swift */,
 				4A3A82062C735A2C004C27A6 /* HomeView.swift */,
-				E03A3FEC2C733D0B00EBC763 /* AchievementView.swift */,
+				E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,8 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7851EB2C7244CB009409B9 /* UserRepository.swift */,
-				E03A3FE62C733C6700EBC763 /* AchievementRepository.swift */,
-				E03A3FF02C733D7C00EBC763 /* FetchAchievements.swift */,
+				E03A3FE62C733C6700EBC763 /* BadgeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -298,10 +301,18 @@
 		E03A3FE12C733BDD00EBC763 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E03A3FE22C733C0500EBC763 /* AchievementCard.swift */,
-				E03A3FE42C733C1700EBC763 /* AchievementModal.swift */,
+				E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */,
+				E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		E03A3FF22C75D35000EBC763 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E03A3FF32C75D38000EBC763 /* badgesData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */,
+				E03A3FF42C75D38000EBC763 /* badgesData.json in Resources */,
 				8F2BAE202C662473009F50C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +433,6 @@
 				8FDDF3BB2C73A43400FB2B80 /* OnboardingView.swift in Sources */,
 				4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */,
 				4A7851EA2C724483009409B9 /* SwiftDataManager.swift in Sources */,
-				E03A3FF12C733D7C00EBC763 /* FetchAchievements.swift in Sources */,
 				4A3A81FD2C724C85004C27A6 /* CigaretteLogUseCase.swift in Sources */,
 				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
 				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
@@ -431,24 +442,25 @@
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
 				8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */,
 				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
-				E03A3FE32C733C0500EBC763 /* AchievementCard.swift in Sources */,
+				E03A3FE32C733C0500EBC763 /* BadgeCardView.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
 				4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */,
 				4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
-				E03A3FEF2C733D3100EBC763 /* AchievementViewModel.swift in Sources */,
+				E03A3FEF2C733D3100EBC763 /* BadgeViewModel.swift in Sources */,
 				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
-				E03A3FED2C733D0B00EBC763 /* AchievementView.swift in Sources */,
+				E03A3FED2C733D0B00EBC763 /* BadgeView.swift in Sources */,
 				4A7851E32C724176009409B9 /* MessageModel.swift in Sources */,
 				E03A3FE92C733CA600EBC763 /* Achievement.swift in Sources */,
 				4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */,
 				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
-				E03A3FE52C733C1700EBC763 /* AchievementModal.swift in Sources */,
-				E03A3FE72C733C6700EBC763 /* AchievementRepository.swift in Sources */,
+				E03A3FE52C733C1700EBC763 /* BadgeModalView.swift in Sources */,
+				E03A3FE72C733C6700EBC763 /* BadgeRepository.swift in Sources */,
 				4A7851E42C724176009409B9 /* OnBoardingModel.swift in Sources */,
 				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
 				4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */,
 				8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */,
+				E03A3FF62C75F02F00EBC763 /* BadgeUseCase.swift in Sources */,
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
 				8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */,
 				8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */,

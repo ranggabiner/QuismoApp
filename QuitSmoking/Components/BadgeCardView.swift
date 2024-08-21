@@ -1,5 +1,5 @@
 //
-//  AchievementCard.swift
+//  BadgeCardView.swift
 //  QuitSmoking
 //
 //  Created by Nur Nisrina on 18/08/24.
@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct AchievementCard: View {
-    let achievement: Achievement
+struct BadgeCardView: View {
+    let badge: BadgeModel
+    let cardWidth: CGFloat
+    let cardHeight: CGFloat
     
     var borderGradient = Gradient(
         colors: [
@@ -37,17 +39,17 @@ struct AchievementCard: View {
                         startPoint: .leading,
                         endPoint: .trailing
                     ),
-                    lineWidth: 2
+                    lineWidth: 4
                 )
-                .frame(width: 130, height: 170)
-            Image(achievement.imageName)
+                .frame(width: cardWidth, height: cardHeight)
+            Image(badge.imageName)
                 .resizable()
                 .padding(.trailing, 10)
                 .padding(.leading, 2)
                 .aspectRatio(contentMode: .fill)
             VStack {
                 Spacer()
-                Text(achievement.title)
+                Text(badge.title)
                     .foregroundStyle(.white)
                     .font(.headline)
                     .bold()
@@ -65,9 +67,19 @@ struct AchievementCard: View {
             }
             .background(Color(.clear))
             .cornerRadius(15)
-            .frame(width: 130, height: 170)
+            .frame(width: cardWidth, height: cardHeight)
+            
+            if !badge.isEarned {
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: cardWidth, height: cardHeight)
+                    .foregroundStyle(.white)
+                    .opacity(0.8)
+            }
         }
-        .frame(width: 130, height: 170)
+        .frame(width: cardWidth, height: cardHeight)
+        .background(Color(.yellowTint3))
+        .cornerRadius(15)
+
     }
        
 }

@@ -7,6 +7,11 @@
 
 import Foundation
 
-struct BadgeModel: Identifiable, Codable{
-    var id: UUID = .init()
+struct BadgeModel: Identifiable, Codable {
+    var id: Int
+    var title: String
+    var subtitle: String
+    var imageName: String
+    var isEarned: Bool
+    var category: String
 }
