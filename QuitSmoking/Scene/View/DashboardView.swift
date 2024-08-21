@@ -84,7 +84,7 @@ struct DashboardView: View {
                 VStack {
                     Image("MoneySaved")
                         .resizable()
-                        .frame(width: 30, height: 30)
+                        .frame(width: 45, height: 45)
                     Text("Rp. \(moneySaved)")
                         .fontWeight(.semibold)
                         .foregroundColor(Color("Primary"))
@@ -96,7 +96,8 @@ struct DashboardView: View {
                 VStack {
                     Image("SmokeFree")
                         .resizable()
-                        .frame(width: 45, height: 45)
+                        .frame(width: 35, height: 35)
+                        .padding(.vertical, 5)
                     Text("\(smokeFree)")
                         .fontWeight(.semibold)
                         .foregroundColor(Color("Primary"))
