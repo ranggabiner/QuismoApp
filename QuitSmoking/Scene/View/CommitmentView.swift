@@ -46,16 +46,12 @@ struct CommitmentView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: 290, height: 42)
                     .padding(.horizontal, 10)
-                    .background(Color("Primary"))
+                    .background(Color("BlueTint3"))
                     .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color("White"), lineWidth: 2)
-                    )
                     .padding(.horizontal, 39)
                     .padding(.bottom)
-                    .foregroundColor(Color("White"))
-                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(Color("BlueShade3"))
+                    .font(.system(size: 16, weight: .semibold))
                 
                 Spacer()
                 
@@ -68,7 +64,7 @@ struct CommitmentView: View {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(commitment.isEmpty ? Color("Gray1") : Color("White"))
+                        .background(commitment.isEmpty ? Color("Gray1").opacity(0.6) : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(commitment.isEmpty ? Color("White") : Color("Blue066ACC"))
                     //                        .onTapGesture {

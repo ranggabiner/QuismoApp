@@ -26,7 +26,7 @@ struct CigsPerDayView: View {
                     .frame(width: 176, height: 175)
                     .foregroundStyle(.tint)
                 
-                Text("That’s a strong motivation. Let’s dig a little deeper. How many cigarettes do you smoke each day?")
+                Text("Great motivation! Let’s dive deeper. How many cigarettes do you smoke daily?")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(Color("White"))
@@ -38,22 +38,18 @@ struct CigsPerDayView: View {
                     .padding(.bottom, 10)
                 
                 // nih gimana cara centernya :)
-                TextField("type here...", text: $cigsPerDay)
+                TextField("Type here...", text: $cigsPerDay)
                     .keyboardType(.numberPad)
                     .textFieldStyle(PlainTextFieldStyle())
                     .multilineTextAlignment(.center)
                     .frame(width: 120, height: 42)
                     .padding(.horizontal, 10)
-                    .background(Color("Primary"))
+                    .background(Color("BlueTint3"))
                     .cornerRadius(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color("White"), lineWidth: 2)
-                    )
                     .padding(.horizontal, 39)
                     .padding(.bottom)
-                    .foregroundColor(Color("White"))
-                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(Color("BlueShade3"))
+                    .font(.system(size: 16, weight: .semibold))
                     .padding(.vertical, 18)
                     .onChange(of: cigsPerDay) { newValue in
                         if let intValue = Int(newValue) {
@@ -75,7 +71,7 @@ struct CigsPerDayView: View {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(cigsPerDay.isEmpty ? Color("Gray1") : Color("White"))
+                        .background(cigsPerDay.isEmpty ? Color("Gray1").opacity(0.6) : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(cigsPerDay.isEmpty ? Color("White") : Color("Blue066ACC"))
                     //                        .onTapGesture {
