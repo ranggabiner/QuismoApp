@@ -97,6 +97,7 @@ struct DashboardView: View {
                             .opacity(0.5)
                     }
                     .offset(x: 150, y: -500)
+
                     
                     //easter egg
                     ZStack {
@@ -113,8 +114,7 @@ struct DashboardView: View {
                             .frame(width: 336, height: 326)
                     }
                     .offset(x: -75, y: -305)
-                    
-                    //Chatbubble belakang
+
                     ZStack {
                         Rectangle()
                             .frame(width: 142, height: 60)
@@ -141,12 +141,14 @@ struct DashboardView: View {
                             .frame(width: 142, height: 60)
                             .foregroundColor(Color("White"))
 //                            .shadow(radius: 4)
+
                             .cornerRadius(15)
                         
                         Circle()
                             .frame(width: 18, height: 18)
                             .foregroundColor(Color("White"))
 //                            .shadow(radius: 4)
+
                             .padding(.top, 60)
                             .padding(.trailing, 125)
                         
@@ -164,6 +166,7 @@ struct DashboardView: View {
                         .foregroundColor(Color("White"))
                         .padding(.top, 75)
                     
+
                     ZStack {
                         
                         VStack {
@@ -175,6 +178,7 @@ struct DashboardView: View {
                                     .padding(.leading, 20)
                                     .padding(.bottom, 0)
                                     .padding(.top, 75)
+
                                 Spacer()
                             }
                             Rectangle()
@@ -182,6 +186,7 @@ struct DashboardView: View {
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
                                 .padding(.bottom, 10)
+
                             Rectangle()
                                 .frame(width: 353, height: 100)
                                 .foregroundColor(Color("Primary"))
@@ -192,11 +197,13 @@ struct DashboardView: View {
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
                                 .padding(.bottom, 10)
+
                             Rectangle()
                                 .frame(width: 353, height: 100)
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
                                 .padding(.bottom, 10)
+
 //                            Rectangle()
 //                                .frame(width: 353, height: 100)
 //                                .foregroundColor(Color("Primary"))
@@ -208,6 +215,7 @@ struct DashboardView: View {
                     }
                     
                     //insight box
+
                     ZStack {
                         Rectangle()
                             .frame(width: 353, height: 100)
@@ -216,11 +224,13 @@ struct DashboardView: View {
                             .shadow(radius: 4)
                             .offset(x: 0, y: -250)
                         
+
                         ZStack {
                             VStack {
                                 HStack {
                                     Spacer()
                                     //Cigaratte Avoided
+
                                     VStack {
                                         Image("CigAvoided")
                                             .resizable()
@@ -236,6 +246,7 @@ struct DashboardView: View {
                                     Spacer()
                                     Spacer()
                                     //Money Saved
+
                                     VStack {
                                         Image("MoneySaved")
                                             .resizable()

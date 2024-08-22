@@ -25,9 +25,8 @@
 		4A7851EC2C7244CB009409B9 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851EB2C7244CB009409B9 /* UserRepository.swift */; };
 		4ADDBB252C6B425E003531B3 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 4ADDBB242C6B425E003531B3 /* OpenAI */; };
 		4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */; };
-		4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */; };
-		4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */; };
 		4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */; };
+		4AEE519B2C75F75200895BC0 /* BreathingVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4AEE519A2C75F75200895BC0 /* BreathingVideo.mov */; };
 		8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */; };
 		8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */; };
 		8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1D2C662471009F50C3 /* ContentView.swift */; };
@@ -53,11 +52,11 @@
 		E03A3FE32C733C0500EBC763 /* BadgeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */; };
 		E03A3FE52C733C1700EBC763 /* BadgeModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */; };
 		E03A3FE72C733C6700EBC763 /* BadgeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE62C733C6700EBC763 /* BadgeRepository.swift */; };
-		E03A3FE92C733CA600EBC763 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FE82C733CA600EBC763 /* Achievement.swift */; };
 		E03A3FED2C733D0B00EBC763 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */; };
 		E03A3FEF2C733D3100EBC763 /* BadgeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FEE2C733D3100EBC763 /* BadgeViewModel.swift */; };
 		E03A3FF42C75D38000EBC763 /* badgesData.json in Resources */ = {isa = PBXBuildFile; fileRef = E03A3FF32C75D38000EBC763 /* badgesData.json */; };
 		E03A3FF62C75F02F00EBC763 /* BadgeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FF52C75F02F00EBC763 /* BadgeUseCase.swift */; };
+		E03A3FF82C76D72A00EBC763 /* BadgeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03A3FF72C76D72A00EBC763 /* BadgeSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +87,8 @@
 		4A7851E92C724483009409B9 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		4A7851EB2C7244CB009409B9 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingTechniqueView.swift; sourceTree = "<group>"; };
-		4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikeTestingView.swift; sourceTree = "<group>"; };
-		4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSmokingView.swift; sourceTree = "<group>"; };
 		4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSmokeView.swift; sourceTree = "<group>"; };
+		4AEE519A2C75F75200895BC0 /* BreathingVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BreathingVideo.mov; sourceTree = "<group>"; };
 		8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		8F2BAE182C662471009F50C3 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingApp.swift; sourceTree = "<group>"; };
@@ -118,11 +116,11 @@
 		E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCardView.swift; sourceTree = "<group>"; };
 		E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeModalView.swift; sourceTree = "<group>"; };
 		E03A3FE62C733C6700EBC763 /* BadgeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeRepository.swift; sourceTree = "<group>"; };
-		E03A3FE82C733CA600EBC763 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		E03A3FEE2C733D3100EBC763 /* BadgeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewModel.swift; sourceTree = "<group>"; };
 		E03A3FF32C75D38000EBC763 /* badgesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = badgesData.json; sourceTree = "<group>"; };
 		E03A3FF52C75F02F00EBC763 /* BadgeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeUseCase.swift; sourceTree = "<group>"; };
+		E03A3FF72C76D72A00EBC763 /* BadgeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +145,6 @@
 				4A7851DB2C724176009409B9 /* MessageModel.swift */,
 				4A7851DC2C724176009409B9 /* OnBoardingModel.swift */,
 				4A3A82022C733C25004C27A6 /* MonthModel.swift */,
-				E03A3FE82C733CA600EBC763 /* Achievement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,10 +196,9 @@
 				8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */,
 				8F2BAE1D2C662471009F50C3 /* ContentView.swift */,
 				4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */,
-				4ADDBB2A2C6B4876003531B3 /* ConfirmSmokingView.swift */,
 				4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */,
 				4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */,
-				4ADDBB282C6B450C003531B3 /* MikeTestingView.swift */,
+				4AEE519A2C75F75200895BC0 /* BreathingVideo.mov */,
 				8F2BAE1F2C662473009F50C3 /* Assets.xcassets */,
 				8F2BAE212C662473009F50C3 /* Preview Content */,
 			);
@@ -303,6 +299,7 @@
 			children = (
 				E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */,
 				E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */,
+				E03A3FF72C76D72A00EBC763 /* BadgeSectionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -403,6 +400,7 @@
 			files = (
 				8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */,
 				E03A3FF42C75D38000EBC763 /* badgesData.json in Resources */,
+				4AEE519B2C75F75200895BC0 /* BreathingVideo.mov in Resources */,
 				8F2BAE202C662473009F50C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,7 +424,6 @@
 				8F8B13F32C6FAF07000C0780 /* SetDateView.swift in Sources */,
 				8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */,
 				4A3A82032C733C25004C27A6 /* MonthModel.swift in Sources */,
-				4ADDBB2B2C6B4876003531B3 /* ConfirmSmokingView.swift in Sources */,
 				4A7851E52C724176009409B9 /* UserModel.swift in Sources */,
 				8F8B13F12C6FACE6000C0780 /* CommitmentView.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
@@ -451,12 +448,14 @@
 				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
 				E03A3FED2C733D0B00EBC763 /* BadgeView.swift in Sources */,
 				4A7851E32C724176009409B9 /* MessageModel.swift in Sources */,
-				E03A3FE92C733CA600EBC763 /* Achievement.swift in Sources */,
 				4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */,
 				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
 				E03A3FE52C733C1700EBC763 /* BadgeModalView.swift in Sources */,
 				E03A3FE72C733C6700EBC763 /* BadgeRepository.swift in Sources */,
+				E03A3FE52C733C1700EBC763 /* AchievementModal.swift in Sources */,
+				E03A3FE72C733C6700EBC763 /* AchievementRepository.swift in Sources */,
 				4A7851E42C724176009409B9 /* OnBoardingModel.swift in Sources */,
+				E03A3FF82C76D72A00EBC763 /* BadgeSectionView.swift in Sources */,
 				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
 				4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */,
 				8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */,
