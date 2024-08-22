@@ -3,7 +3,7 @@
         "id": 0,
         "title": "20 Minutes",
         "subtitle": "Heart rate and blood pressure drop to healthier levels.",
-        "imageName": "health1",
+        "imageName": "time3",
         "isEarned": false,
         "category": "health"
     },
@@ -11,7 +11,7 @@
         "id": 1,
         "title": "12 Hours",
         "subtitle": "Carbon monoxide levels in the blood return to normal.",
-        "imageName": "health1",
+        "imageName": "time1",
         "isEarned": false,
         "category": "health"
     },
@@ -19,7 +19,7 @@
         "id": 2,
         "title": "2 Weeks",
         "subtitle": "Circulation improves and lung function begins to enhance.",
-        "imageName": "health1",
+        "imageName": "money3",
         "isEarned": false,
         "category": "health"
     },
@@ -27,7 +27,7 @@
         "id": 3,
         "title": "1 Month",
         "subtitle": "Coughing and shortness of breath decrease; lung function improves further.",
-        "imageName": "health1",
+        "imageName": "health3",
         "isEarned": false,
         "category": "health"
     },
@@ -36,7 +36,7 @@
         "id": 4,
         "title": "3 Months",
         "subtitle": "Lung function continues to improve, making breathing easier and reducing symptoms like coughing.",
-        "imageName": "health1",
+        "imageName": "health3",
         "isEarned": false,
         "category": "health"
     },
@@ -44,7 +44,7 @@
         "id": 5,
         "title": "4 Months",
         "subtitle": "Improved overall energy levels and reduced risk of respiratory infections.",
-        "imageName": "health1",
+        "imageName": "time1",
         "isEarned": false,
         "category": "health"
     },
@@ -52,7 +52,7 @@
         "id": 6,
         "title": "5 Months",
         "subtitle": "Enhanced sense of taste and smell as the body recovers from the effects of smoking.",
-        "imageName": "health1",
+        "imageName": "money2",
         "isEarned": false,
         "category": "health"
     },
@@ -60,7 +60,7 @@
         "id": 7,
         "title": "6 Months",
         "subtitle": "Cilia in the lungs regain normal function, helping to clear mucus and reduce infections.",
-        "imageName": "health1",
+        "imageName": "time3",
         "isEarned": false,
         "category": "health"
     },
@@ -84,7 +84,7 @@
         "id": 10,
         "title": "Rp 50,000",
         "subtitle": "Can buy a basic lunch at a local café.",
-        "imageName": "money1",
+        "imageName": "money2",
         "isEarned": false,
         "category": "money"
     },
@@ -100,7 +100,7 @@
         "id": 12,
         "title": "Rp 200,000",
         "subtitle": "Can purchase a high-quality pair of wireless earbuds.",
-        "imageName": "money1",
+        "imageName": "money5",
         "isEarned": false,
         "category": "money"
     },
@@ -116,7 +116,7 @@
         "id": 14,
         "title": "Rp 1,000,000",
         "subtitle": "Can buy a decent quality air purifier.",
-        "imageName": "money1",
+        "imageName": "time1",
         "isEarned": false,
         "category": "money"
     },
@@ -124,7 +124,7 @@
         "id": 15,
         "title": "Rp 2,000,000",
         "subtitle": "Enough for a mid-range tablet.",
-        "imageName": "money1",
+        "imageName": "money5",
         "isEarned": false,
         "category": "money"
     },
@@ -132,7 +132,7 @@
         "id": 16,
         "title": "Rp 3,000,000",
         "subtitle": "Can cover the cost of a quality smartwatch.",
-        "imageName": "money1",
+        "imageName": "money3",
         "isEarned": false,
         "category": "money"
     },
@@ -148,7 +148,7 @@
         "id": 18,
         "title": "Rp 7,500,000",
         "subtitle": "Can purchase a top-tier smartphone.",
-        "imageName": "money1",
+        "imageName": "time1",
         "isEarned": false,
         "category": "money"
     },
@@ -156,7 +156,7 @@
         "id": 19,
         "title": "Rp 10,000,000",
         "subtitle": "Enough for a high-quality gaming laptop with advanced features.",
-        "imageName": "money1",
+        "imageName": "money3",
         "isEarned": false,
         "category": "money"
     },
@@ -164,7 +164,7 @@
         "id": 20,
         "title": "10 Seconds",
         "subtitle": "The fastest 100-meter sprint by Usain Bolt, who completed it in 9.58 seconds.",
-        "imageName": "time1",
+        "imageName": "time2",
         "isEarned": false,
         "category": "time"
     },
@@ -172,7 +172,7 @@
         "id": 21,
         "title": "5 Minutes",
         "subtitle": "The longest time a person has held their breath underwater on pure oxygen, achieved by Stig Severinsen in 5 minutes and 32 seconds.",
-        "imageName": "time1",
+        "imageName": "health1",
         "isEarned": false,
         "category": "time"
     },
@@ -180,7 +180,7 @@
         "id": 22,
         "title": "26 Minutes",
         "subtitle": "The time it took for the fastest human to complete a 10-kilometer run, achieved by Joshua Cheptegei in 26 minutes and 38 seconds.",
-        "imageName": "time1",
+        "imageName": "money4",
         "isEarned": false,
         "category": "time"
     },
@@ -188,7 +188,7 @@
         "id": 23,
         "title": "1 Hour",
         "subtitle": "The longest time for a person to continuously balance a bicycle on one wheel, which is 1 hour and 1 minute, achieved by Fred Rompelberg.",
-        "imageName": "time1",
+        "imageName": "health1",
         "isEarned": false,
         "category": "time"
     },
@@ -196,7 +196,7 @@
         "id": 24,
         "title": "8 Hours",
         "subtitle": "The longest continuous period of sleep ever recorded, with the average duration being 8 hours.",
-        "imageName": "time1",
+        "imageName": "health3",
         "isEarned": false,
         "category": "time"
     },
@@ -204,7 +204,7 @@
         "id": 25,
         "title": "24 Hours",
         "subtitle": "The duration of a day, marked by Earth's rotation.",
-        "imageName": "time1",
+        "imageName": "time3",
         "isEarned": false,
         "category": "time"
     },
@@ -220,7 +220,7 @@
         "id": 27,
         "title": "1 Month",
         "subtitle": "The length of time in one lunar month, approximately 29.5 days.",
-        "imageName": "time1",
+        "imageName": "health2",
         "isEarned": false,
         "category": "time"
     },
@@ -228,7 +228,7 @@
         "id": 28,
         "title": "1 Year",
         "subtitle": "The length of time for Earth's orbit around the sun, approximately 365.25 days.",
-        "imageName": "time1",
+        "imageName": "money3",
         "isEarned": false,
         "category": "time"
     },
