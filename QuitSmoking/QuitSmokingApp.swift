@@ -18,9 +18,7 @@ struct QuitSmokingApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            @State var step = 1
-//            GreetingsViewView()
-            AddSmokeView()
+            OnboardingView()
         }
     }
 }

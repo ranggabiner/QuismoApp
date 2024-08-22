@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showNextView = false
-    @Binding var user: UserModel
+    @State private var goToAddSmokeView = false
 
 //    @State var user = UserModel(
 //        id: UUID(),
@@ -28,7 +27,7 @@ struct HomeView: View {
         ZStack {
             
             TabView {
-                DashboardView(user: $user)
+                DashboardView()
                     .tabItem {
                         Label("Journey", systemImage: "house.fill")
                     }
@@ -57,7 +56,7 @@ struct HomeView: View {
             
             Button(action: {
                 withAnimation {
-                    showNextView = true
+                    goToAddSmokeView = true
                 }
             }) {
                 ZStack {
@@ -73,7 +72,7 @@ struct HomeView: View {
                         .foregroundColor(Color("White"))
                         .font(.system(size: 30, weight: .bold))
                         .padding(.bottom, 9)
-                        .sheet(isPresented: $showNextView) {
+                        .sheet(isPresented: $goToAddSmokeView) {
                             AddSmokeView()
                         }
                 }
