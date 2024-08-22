@@ -23,6 +23,6 @@ class AddSmokeViewModel: ObservableObject{
     }
     
     func fetch(){
-        self.cigaretteLog = cigaretteLogUseCase.fetch()
+        self.cigaretteLog = cigaretteLogUseCase.fetchCigaretteLog()
     }
 }

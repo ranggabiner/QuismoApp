@@ -16,51 +16,22 @@ struct TrackView: View {
                 ForEach((0..<12), id: \.self) { monthIndex in
                     VStack {
                         Text("\(viewModel.months[monthIndex])")
-                            .font(.headline)
-                            .padding(.bottom, 4)
+                            .foregroundStyle(.blueShade3)
+                            .font(.system(size: 24, weight: .semibold))
                         
                         VStack(spacing: 0) {
                             ForEach(0..<viewModel.daysInMonths[monthIndex], id: \.self) { dayIndex in
                                 
-                                let date = DateComponents(calendar: Calendar.current, year: 2024, month: 1 + monthIndex, day: 1 + dayIndex).date
+                                let date = viewModel.dateFromComponents(monthIndex: monthIndex, dayIndex: dayIndex)
+                                let isDateValid = viewModel.isDateValid(date: date!)
+                                let isDateAfterSetDate = viewModel.isDateAfterSetDate(date: date!)
+                                let containsDate = viewModel.isDateInLog(date: date!)
                                 
-                                let dateToCheck = Calendar.current.dateComponents([.year, .month, .day], from: date ?? Date())
-                                let logDates = viewModel.cigaretteLog?.cigarettesSmoked ?? []
-                                
-                                let containsDate = logDates.contains { logDate in
-                                    let logDateComponents = Calendar.current.dateComponents([.year, .month, .day], from: logDate)
-                                    return logDateComponents == dateToCheck
-                                }
-                                
-                                if containsDate {
-                                    
-                                    ZStack {
-                                        // Container
-                                        Rectangle()
-                                            .frame(width: 19, height: 19)
-                                            .foregroundColor(.clear)
-                                        
-                                        // Circle
-                                        Image("TrackImage")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 19, height: 19)
-                                    }
-                                    
-                                    
+                                if !containsDate && isDateValid && isDateAfterSetDate{
+                                    successLog
                                 } else {
                                     if(viewModel.showFailedLog){
-                                        ZStack {
-                                            Rectangle()
-                                                .frame(width: 19, height: 19)
-                                                .foregroundColor(.clear)
-                                            
-                                            // Circle
-                                            Circle()
-                                                .frame(width: 4, height: 4)
-                                                .foregroundColor(.blue)
-                                        }
-                                        
+                                        failedLog
                                     }
                                 }
                                 
@@ -73,7 +44,7 @@ struct TrackView: View {
                                     .frame(width: 19, height: 19)
                                     .foregroundColor(.clear)
                             }
-                        }.padding(.top)
+                        }
                         
                     }
                 }
@@ -89,10 +60,35 @@ struct TrackView: View {
             viewModel.showFailedLog.toggle()
         }
     }
+}
+
+extension TrackView{
+    var failedLog: some View {
+        ZStack {
+            Rectangle()
+                .frame(width: 19, height: 19)
+                .foregroundColor(.clear)
+            
+            // Circle
+            Circle()
+                .frame(width: 4, height: 4)
+                .foregroundColor(.blueTint2)
+        }
+    }
     
-    func tapped(){
-        print("x")
-        print(viewModel.cigaretteLog?.cigarettesSmoked)
+    var successLog: some View{
+        ZStack {
+            // Container
+            Rectangle()
+                .frame(width: 19, height: 19)
+                .foregroundColor(.clear)
+            
+            // Circle
+            Image("TrackImage")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 19, height: 19)
+        }
     }
 }
 

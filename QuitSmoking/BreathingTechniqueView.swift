@@ -1,82 +1,89 @@
 import SwiftUI
+import AVKit
 
 struct BreathingTechniqueView: View {
-    @State private var breathPhase: Int = 0
-    @State private var circleScale: CGFloat = 1.0
+    @Environment(\.presentationMode) private var presentationMode
+    
+    @State var player = AVPlayer(url: Bundle.main.url(forResource: "BreathingVideo", withExtension: "mov")!)
+    @State var isPlaying: Bool = true
     
     var body: some View {
-        ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
+        ZStack{
+            VideoPlayer(player: player)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .ignoresSafeArea()
+            //                .frame(width: 320, height: 180, alignment: .center)
+                .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
             VStack {
-                Text("4-7-8 Breathing")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .padding()
-                
                 Spacer()
                 
-                Circle()
-                    .fill(Color.blue)
-                    .frame(width: 200, height: 200)
-                    .scaleEffect(circleScale)
-                    .onAppear {
-                        startBreathing()
+                Button {
+                    isPlaying ? player.pause() : player.play()
+                    isPlaying.toggle()
+                } label: {
+                    ZStack {
+                        // Circular background
+                        Circle()
+                            .fill(Color.white.opacity(0.7)) // Background color and opacity
+                            .frame(width: 60, height: 60) // Size of the circle
+                        
+                        // Image
+                        Image(systemName: isPlaying ? "stop" : "play")
+                            .foregroundColor(.blueTint1)
+                            .font(.system(size: 24, weight: .bold)) // Adjust image size and weight
                     }
-                    .animation(.easeInOut(duration: durationForPhase(phase: breathPhase)), value: circleScale)
-                
-                Spacer()
-                
-                Text(phaseDescription(phase: breathPhase))
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .padding()
-            }
-        }
-    }
-    
-    func startBreathing() {
-        animateBreathing() // Start the breathing cycle immediately
-
-        Timer.scheduledTimer(withTimeInterval: 19, repeats: true) { _ in
-            animateBreathing()
-        }
-    }
-    
-    func animateBreathing() {
-        breathPhase = 0
-        withAnimation {
-            circleScale = 2.0
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            breathPhase = 1
-            withAnimation {
-                circleScale = 2.0
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-                breathPhase = 2
-                withAnimation {
-                    circleScale = 1.0
                 }
             }
         }
+        .onAppear{
+            player.play()
+            addObserver()
+        }
+        .onDisappear{
+            removeObserver()
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            // Customize the back button
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    // Handle the back button action
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(.white)
+                }
+            }
+        }
+        .background(NavigationConfigurator { nc in
+            nc.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            nc.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        })
     }
     
-    func durationForPhase(phase: Int) -> Double {
-        switch phase {
-        case 0: return 4.0 // Inhale for 4 seconds
-        case 1: return 7.0 // Hold for 7 seconds
-        case 2: return 8.0 // Exhale for 8 seconds
-        default: return 0
+    func addObserver(){
+        Foundation.NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { notif in
+            presentationMode.wrappedValue.dismiss()
         }
     }
     
-    func phaseDescription(phase: Int) -> String {
-        switch phase {
-        case 0: return "Inhale"
-        case 1: return "Hold"
-        case 2: return "Exhale"
-        default: return ""
+    func removeObserver() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: .AVPlayerItemDidPlayToEndTime,
+                                                  object: nil)
+    }
+}
+
+struct NavigationConfigurator: UIViewControllerRepresentable {
+    var configure: (UINavigationController) -> Void
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        UIViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        if let nc = uiViewController.navigationController {
+            configure(nc)
         }
     }
 }

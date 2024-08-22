@@ -15,7 +15,7 @@ public class SwiftDataManager {
 
     init() {
         do {
-            container = try ModelContainer(for: UserStorage.self)
+            container = try ModelContainer(for: UserStorage.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
             if let container {
                 context = ModelContext(container)
             }
