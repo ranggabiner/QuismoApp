@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabbarView: View {
-    @State private var showNextView = false
+    @State private var goToAddSmokeView = false
     
     @State var user = UserModel(
         id: UUID(),
@@ -31,7 +31,7 @@ struct TabbarView: View {
         ZStack {
             
             TabView {
-                DashboardView(user: $user)
+                DashboardView()
                     .tabItem {
                         Label("Journey", systemImage: "house.fill")
                     }
@@ -51,7 +51,7 @@ struct TabbarView: View {
                         Label("Track", systemImage: "calendar")
                     }
                 
-                TrackView()
+                BadgeView()
                     .tabItem {
                         Label("Badges", systemImage: "trophy")
                     }
@@ -60,7 +60,7 @@ struct TabbarView: View {
             
             Button(action: {
                 withAnimation {
-                    showNextView = true
+                    goToAddSmokeView = true
                 }
             }) {
                 ZStack {
@@ -76,7 +76,7 @@ struct TabbarView: View {
                         .foregroundColor(Color("White"))
                         .font(.system(size: 30, weight: .bold))
                         .padding(.bottom, 9)
-                        .sheet(isPresented: $showNextView) {
+                        .sheet(isPresented: $goToAddSmokeView) {
                             AddSmokeView()
                         }
                 }
@@ -88,6 +88,6 @@ struct TabbarView: View {
     }
 }
 
-#Preview {
-    TabbarView()
-}
+//#Preview {
+//    TabbarView()
+//}
