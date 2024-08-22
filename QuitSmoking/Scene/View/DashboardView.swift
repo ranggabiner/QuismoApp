@@ -189,7 +189,7 @@ struct DashboardView: View {
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                         //                    Text("\(cigAvoided)")
-                                        Text("0")
+                                        Text("\(user.onBoarding.cigsPerDay)")
                                             .foregroundColor(Color("Primary"))
                                             .font(.system(size: 11, weight: .semibold))
                                         Text("Cig Avoided")
