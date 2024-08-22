@@ -30,8 +30,11 @@ struct ProgressBarView: View {
             // Page Indicators
             HStack(spacing: 10) {
                 ForEach(1...totalSteps, id: \.self) { step in
-                    Image(systemName: currentStep == step ? "circle.circle.fill" : (currentStep > step ? "circle.fill" : "circle"))
-                        .foregroundColor(currentStep >= step ? Color("Secondary") : Color("White"))
+                    Image(systemName: currentStep == step ? "circle.fill" : (currentStep > step ? "circle.fill" : "circle"))
+                        .foregroundColor(
+                            currentStep == step ? Color("Secondary") :
+                            (step < currentStep ? Color("YellowTint3") : Color("White"))
+                        )
                         .font(.system(size: currentStep == step ? 16 : 16))
                         .scaleEffect(currentStep == step ? 1.2 : 1.0)
                         .animation(.easeInOut(duration: 0.4), value: currentStep)
@@ -45,5 +48,5 @@ struct ProgressBarView: View {
 }
 
 #Preview {
-    ProgressBarView(currentStep: 1, onBackButtonPressed: {})
+    ProgressBarView(currentStep: 4, onBackButtonPressed: {})
 }

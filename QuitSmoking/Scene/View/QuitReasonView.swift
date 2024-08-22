@@ -27,7 +27,7 @@ struct QuitReasonView: View {
                     .frame(width: 176, height: 175)
                     .foregroundStyle(.tint)
                 
-                Text("Great to hear. Before we begin, I’d like to understand what’s driving you to quit. What’s your main reason?")
+                Text("Good! Before we start, let's understand why you want to quit smoking?")
                     .multilineTextAlignment(.center)
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(Color("White"))
@@ -75,7 +75,7 @@ struct QuitReasonView: View {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(selectedOptions.isEmpty ? Color("Gray1") : Color("White"))
+                        .background(selectedOptions.isEmpty ? Color("Gray1").opacity(0.6) : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(selectedOptions.isEmpty ? Color("White") : Color("Blue066ACC"))
                 }

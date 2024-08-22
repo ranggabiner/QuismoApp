@@ -71,16 +71,11 @@ struct PricePerPackView: View {
                         .multilineTextAlignment(.center)
                         .frame(width: 120, height: 42)
                         .padding(.horizontal, 10)
-                        .background(Color("Primary"))
+                        .background(Color("BlueTint3"))
                         .cornerRadius(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color("White"), lineWidth: 2)
-                        )
-                    //                            .padding(.horizontal)
                         .padding(.bottom)
-                        .foregroundColor(Color("White"))
-                        .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(Color("BlueShade3"))
+                        .font(.system(size: 16, weight: .semibold))
                         .onChange(of: pricePerPack) { newValue in
                             if let intValue = Int(newValue) {
                                 user.onBoarding.pricePerPack = intValue
@@ -104,7 +99,7 @@ struct PricePerPackView: View {
                     Text("Next")
                         .fontWeight(.semibold)
                         .frame(width: 100, height: 42)
-                        .background(pricePerPack.isEmpty ? Color("Gray1") : Color("White"))
+                        .background(pricePerPack.isEmpty ? Color("Gray1").opacity(0.6) : Color("White"))
                         .cornerRadius(10)
                         .foregroundColor(pricePerPack.isEmpty ? Color("White") : Color("Blue066ACC"))
                     //                        .onTapGesture {
