@@ -10,6 +10,14 @@ import SwiftUI
 struct HomeView: View {
     @State private var showNextView = false
     
+    @State var user = UserModel(
+        id: UUID(),
+        onBoarding: OnBoardingModel(),
+        cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
+        chatBuddy: ChatLogModel(messages: []),
+        chatSessions: [],
+        badges: [])
+    
 //    init() {
 //        UITabBar.appearance().backgroundColor = UIColor.white
 //        UITabBar.appearance().unselectedItemTintColor = UIColor.gray1.withAlphaComponent(0.6)
@@ -19,7 +27,7 @@ struct HomeView: View {
         ZStack {
             
             TabView {
-                DashboardView()
+                DashboardView(user: $user)
                     .tabItem {
                         Label("Journey", systemImage: "house.fill")
                     }
