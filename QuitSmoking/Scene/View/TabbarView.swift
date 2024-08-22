@@ -14,9 +14,10 @@ struct TabbarView: View {
         id: UUID(),
         onBoarding: OnBoardingModel(),
         cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
-        chatBuddy: ChatLogModel(messages: []),
-        chatSessions: [],
-        badges: [])
+        badges: [],
+        message: MessageModel(),
+        companionChatHistory: CompanionChatHistoryModel()
+    )
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(.white)

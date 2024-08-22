@@ -49,7 +49,9 @@ struct OnboardingEndView: View {
                 }
                 .padding(.top, 20)
                 .fullScreenCover(isPresented: $showNextView) {
+
                     TabbarView()
+
                 }
                 
                 Spacer()

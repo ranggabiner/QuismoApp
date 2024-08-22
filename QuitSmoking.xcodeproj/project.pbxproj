@@ -37,6 +37,10 @@
 		8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */; };
 		8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F82C708375000C0780 /* DashboardView.swift */; };
 		8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */; };
+		8FADBE932C774113009149C0 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADBE922C774113009149C0 /* SoundManager.swift */; };
+		8FADBE942C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FADBE912C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 */; };
+		8FADBE962C77411B009149C0 /* CompanionMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADBE952C77411B009149C0 /* CompanionMessageView.swift */; };
+		8FADBE982C774128009149C0 /* CompanionChatHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADBE972C774128009149C0 /* CompanionChatHistoryModel.swift */; };
 		8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */; };
 		8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2DD1B2C6DF03400E9A157 /* GreetingsViewController.swift */; };
 		8FDDF3BB2C73A43400FB2B80 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDDF3BA2C73A43300FB2B80 /* OnboardingView.swift */; };
@@ -100,6 +104,10 @@
 		8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEndView.swift; sourceTree = "<group>"; };
 		8F8B13F82C708375000C0780 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerPackView.swift; sourceTree = "<group>"; };
+		8FADBE912C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "puppy-barking-felix-blume-1-00-01.mp3"; sourceTree = "<group>"; };
+		8FADBE922C774113009149C0 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		8FADBE952C77411B009149C0 /* CompanionMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionMessageView.swift; sourceTree = "<group>"; };
+		8FADBE972C774128009149C0 /* CompanionChatHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionChatHistoryModel.swift; sourceTree = "<group>"; };
 		8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		8FB2DD1B2C6DF03400E9A157 /* GreetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewController.swift; sourceTree = "<group>"; };
 		8FDDF3BA2C73A43300FB2B80 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7851D82C724176009409B9 /* BadgeModel.swift */,
+				8FADBE972C774128009149C0 /* CompanionChatHistoryModel.swift */,
 				4A7851D92C724176009409B9 /* ChatLogModel.swift */,
 				4A7851DD2C724176009409B9 /* UserModel.swift */,
 				4A7851DA2C724176009409B9 /* CigaretteLogModel.swift */,
@@ -297,6 +306,7 @@
 		E03A3FE12C733BDD00EBC763 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8FADBE952C77411B009149C0 /* CompanionMessageView.swift */,
 				E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */,
 				E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */,
 				E03A3FF72C76D72A00EBC763 /* BadgeSectionView.swift */,
@@ -307,6 +317,8 @@
 		E03A3FF22C75D35000EBC763 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8FADBE912C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 */,
+				8FADBE922C774113009149C0 /* SoundManager.swift */,
 				E03A3FF32C75D38000EBC763 /* badgesData.json */,
 			);
 			path = Resources;
@@ -398,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FADBE942C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 in Resources */,
 				8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */,
 				E03A3FF42C75D38000EBC763 /* badgesData.json in Resources */,
 				4AEE519B2C75F75200895BC0 /* BreathingVideo.mov in Resources */,
@@ -436,20 +449,24 @@
 				4A7851E82C724204009409B9 /* UserStorage.swift in Sources */,
 				4A3A82072C735A2C004C27A6 /* TabbarView.swift in Sources */,
 				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
+				8FADBE932C774113009149C0 /* SoundManager.swift in Sources */,
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
 				8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */,
 				E03A3F9A2C6B536600EBC763 /* CigsPerDayViewController.swift in Sources */,
 				E03A3FE32C733C0500EBC763 /* BadgeCardView.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
 				4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */,
+				8FADBE962C77411B009149C0 /* CompanionMessageView.swift in Sources */,
 				4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
 				E03A3FEF2C733D3100EBC763 /* BadgeViewModel.swift in Sources */,
 				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
+				8FADBE982C774128009149C0 /* CompanionChatHistoryModel.swift in Sources */,
 				E03A3FED2C733D0B00EBC763 /* BadgeView.swift in Sources */,
 				4A7851E32C724176009409B9 /* MessageModel.swift in Sources */,
 				4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */,
-				4ADDBB292C6B450C003531B3 /* MikeTestingView.swift in Sources */,
+				E03A3FE52C733C1700EBC763 /* BadgeModalView.swift in Sources */,
+				E03A3FE72C733C6700EBC763 /* BadgeRepository.swift in Sources */,
 				E03A3FE52C733C1700EBC763 /* BadgeModalView.swift in Sources */,
 				E03A3FE72C733C6700EBC763 /* BadgeRepository.swift in Sources */,
 				E03A3FE52C733C1700EBC763 /* AchievementModal.swift in Sources */,
@@ -615,7 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
-				DEVELOPMENT_TEAM = DXHNB7CJR9;
+				DEVELOPMENT_TEAM = A23N5QDWR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -646,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
-				DEVELOPMENT_TEAM = DXHNB7CJR9;
+				DEVELOPMENT_TEAM = A23N5QDWR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
