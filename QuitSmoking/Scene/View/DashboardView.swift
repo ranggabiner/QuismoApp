@@ -84,16 +84,21 @@ struct DashboardView: View {
                     //moon
                     ZStack {
                         Circle()
-                            .frame(width: 375, height: 375)
+                            .frame(width: 400, height: 400)
                             .foregroundColor(Color("BlueTint1"))
+                            .opacity(0.5)
                         Circle()
-                            .frame(width: 270, height: 270)
+                            .frame(width: 300, height: 300)
                             .foregroundColor(Color("BlueTint2"))
+                            .opacity(0.5)
                         Circle()
                             .frame(width: 175, height: 175)
                             .foregroundColor(Color("BlueTint3"))
+                            .opacity(0.5)
                     }
-                    .offset(x: 130, y: -450)
+                    .offset(x: 150, y: -500)
+
+
                     
                     //easter egg
                     ZStack {
@@ -109,18 +114,20 @@ struct DashboardView: View {
                             .resizable()
                             .frame(width: 336, height: 326)
                     }
-                    .offset(x: -75, y: -255)
+                    .offset(x: -75, y: -305)
+
+
                     ZStack {
                         Rectangle()
                             .frame(width: 142, height: 60)
                             .foregroundColor(Color("White"))
-                            .shadow(radius: 4)
+                            .shadow(radius: 8)
                             .cornerRadius(15)
                         
                         Circle()
                             .frame(width: 18, height: 18)
-                            .foregroundColor(Color("Secondary"))
-                            .shadow(radius: 4)
+                            .foregroundColor(Color("White"))
+                            .shadow(radius: 8)
                             .padding(.top, 60)
                             .padding(.trailing, 125)
                         
@@ -130,109 +137,147 @@ struct DashboardView: View {
                             .font(.system(size: 18, weight: .semibold))
                             .lineLimit(2)
                     }
-                    .offset(x: 90, y: -320)
+                    // bubble chat dpn
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 142, height: 60)
+                            .foregroundColor(Color("White"))
+//                            .shadow(radius: 4)
+                            .cornerRadius(15)
+                        
+                        Circle()
+                            .frame(width: 18, height: 18)
+                            .foregroundColor(Color("White"))
+//                            .shadow(radius: 4)
+                            .padding(.top, 60)
+                            .padding(.trailing, 125)
+                        
+                        Text("Let's start your journey!")
+                            .frame(width: 120)
+                            .foregroundColor(Color("Primary"))
+                            .font(.system(size: 18, weight: .semibold))
+                            .lineLimit(2)
+                    }
+                    .offset(x: 81, y: -380)
                     
+                    //session
                     Rectangle()
                         .frame(width: 393, height: 576)
                         .foregroundColor(Color("White"))
-                        .padding(.top, 226)
+                        .padding(.top, 75)
                     ZStack {
                         
                         VStack {
                             HStack {
                                 Text("Let's Talk!")
                                     .multilineTextAlignment(.leading)
-                                    .font(.system(size: 24, weight: .semibold))
+                                    .font(.system(size: 24, weight: .semibold, design: .rounded))
                                     .foregroundColor(Color("Primary"))
                                     .padding(.leading, 20)
-                                    .padding(.bottom, 13)
-                                    .padding(.top, 0)
+                                    .padding(.bottom, 0)
+                                    .padding(.top, 75)
                                 Spacer()
                             }
                             Rectangle()
                                 .frame(width: 353, height: 100)
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
+                                .padding(.bottom, 10)
                             Rectangle()
                                 .frame(width: 353, height: 100)
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
+                                .padding(.bottom, 10)
                             Rectangle()
                                 .frame(width: 353, height: 100)
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
+                                .padding(.bottom, 10)
                             Rectangle()
                                 .frame(width: 353, height: 100)
                                 .foregroundColor(Color("Primary"))
                                 .cornerRadius(15)
+                                .padding(.bottom, 10)
+
 //                            Rectangle()
 //                                .frame(width: 353, height: 100)
 //                                .foregroundColor(Color("Primary"))
 //                                .cornerRadius(15)
                         }
                         .frame(width: 393)
-                        .padding(.top, 276)
+//                        .padding(.top, 276)
+                        .padding(.top, 75)
                     }
+                    
+                    //insight box
                     ZStack {
                         Rectangle()
                             .frame(width: 353, height: 100)
                             .foregroundColor(Color("White"))
                             .cornerRadius(15)
                             .shadow(radius: 4)
-                            .offset(x: 0, y: -175)
+                            .offset(x: 0, y: -250)
+                        
                         ZStack {
                             VStack {
                                 HStack {
                                     Spacer()
+                                    //Cigaratte Avoided
                                     VStack {
                                         Image("CigAvoided")
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                         //                    Text("\(cigAvoided)")
-                                        Text("\(user.onBoarding.cigsPerDay)")
+                                        Text("0") // <-------------------------------------------- Data Cig Avoided
                                             .foregroundColor(Color("Primary"))
-                                            .font(.system(size: 11, weight: .semibold))
-                                        Text("Cig Avoided")
-                                            .fontWeight(.semibold)
+                                            .font(.system(size: 10, weight: .semibold))
+                                        Text("Cigarette Avoided")
                                             .foregroundColor(Color("Primary"))
-                                            .font(.system(size: 11, weight: .regular))
+                                            .font(.system(size: 10, weight: .regular))
                                     }
                                     Spacer()
+                                    Spacer()
+                                    //Money Saved
                                     VStack {
                                         Image("MoneySaved")
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                         //                    Text("Rp. \(moneySaved)")
-                                        Text("Rp 0")
+                                        Text("Rp 0") // <-------------------------------------------- Data Money Saved
                                             .foregroundColor(Color("Primary"))
-                                            .font(.system(size: 11, weight: .semibold))
+                                            .font(.system(size: 10, weight: .semibold))
                                         Text("Money Saved")
                                             .foregroundColor(Color("Primary"))
-                                            .font(.system(size: 11, weight: .regular))
+                                            .font(.system(size: 10, weight: .regular))
                                     }
                                     Spacer()
+                                    Spacer()
+                                    Spacer()
+                                    //Smoke Free
                                     VStack {
                                         Image("SmokeFree")
                                             .resizable()
                                             .frame(width: 30, height: 30)
                                             .padding(.vertical, 5)
                                         //                    Text("\(smokeFree)")
-                                        Text("0 Days")
+                                        Text("0 Days") // <-------------------------------------------- Data Smoke Free
                                             .foregroundColor(Color("Primary"))
-                                            .font(.system(size: 11, weight: .semibold))
+                                            .font(.system(size: 10, weight: .semibold))
                                         Text("Smoke Free")
                                             .foregroundColor(Color("Primary"))
-                                            .font(.system(size: 11, weight: .regular))
+                                            .font(.system(size: 10, weight: .regular))
                                     }
                                     Spacer()
                                 }
-                                Divider()
+                                Rectangle()
                                     .frame(width: 315, height: 2)
-                                    .background(Color("Primary"))
+                                    .foregroundColor(Color("Primary"))
+                                    .cornerRadius(1000)
+                                    .padding(.bottom, 10)
                             }
                             .frame(width: 353, height: 1000)
                             .padding()
-                            .offset(x: 0, y: -175)
+                            .offset(x: 0, y: -250)
                         }
                     }
                 }

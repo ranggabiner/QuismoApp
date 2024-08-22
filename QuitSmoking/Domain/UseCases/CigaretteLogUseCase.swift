@@ -32,6 +32,8 @@ class CigaretteLogUseCase{
         
         user.onBoarding.setDate = formattedDateThreeDaysAgo
         
+        user.onBoarding.setDate = formattedDateThreeDaysAgo
+        
         repository.insert(user: user)
     }
     
