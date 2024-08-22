@@ -47,7 +47,7 @@ struct HomeView: View {
                         Label("Track", systemImage: "calendar")
                     }
                 
-                TrackView()
+                BadgeView()
                     .tabItem {
                         Label("Badges", systemImage: "trophy")
                     }
