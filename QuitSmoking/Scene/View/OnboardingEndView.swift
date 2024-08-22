@@ -35,7 +35,7 @@ struct OnboardingEndView: View {
                 Spacer(minLength: 24)
                 
                 Button(action: {
-                    viewModel.saveData()
+                    viewModel.saveData(user: user)
                     withAnimation {
                         showNextView = true
                     }
@@ -49,7 +49,7 @@ struct OnboardingEndView: View {
                 }
                 .padding(.top, 20)
                 .fullScreenCover(isPresented: $showNextView) {
-                    HomeView()
+                    HomeView(user: $user)
                 }
                 
                 Spacer()

@@ -9,15 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showNextView = false
-    
-    @State var user = UserModel(
-        id: UUID(),
-        onBoarding: OnBoardingModel(),
-        cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
-        chatBuddy: ChatLogModel(messages: []),
-        chatSessions: [],
-        badges: [])
-    
+    @Binding var user: UserModel
+
+//    @State var user = UserModel(
+//        id: UUID(),
+//        onBoarding: OnBoardingModel(),
+//        cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
+//        chatBuddy: ChatLogModel(messages: []),
+//        chatSessions: [],
+//        badges: [])
+//    
 //    init() {
 //        UITabBar.appearance().backgroundColor = UIColor.white
 //        UITabBar.appearance().unselectedItemTintColor = UIColor.gray1.withAlphaComponent(0.6)
@@ -47,7 +48,7 @@ struct HomeView: View {
                         Label("Track", systemImage: "calendar")
                     }
                 
-                TrackView()
+                BadgeView()
                     .tabItem {
                         Label("Badges", systemImage: "trophy")
                     }
@@ -83,7 +84,7 @@ struct HomeView: View {
         .ignoresSafeArea()
     }
 }
-
-#Preview {
-    HomeView()
-}
+//
+//#Preview {
+//    HomeView()
+//}

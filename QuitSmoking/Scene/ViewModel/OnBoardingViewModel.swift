@@ -17,16 +17,8 @@ class OnBoardingViewModel: ObservableObject {
         self.onBoardingUseCase = onBoardingUseCase
     }
     
-    func saveData() {
+    func saveData(user: UserModel) {
         print("Form saved: \(form)")
-        
-        var user = UserModel(
-            id: UUID(),
-            onBoarding: form,
-            cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
-            chatBuddy: ChatLogModel(messages: []),
-            chatSessions: [],
-            badges: [])
         
         onBoardingUseCase.insertUser(user: user)
     }
