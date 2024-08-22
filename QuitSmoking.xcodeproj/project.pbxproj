@@ -12,7 +12,7 @@
 		4A3A82012C733BCC004C27A6 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82002C733BCC004C27A6 /* TrackView.swift */; };
 		4A3A82032C733C25004C27A6 /* MonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82022C733C25004C27A6 /* MonthModel.swift */; };
 		4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82042C733E32004C27A6 /* TrackViewModel.swift */; };
-		4A3A82072C735A2C004C27A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82062C735A2C004C27A6 /* HomeView.swift */; };
+		4A3A82072C735A2C004C27A6 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3A82062C735A2C004C27A6 /* TabbarView.swift */; };
 		4A655EF02C749FE500234EDE /* OnBoardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */; };
 		4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D82C724176009409B9 /* BadgeModel.swift */; };
 		4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7851D92C724176009409B9 /* ChatLogModel.swift */; };
@@ -76,7 +76,7 @@
 		4A3A82002C733BCC004C27A6 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		4A3A82022C733C25004C27A6 /* MonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthModel.swift; sourceTree = "<group>"; };
 		4A3A82042C733E32004C27A6 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
-		4A3A82062C735A2C004C27A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4A3A82062C735A2C004C27A6 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingUseCase.swift; sourceTree = "<group>"; };
 		4A7851D82C724176009409B9 /* BadgeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeModel.swift; sourceTree = "<group>"; };
 		4A7851D92C724176009409B9 /* ChatLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogModel.swift; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 				8FDDF3BA2C73A43300FB2B80 /* OnboardingView.swift */,
 				8F8B13F82C708375000C0780 /* DashboardView.swift */,
 				4A3A82002C733BCC004C27A6 /* TrackView.swift */,
-				4A3A82062C735A2C004C27A6 /* HomeView.swift */,
+				4A3A82062C735A2C004C27A6 /* TabbarView.swift */,
 				E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */,
 			);
 			path = View;
@@ -437,7 +437,7 @@
 				E03A3FB02C6C9DC800EBC763 /* CigsPerDayView.swift in Sources */,
 				E03A3FB62C6CAB4800EBC763 /* NameView.swift in Sources */,
 				4A7851E82C724204009409B9 /* UserStorage.swift in Sources */,
-				4A3A82072C735A2C004C27A6 /* HomeView.swift in Sources */,
+				4A3A82072C735A2C004C27A6 /* TabbarView.swift in Sources */,
 				E03A3FB22C6C9EE900EBC763 /* PricePerPackView.swift in Sources */,
 				E03A3FAE2C6C99D700EBC763 /* QuitReasonView.swift in Sources */,
 				8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */,

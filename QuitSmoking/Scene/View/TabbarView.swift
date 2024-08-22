@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct TabbarView: View {
     @State private var showNextView = false
     
     @State var user = UserModel(
@@ -19,8 +19,11 @@ struct HomeView: View {
         badges: [])
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(named: "White")
+        UITabBar.appearance().backgroundColor = UIColor(.white)
+        UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray1.withAlphaComponent(0.6)
+        UITabBar.appearance().shadowImage = UIImage()
+
     }
     
     var body: some View {
@@ -85,5 +88,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    TabbarView()
 }
