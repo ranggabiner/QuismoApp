@@ -9,6 +9,13 @@ import SwiftUI
 
 @main
 struct QuitSmokingApp: App {
+    
+    init() {
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                windowScene.windows.first?.overrideUserInterfaceStyle = .light
+            }
+        }
+    
     var body: some Scene {
         WindowGroup {
             @State var step = 1
