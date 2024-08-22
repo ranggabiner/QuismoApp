@@ -11,7 +11,7 @@ struct UserModel : Identifiable, Codable{
     var id: UUID
     var onBoarding: OnBoardingModel
     var cigaretteLog : CigaretteLogModel
-    var chatBuddy : ChatLogModel
-    var chatSessions : [ChatLogModel]
     var badges : [BadgeModel]
+    var message : MessageModel
+    var companionChatHistory : CompanionChatHistoryModel
 }

@@ -24,9 +24,11 @@ class CigaretteLogUseCase{
             id: UUID(),
             onBoarding: OnBoardingModel(),
             cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
-            chatBuddy: ChatLogModel(messages: []),
-            chatSessions: [],
-            badges: [])
+            badges: [],
+            message : MessageModel(),
+            companionChatHistory : CompanionChatHistoryModel()
+
+        )
         
         user.onBoarding.setDate = formattedDateThreeDaysAgo
         

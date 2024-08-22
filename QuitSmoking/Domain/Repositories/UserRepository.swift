@@ -30,7 +30,7 @@ class LocalUserRepository: UserRepository{
     
     //harus dipanggil 1x, no more, no less
     @MainActor func insert(user: UserModel){
-        let newUser = UserStorage(id: user.id, onBoarding: user.onBoarding, cigaretteLog: user.cigaretteLog, chatBuddy: user.chatBuddy, chatSessions: user.chatSessions, badges: user.badges)
+        let newUser = UserStorage(id: user.id, onBoarding: user.onBoarding, cigaretteLog: user.cigaretteLog,  badges: user.badges, message : user.message, companionChatHistory : user.companionChatHistory)
         container?.mainContext.insert(newUser)
     }
     
@@ -41,6 +41,7 @@ class LocalUserRepository: UserRepository{
             
             localUsers?[0].cigaretteLog.cigarettesSmoked = user.cigaretteLog.cigarettesSmoked
             localUsers?[0].badges = user.badges
+            localUsers?[0].companionChatHistory = user.companionChatHistory
             print(user.badges)
             try container?.mainContext.save()
         } catch{
