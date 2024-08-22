@@ -13,6 +13,13 @@ class CigaretteLogUseCase{
     init(repository: UserRepository) {
         self.repository = repository
         
+        var formattedDateThreeDaysAgo: Date {
+            let calendar = Calendar.current
+            let now = Date()
+            return calendar.date(byAdding: .day, value: -3, to: now) ?? now
+        }
+        
+        
         var user = UserModel(
             id: UUID(),
             onBoarding: OnBoardingModel(),
@@ -20,6 +27,8 @@ class CigaretteLogUseCase{
             chatBuddy: ChatLogModel(messages: []),
             chatSessions: [],
             badges: [])
+        
+        user.onBoarding.setDate = formattedDateThreeDaysAgo
         
         repository.insert(user: user)
     }
@@ -31,8 +40,13 @@ class CigaretteLogUseCase{
         print(user.cigaretteLog.cigarettesSmoked.count)
     }
     
-    func fetch() -> CigaretteLogModel{
+    func fetchCigaretteLog() -> CigaretteLogModel{
         let user = repository.fetch()
         return user.cigaretteLog
+    }
+    
+    func fetchSetDate() -> Date{
+        let user = repository.fetch()
+        return user.onBoarding.setDate
     }
 }
