@@ -18,10 +18,10 @@ struct HomeView: View {
         chatSessions: [],
         badges: [])
     
-//    init() {
-//        UITabBar.appearance().backgroundColor = UIColor.white
-//        UITabBar.appearance().unselectedItemTintColor = UIColor.gray1.withAlphaComponent(0.6)
-//    }
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(named: "White")
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray1.withAlphaComponent(0.6)
+    }
     
     var body: some View {
         ZStack {
@@ -77,7 +77,7 @@ struct HomeView: View {
                         }
                 }
             }
-            .offset(y: 349)
+            .offset(y: 360)
             
         }
         .ignoresSafeArea()

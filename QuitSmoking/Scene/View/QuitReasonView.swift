@@ -12,7 +12,7 @@ struct QuitReasonView: View {
     @State private var reason: String = ""
     let userDefault = UserDefaults.standard
     @State private var selectedOptions: Set<String> = []
-    let options = ["My health", "My family", "My well-being", "To save money", "To have a child", "My freedom"]
+    let options = ["My health", "My family", "To save money", "My freedom"]
     @Binding var currentStep: Int
     @Binding var user: UserModel
     
@@ -63,6 +63,7 @@ struct QuitReasonView: View {
                 }
                 
                 Spacer()
+                    .padding()
                 
                 Button(action: {
                     if !selectedOptions.isEmpty {

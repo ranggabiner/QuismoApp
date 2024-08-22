@@ -110,6 +110,8 @@ struct DashboardView: View {
                             .frame(width: 336, height: 326)
                     }
                     .offset(x: -75, y: -255)
+                    
+                    //Chatbubble
                     ZStack {
                         Rectangle()
                             .frame(width: 142, height: 60)
@@ -132,10 +134,12 @@ struct DashboardView: View {
                     }
                     .offset(x: 90, y: -320)
                     
+                    //session
                     Rectangle()
                         .frame(width: 393, height: 576)
                         .foregroundColor(Color("White"))
                         .padding(.top, 226)
+                    
                     ZStack {
                         
                         VStack {
@@ -173,6 +177,8 @@ struct DashboardView: View {
                         .frame(width: 393)
                         .padding(.top, 276)
                     }
+                    
+                    //insight box
                     ZStack {
                         Rectangle()
                             .frame(width: 353, height: 100)
@@ -180,16 +186,18 @@ struct DashboardView: View {
                             .cornerRadius(15)
                             .shadow(radius: 4)
                             .offset(x: 0, y: -175)
+                        
                         ZStack {
                             VStack {
                                 HStack {
                                     Spacer()
+                                    //Cigaratte Avoided
                                     VStack {
                                         Image("CigAvoided")
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                         //                    Text("\(cigAvoided)")
-                                        Text("0")
+                                        Text("0") // <-------------------------------------------- Data Cig Avoided
                                             .foregroundColor(Color("Primary"))
                                             .font(.system(size: 11, weight: .semibold))
                                         Text("Cig Avoided")
@@ -198,12 +206,13 @@ struct DashboardView: View {
                                             .font(.system(size: 11, weight: .regular))
                                     }
                                     Spacer()
+                                    //Money Saved
                                     VStack {
                                         Image("MoneySaved")
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                         //                    Text("Rp. \(moneySaved)")
-                                        Text("Rp 0")
+                                        Text("Rp 0") // <-------------------------------------------- Data Money Saved
                                             .foregroundColor(Color("Primary"))
                                             .font(.system(size: 11, weight: .semibold))
                                         Text("Money Saved")
@@ -211,13 +220,14 @@ struct DashboardView: View {
                                             .font(.system(size: 11, weight: .regular))
                                     }
                                     Spacer()
+                                    //Smoke Free
                                     VStack {
                                         Image("SmokeFree")
                                             .resizable()
                                             .frame(width: 30, height: 30)
                                             .padding(.vertical, 5)
                                         //                    Text("\(smokeFree)")
-                                        Text("0 Days")
+                                        Text("0 Days") // <------------------------------------------- Data Smoke Free
                                             .foregroundColor(Color("Primary"))
                                             .font(.system(size: 11, weight: .semibold))
                                         Text("Smoke Free")
