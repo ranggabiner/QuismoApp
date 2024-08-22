@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PricePerPackView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var pricePerPack: String = ""
     let userDefault = UserDefaults.standard
     @State private var showNextView = false

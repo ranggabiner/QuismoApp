@@ -57,13 +57,13 @@ import SwiftUI
 //}
 
 struct DashboardView: View {
-    //    var viewModel = OnBoardingViewModel()
-    //    @State private var cigAvoided: Int = 0
-    //    @State private var moneySaved: Int = 0
-    //    @State private var smokeFree: Int = 0
-    //    @State private var selectedDate: Date?
-    //    @State private var quitReasons: [String] = []
-    //    @Binding var user: UserModel
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
+    @State private var cigAvoided: Int = 0
+    @State private var moneySaved: Int = 0
+    @State private var smokeFree: Int = 0
+    @State private var selectedDate: Date?
+    @State private var quitReasons: [String] = []
+    @Binding var user: UserModel
     
     var body: some View {
         ZStack {
@@ -236,9 +236,22 @@ struct DashboardView: View {
                         }
                     }
                 }
+                Spacer()
             }
             .ignoresSafeArea()
         }
+    }
+    
+    private func calculateTimeElapsed() -> Int {
+        let quitDate = user.onBoarding.setDate
+        let components = Calendar.current.dateComponents([.day], from: quitDate, to: Date())
+        return components.day ?? 0
+    }
+    
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
     }
 }
 //        ScrollView {
@@ -376,6 +389,6 @@ struct DashboardView: View {
 //        //    }
 //    }
 
-#Preview {
-    DashboardView()
-}
+//#Preview {
+//    DashboardView(user: $user)
+//}

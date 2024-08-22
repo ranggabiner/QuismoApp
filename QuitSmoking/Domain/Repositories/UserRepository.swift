@@ -40,6 +40,8 @@ class LocalUserRepository: UserRepository{
             var localUsers = try self.container?.mainContext.fetch(fetchDescriptor)
             
             localUsers?[0].cigaretteLog.cigarettesSmoked = user.cigaretteLog.cigarettesSmoked
+            localUsers?[0].badges = user.badges
+            print(user.badges)
             try container?.mainContext.save()
         } catch{
             fatalError(error.localizedDescription)

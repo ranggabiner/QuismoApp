@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommitmentView: View {
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var commitment: String = ""
     let userDefault = UserDefaults.standard
     @State private var comName: String = ""

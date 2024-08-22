@@ -19,7 +19,7 @@ struct OnboardingView: View {
         chatSessions: [],
         badges: [])
     
-    var viewModel = OnBoardingViewModel()
+    var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     
     var body: some View {
         ZStack {
