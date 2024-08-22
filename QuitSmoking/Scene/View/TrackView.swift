@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TrackView: View {
-    @StateObject var viewModel = TrackViewModel(cigaretteLogUseCase: CigaretteLogUseCase(repository: LocalUserRepository()))
+    @ObservedObject var viewModel = TrackViewModel(cigaretteLogUseCase: CigaretteLogUseCase(repository: LocalUserRepository()))
     
     var body: some View {
         VStack{

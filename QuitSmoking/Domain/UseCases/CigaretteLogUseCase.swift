@@ -18,23 +18,6 @@ class CigaretteLogUseCase{
             let now = Date()
             return calendar.date(byAdding: .day, value: -3, to: now) ?? now
         }
-        
-        
-        var user = UserModel(
-            id: UUID(),
-            onBoarding: OnBoardingModel(),
-            cigaretteLog: CigaretteLogModel(cigarettesSmoked: []),
-            badges: [],
-            message : MessageModel(),
-            companionChatHistory : CompanionChatHistoryModel()
-
-        )
-        
-        user.onBoarding.setDate = formattedDateThreeDaysAgo
-        
-        user.onBoarding.setDate = formattedDateThreeDaysAgo
-        
-        repository.insert(user: user)
     }
     
     func addSmoke(){

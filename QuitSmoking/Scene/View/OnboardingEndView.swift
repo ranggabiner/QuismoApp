@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingEndView: View {
-    @StateObject var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
+    @ObservedObject var viewModel = OnBoardingViewModel(onBoardingUseCase: OnBoardingUseCase(repository: LocalUserRepository()))
     @State private var showNextView = false
     @Binding var currentStep: Int
     @Binding var user: UserModel
@@ -36,8 +36,12 @@ struct OnboardingEndView: View {
                 
                 Button(action: {
                     viewModel.saveData(user: user)
+                    print("xxxxxxxx")
+                    print(user)
                     withAnimation {
-                        showNextView = true
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            showNextView = true
+//                        }
                     }
                 }) {
                     Text("Next")
@@ -49,9 +53,7 @@ struct OnboardingEndView: View {
                 }
                 .padding(.top, 20)
                 .fullScreenCover(isPresented: $showNextView) {
-
                     TabbarView()
-
                 }
                 
                 Spacer()

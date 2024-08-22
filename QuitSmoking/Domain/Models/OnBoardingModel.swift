@@ -9,9 +9,9 @@ import Foundation
 
 struct OnBoardingModel : Codable {
     var quitReason: String = ""
-    var cigsPerDay: Int = 0
-    var cigsPerPack: Int = 0
-    var pricePerPack: Int = 0
+    var cigsPerDay: Int = 1
+    var cigsPerPack: Int = 1
+    var pricePerPack: Int = 1
     var name: String = ""
     var setDate: Date = Date()
     

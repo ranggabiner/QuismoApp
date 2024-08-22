@@ -48,10 +48,15 @@ struct SetDateView: View {
                             .labelsHidden()
                             .padding()
                             .onChange(of: selectedDate) { newDate in
-                                user.onBoarding.setDate = newDate
-                                userSelectedDate()
-                                print(user)
+                                let calendar = Calendar.current
+                                let dateComponents = calendar.dateComponents([.year, .month, .day], from: newDate)
+                                if let dateWithZeroTime = calendar.date(from: dateComponents) {
+                                    user.onBoarding.setDate = dateWithZeroTime
+                                    userSelectedDate()
+                                    print(user)
+                                }
                             }
+
                     }
                     .cornerRadius(10)
                     .padding()
