@@ -13,17 +13,18 @@ class UserStorage {
     var id: UUID
     var onBoarding: OnBoardingModel
     var cigaretteLog : CigaretteLogModel
-    var chatBuddy : ChatLogModel
-    var chatSessions : [ChatLogModel]
     var badges : [BadgeModel]
+    var message : MessageModel
+    var companionChatHistory : CompanionChatHistoryModel
     
-    init(id: UUID, onBoarding: OnBoardingModel, cigaretteLog: CigaretteLogModel, chatBuddy: ChatLogModel, chatSessions: [ChatLogModel], badges: [BadgeModel]) {
+    init(id: UUID, onBoarding: OnBoardingModel, cigaretteLog: CigaretteLogModel, badges: [BadgeModel], message : MessageModel, companionChatHistory : CompanionChatHistoryModel) {
         self.id = id
         self.onBoarding = onBoarding
         self.cigaretteLog = cigaretteLog
-        self.chatBuddy = chatBuddy
-        self.chatSessions = chatSessions
         self.badges = badges
+        self.message = message
+        self.companionChatHistory = companionChatHistory
+        
     }
     
     func toDomain() -> UserModel{
@@ -31,9 +32,9 @@ class UserStorage {
             id: self.id,
             onBoarding: self.onBoarding,
             cigaretteLog: self.cigaretteLog,
-            chatBuddy: self.chatBuddy,
-            chatSessions: self.chatSessions,
-            badges: self.badges
+            badges: self.badges,
+            message: self.message,
+            companionChatHistory: self.companionChatHistory
         )
     }
 }
