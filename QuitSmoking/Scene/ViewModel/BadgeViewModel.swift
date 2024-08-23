@@ -20,7 +20,7 @@ class BadgeViewModel: ObservableObject {
     init(badgeRepository: BadgeRepository, badgeUseCase: BadgeUseCase) {
         self.badgeRepository = badgeRepository
         self.badgeUseCase = badgeUseCase
-        startBadgeTimer()
+        self.startBadgeTimer()
     }
 
     func loadBadges() {
@@ -45,7 +45,6 @@ class BadgeViewModel: ObservableObject {
             .sink { [weak self] _ in
                 self?.getBadge()
                 self?.loadBadges()
-                print("yhu")
             }
     }
 

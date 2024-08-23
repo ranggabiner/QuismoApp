@@ -35,11 +35,13 @@ class BadgeUseCase {
         var moneyBadges = badgeRepository.fetchBadges(for: "money")
         
         for i in 0..<moneyBadges.count {
+            print("moneysaved: ", moneySaved)
+            print("first", moneyBadges[i])
             if moneySaved >= Int(moneyBadges[i].value) && !moneyBadges[i].isEarned {
                 moneyBadges[i].isEarned = true
+                userRepository.update(user: user)
             }
         }
-        userRepository.update(user: user)
     }
     
     func getHeaalthAndTimeBadge() {
@@ -53,9 +55,9 @@ class BadgeUseCase {
             if timeElapsed >= badge.value {
                 if let index = user.badges.firstIndex(where: { $0.id == badge.id }) {
                     user.badges[index].isEarned = true
+                    userRepository.update(user: user)
                 }
             }
         }
-        userRepository.update(user: user)
     }
 }

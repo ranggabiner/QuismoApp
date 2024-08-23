@@ -54,7 +54,6 @@ struct NameView: View {
                     .onChange(of: name) { newValue in
                         user.onBoarding.name = name
                         UserDefaults.standard.set(name, forKey: "name")
-                        print(user)
                     }
                 
                 

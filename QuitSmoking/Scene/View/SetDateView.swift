@@ -53,7 +53,6 @@ struct SetDateView: View {
                                 if let dateWithZeroTime = calendar.date(from: dateComponents) {
                                     user.onBoarding.setDate = dateWithZeroTime
                                     userSelectedDate()
-                                    print(user)
                                 }
                             }
 

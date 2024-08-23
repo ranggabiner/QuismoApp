@@ -209,7 +209,6 @@ struct DashboardView: View {
             }
             .ignoresSafeArea()
         }.onAppear{
-            print("onappear")
             viewModel.fetch()
         }
     }
