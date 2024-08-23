@@ -36,7 +36,7 @@ struct TabbarView: View {
                         Label("Journey", systemImage: "house.fill")
                     }
                 
-                ContentView()
+                ChatBuddyView()
                     .tabItem {
                         Label("Chat", systemImage: "bubble.left.and.bubble.right")
                     }
