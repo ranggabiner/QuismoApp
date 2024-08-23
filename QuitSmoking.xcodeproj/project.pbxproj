@@ -31,9 +31,15 @@
 		4AEE519F2C772B7B00895BC0 /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE519E2C772B7B00895BC0 /* DashboardUseCase.swift */; };
 		8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */; };
 		8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */; };
-		8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1D2C662471009F50C3 /* ContentView.swift */; };
 		8F2BAE202C662473009F50C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE1F2C662473009F50C3 /* Assets.xcassets */; };
 		8F2BAE232C662473009F50C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */; };
+		8F7B782C2C7854B300322A49 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B782B2C7854B300322A49 /* ChatController.swift */; };
+		8F7B78312C7854FD00322A49 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B78302C7854FD00322A49 /* CountdownView.swift */; };
+		8F7B78322C7854FD00322A49 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B782F2C7854FD00322A49 /* StatusView.swift */; };
+		8F7B78332C7854FD00322A49 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B782D2C7854FD00322A49 /* MessageView.swift */; };
+		8F7B78342C7854FD00322A49 /* LetsTalkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B782E2C7854FD00322A49 /* LetsTalkCard.swift */; };
+		8F7B78372C78553200322A49 /* ChatSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B78352C78553100322A49 /* ChatSessionView.swift */; };
+		8F7B78382C78553200322A49 /* LetsTalkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B78362C78553100322A49 /* LetsTalkListView.swift */; };
 		8F8B13F12C6FACE6000C0780 /* CommitmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F02C6FACE6000C0780 /* CommitmentView.swift */; };
 		8F8B13F32C6FAF07000C0780 /* SetDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F22C6FAF07000C0780 /* SetDateView.swift */; };
 		8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */; };
@@ -103,9 +109,15 @@
 		8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		8F2BAE182C662471009F50C3 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingApp.swift; sourceTree = "<group>"; };
-		8F2BAE1D2C662471009F50C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F2BAE1F2C662473009F50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F7B782B2C7854B300322A49 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		8F7B782D2C7854FD00322A49 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		8F7B782E2C7854FD00322A49 /* LetsTalkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsTalkCard.swift; sourceTree = "<group>"; };
+		8F7B782F2C7854FD00322A49 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		8F7B78302C7854FD00322A49 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		8F7B78352C78553100322A49 /* ChatSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionView.swift; sourceTree = "<group>"; };
+		8F7B78362C78553100322A49 /* LetsTalkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsTalkListView.swift; sourceTree = "<group>"; };
 		8F8B13F02C6FACE6000C0780 /* CommitmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitmentView.swift; sourceTree = "<group>"; };
 		8F8B13F22C6FAF07000C0780 /* SetDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateView.swift; sourceTree = "<group>"; };
 		8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEndView.swift; sourceTree = "<group>"; };
@@ -215,7 +227,6 @@
 				E03A3FB82C6DF52C00EBC763 /* Domain */,
 				E03A3FB92C6DF56400EBC763 /* Scene */,
 				8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */,
-				8F2BAE1D2C662471009F50C3 /* ContentView.swift */,
 				4ADDBB262C6B43EC003531B3 /* BreathingTechniqueView.swift */,
 				4ADDBB2C2C6B48A6003531B3 /* AddSmokeView.swift */,
 				4A3A81FE2C725408004C27A6 /* AddSmokeViewModel.swift */,
@@ -254,6 +265,7 @@
 				E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */,
 				E03A3F9B2C6B53B100EBC763 /* PricePerPackViewController.swift */,
 				E03A3FB32C6CA8EE00EBC763 /* NameViewController.swift */,
+				8F7B782B2C7854B300322A49 /* ChatController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -277,6 +289,8 @@
 				4A3A82002C733BCC004C27A6 /* TrackView.swift */,
 				4A3A82062C735A2C004C27A6 /* TabbarView.swift */,
 				E03A3FEC2C733D0B00EBC763 /* BadgeView.swift */,
+				8F7B78352C78553100322A49 /* ChatSessionView.swift */,
+				8F7B78362C78553100322A49 /* LetsTalkListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				8FADBE952C77411B009149C0 /* CompanionMessageView.swift */,
+				8F7B782D2C7854FD00322A49 /* MessageView.swift */,
+				8F7B782E2C7854FD00322A49 /* LetsTalkCard.swift */,
+				8F7B782F2C7854FD00322A49 /* StatusView.swift */,
+				8F7B78302C7854FD00322A49 /* CountdownView.swift */,
 				E03A3FE22C733C0500EBC763 /* BadgeCardView.swift */,
 				E03A3FE42C733C1700EBC763 /* BadgeModalView.swift */,
 				E03A3FF72C76D72A00EBC763 /* BadgeSectionView.swift */,
@@ -448,7 +466,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7851EC2C7244CB009409B9 /* UserRepository.swift in Sources */,
-				8F2BAE1E2C662471009F50C3 /* ContentView.swift in Sources */,
 				8F8B13F32C6FAF07000C0780 /* SetDateView.swift in Sources */,
 				8FB2DD1C2C6DF03400E9A157 /* GreetingsViewController.swift in Sources */,
 				4A3A82032C733C25004C27A6 /* MonthModel.swift in Sources */,
@@ -491,6 +508,10 @@
 				4A7851E42C724176009409B9 /* OnBoardingModel.swift in Sources */,
 				E03A3FF82C76D72A00EBC763 /* BadgeSectionView.swift in Sources */,
 				E03A3F912C6B454100EBC763 /* OnBoardingViewModel.swift in Sources */,
+				8F7B78312C7854FD00322A49 /* CountdownView.swift in Sources */,
+				8F7B78322C7854FD00322A49 /* StatusView.swift in Sources */,
+				8F7B78332C7854FD00322A49 /* MessageView.swift in Sources */,
+				8F7B78342C7854FD00322A49 /* LetsTalkCard.swift in Sources */,
 				4A7851E12C724176009409B9 /* ChatLogModel.swift in Sources */,
 				8F12EDC72C735AF300A11D1D /* ProgressBarView.swift in Sources */,
 				4AEE519D2C772B0C00895BC0 /* DashboardViewModel.swift in Sources */,
@@ -498,10 +519,13 @@
 				E03A3F9C2C6B53B100EBC763 /* PricePerPackViewController.swift in Sources */,
 				8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */,
 				8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */,
+				8F7B782C2C7854B300322A49 /* ChatController.swift in Sources */,
 				4A655EF02C749FE500234EDE /* OnBoardingUseCase.swift in Sources */,
 				E03A3F982C6B531A00EBC763 /* QuitReasonViewController.swift in Sources */,
 				E03A3FB42C6CA8EE00EBC763 /* NameViewController.swift in Sources */,
 				4A3A82012C733BCC004C27A6 /* TrackView.swift in Sources */,
+				8F7B78372C78553200322A49 /* ChatSessionView.swift in Sources */,
+				8F7B78382C78553200322A49 /* LetsTalkListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

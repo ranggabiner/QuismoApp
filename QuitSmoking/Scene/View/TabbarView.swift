@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TabbarView: View {
     @State private var goToAddSmokeView = false
+    let container: ModelContainer
     
     @State var user = UserModel(
         id: UUID(),
@@ -24,14 +26,15 @@ struct TabbarView: View {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray1.withAlphaComponent(0.6)
         UITabBar.appearance().shadowImage = UIImage()
+        
+        container = try! ModelContainer(for: UserStorage.self, ChatHistory.self, Message.self, SessionStatus.self)
 
     }
     
     var body: some View {
         ZStack {
-            
             TabView {
-                DashboardView()
+                DashboardView(container: container)
                     .tabItem {
                         Label("Journey", systemImage: "house.fill")
                     }

@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct DashboardView: View {
+    let container: ModelContainer
     @ObservedObject var viewModel = DashboardViewModel(dashboardUseCase: DashboardUseCase(repository: LocalUserRepository()))
     
     var body: some View {
@@ -111,7 +113,6 @@ struct DashboardView: View {
                         .foregroundColor(Color("White"))
                         .padding(.top, 75)
                     ZStack {
-                        
                         VStack {
                             HStack {
                                 Text("Let's Talk!")
@@ -123,29 +124,12 @@ struct DashboardView: View {
                                     .padding(.top, 75)
                                 Spacer()
                             }
-                            Rectangle()
-                                .frame(width: 353, height: 100)
-                                .foregroundColor(Color("Primary"))
-                                .cornerRadius(15)
-                                .padding(.bottom, 10)
-                            Rectangle()
-                                .frame(width: 353, height: 100)
-                                .foregroundColor(Color("Primary"))
-                                .cornerRadius(15)
-                                .padding(.bottom, 10)
-                            Rectangle()
-                                .frame(width: 353, height: 100)
-                                .foregroundColor(Color("Primary"))
-                                .cornerRadius(15)
-                                .padding(.bottom, 10)
-                            Rectangle()
-                                .frame(width: 353, height: 100)
-                                .foregroundColor(Color("Primary"))
-                                .cornerRadius(15)
+                            LetsTalkListView(chatController: ChatController(modelContext: container.mainContext, repository: LocalUserRepository()))
+
                         }
                         .frame(width: 393)
 //                        .padding(.top, 276)
-                        .padding(.top, 75)
+                        .padding(.top, 276)
                     }
                     
                     //insight box
@@ -212,7 +196,7 @@ struct DashboardView: View {
                                 }
                                 Rectangle()
                                     .frame(width: 315, height: 2)
-                                    .background(Color("Primary"))
+                                    .foregroundColor(Color("Primary"))
                                     .offset(CGSize(width: 0.0, height: -15))
                             }
                             .frame(width: 353, height: 1000)
