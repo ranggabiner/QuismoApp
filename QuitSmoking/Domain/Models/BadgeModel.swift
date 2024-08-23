@@ -10,6 +10,7 @@ import Foundation
 struct BadgeModel: Identifiable, Codable {
     var id: Int
     var title: String
+    var value: Double
     var subtitle: String
     var imageName: String
     var isEarned: Bool

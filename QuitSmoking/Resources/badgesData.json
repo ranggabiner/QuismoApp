@@ -2,6 +2,7 @@
     {
         "id": 0,
         "title": "20 Minutes",
+        "value": 20,
         "subtitle": "Heart rate and blood pressure drop to healthier levels.",
         "imageName": "time3",
         "isEarned": false,
@@ -10,6 +11,7 @@
     {
         "id": 1,
         "title": "12 Hours",
+        "value": 720,
         "subtitle": "Carbon monoxide levels in the blood return to normal.",
         "imageName": "time1",
         "isEarned": false,
@@ -18,6 +20,7 @@
     {
         "id": 2,
         "title": "2 Weeks",
+        "value": 20160,
         "subtitle": "Circulation improves and lung function begins to enhance.",
         "imageName": "money3",
         "isEarned": false,
@@ -25,7 +28,8 @@
     },
     {
         "id": 3,
-        "title": "1 Month",
+        "title": "1 Months",
+        "value": 43800,
         "subtitle": "Coughing and shortness of breath decrease; lung function improves further.",
         "imageName": "health3",
         "isEarned": false,
@@ -35,6 +39,7 @@
     {
         "id": 4,
         "title": "3 Months",
+        "value": 131400,
         "subtitle": "Lung function continues to improve, making breathing easier and reducing symptoms like coughing.",
         "imageName": "health3",
         "isEarned": false,
@@ -43,6 +48,7 @@
     {
         "id": 5,
         "title": "4 Months",
+        "value": 175200,
         "subtitle": "Improved overall energy levels and reduced risk of respiratory infections.",
         "imageName": "time1",
         "isEarned": false,
@@ -51,6 +57,7 @@
     {
         "id": 6,
         "title": "5 Months",
+        "value": 219000,
         "subtitle": "Enhanced sense of taste and smell as the body recovers from the effects of smoking.",
         "imageName": "money2",
         "isEarned": false,
@@ -59,6 +66,7 @@
     {
         "id": 7,
         "title": "6 Months",
+        "value": 262800,
         "subtitle": "Cilia in the lungs regain normal function, helping to clear mucus and reduce infections.",
         "imageName": "time3",
         "isEarned": false,
@@ -67,6 +75,7 @@
     {
         "id": 8,
         "title": "8 Months",
+        "value": 350400,
         "subtitle": "Significant improvement in lung health, leading to fewer respiratory issues and less wheezing.",
         "imageName": "health1",
         "isEarned": false,
@@ -74,7 +83,8 @@
     },
     {
         "id": 9,
-        "title": "1 Year",
+        "title": "1 year",
+        "value": 525600,
         "subtitle": "Risk of coronary heart disease is reduced by 50% compared to a smoker’s risk, and overall health benefits are evident.",
         "imageName": "health1",
         "isEarned": false,
@@ -83,6 +93,7 @@
     {
         "id": 10,
         "title": "Rp 50,000",
+        "value": 50000,
         "subtitle": "Can buy a basic lunch at a local café.",
         "imageName": "money2",
         "isEarned": false,
@@ -91,6 +102,7 @@
     {
         "id": 11,
         "title": "Rp 100,000",
+        "value": 100000,
         "subtitle": "Enough for a stylish wallet.",
         "imageName": "money1",
         "isEarned": false,
@@ -99,6 +111,7 @@
     {
         "id": 12,
         "title": "Rp 200,000",
+        "value": 200000,
         "subtitle": "Can purchase a high-quality pair of wireless earbuds.",
         "imageName": "money5",
         "isEarned": false,
@@ -107,6 +120,7 @@
     {
         "id": 13,
         "title": "Rp 500,000",
+        "value": 500000,
         "subtitle": "Equivalent to a well-made office chair cushion.",
         "imageName": "money1",
         "isEarned": false,
@@ -115,6 +129,7 @@
     {
         "id": 14,
         "title": "Rp 1,000,000",
+        "value": 1000000,
         "subtitle": "Can buy a decent quality air purifier.",
         "imageName": "time1",
         "isEarned": false,
@@ -123,6 +138,7 @@
     {
         "id": 15,
         "title": "Rp 2,000,000",
+        "value": 2000000,
         "subtitle": "Enough for a mid-range tablet.",
         "imageName": "money5",
         "isEarned": false,
@@ -131,6 +147,7 @@
     {
         "id": 16,
         "title": "Rp 3,000,000",
+        "value": 3000000,
         "subtitle": "Can cover the cost of a quality smartwatch.",
         "imageName": "money3",
         "isEarned": false,
@@ -139,6 +156,7 @@
     {
         "id": 17,
         "title": "Rp 5,000,000",
+        "value": 5000000,
         "subtitle": "Equivalent to a 42-inch smart TV.",
         "imageName": "money1",
         "isEarned": false,
@@ -147,6 +165,7 @@
     {
         "id": 18,
         "title": "Rp 7,500,000",
+        "value": 7500000,
         "subtitle": "Can purchase a top-tier smartphone.",
         "imageName": "time1",
         "isEarned": false,
@@ -155,6 +174,7 @@
     {
         "id": 19,
         "title": "Rp 10,000,000",
+        "value": 1000000,
         "subtitle": "Enough for a high-quality gaming laptop with advanced features.",
         "imageName": "money3",
         "isEarned": false,
@@ -162,7 +182,8 @@
     },
     {
         "id": 20,
-        "title": "10 Seconds",
+        "title": "1 Minute",
+        "value": 1,
         "subtitle": "The fastest 100-meter sprint by Usain Bolt, who completed it in 9.58 seconds.",
         "imageName": "time2",
         "isEarned": false,
@@ -171,6 +192,7 @@
     {
         "id": 21,
         "title": "5 Minutes",
+        "value": 5,
         "subtitle": "The longest time a person has held their breath underwater on pure oxygen, achieved by Stig Severinsen in 5 minutes and 32 seconds.",
         "imageName": "health1",
         "isEarned": false,
@@ -179,6 +201,7 @@
     {
         "id": 22,
         "title": "26 Minutes",
+        "value": 26,
         "subtitle": "The time it took for the fastest human to complete a 10-kilometer run, achieved by Joshua Cheptegei in 26 minutes and 38 seconds.",
         "imageName": "money4",
         "isEarned": false,
@@ -187,6 +210,7 @@
     {
         "id": 23,
         "title": "1 Hour",
+        "value": 60,
         "subtitle": "The longest time for a person to continuously balance a bicycle on one wheel, which is 1 hour and 1 minute, achieved by Fred Rompelberg.",
         "imageName": "health1",
         "isEarned": false,
@@ -195,23 +219,26 @@
     {
         "id": 24,
         "title": "8 Hours",
-        "subtitle": "The longest continuous period of sleep ever recorded, with the average duration being 8 hours.",
+        "value": 480,
+        "subtitle": "The longest continuous plank hold, achieved by George Hood, who held the plank position for 8 hours, 15 minutes, and 15 seconds. ",
         "imageName": "health3",
         "isEarned": false,
         "category": "time"
     },
     {
         "id": 25,
-        "title": "24 Hours",
-        "subtitle": "The duration of a day, marked by Earth's rotation.",
+        "title": "20 Hours",
+        "value": 1200,
+        "subtitle": "The longest continuous solo kayak journey, achieved by Jason Caldwell, who paddled for 20 hours non-stop.",
         "imageName": "time3",
         "isEarned": false,
         "category": "time"
     },
     {
         "id": 26,
-        "title": "7 Days",
-        "subtitle": "The length of time in one week, containing 168 hours.",
+        "title": "1 Days",
+        "value": 1440,
+        "subtitle": "The longest time a person has run on a treadmill in 24 hours, with the record being 262.2 kilometers (162.3 miles) by Yiannis Kouros.",
         "imageName": "time1",
         "isEarned": false,
         "category": "time"
@@ -219,23 +246,26 @@
     {
         "id": 27,
         "title": "1 Month",
-        "subtitle": "The length of time in one lunar month, approximately 29.5 days.",
+        "value": 43800,
+        "subtitle": "The longest time someone has survived underwater in a submerged habitat, which is 30 days in the Aquarius underwater habitat.",
         "imageName": "health2",
         "isEarned": false,
         "category": "time"
     },
     {
         "id": 28,
-        "title": "1 Year",
-        "subtitle": "The length of time for Earth's orbit around the sun, approximately 365.25 days.",
+        "title": "71 Days",
+        "value": 365,
+        "subtitle": "The record for the fastest solo circumnavigation of the globe by a sailboat, achieved by Ellen MacArthur in 71 days, but notable achievements within two weeks include long-distance flights or significant solo expeditions.",
         "imageName": "money3",
         "isEarned": false,
         "category": "time"
     },
     {
         "id": 29,
-        "title": "10 Years",
-        "subtitle": "A decade, the period in which significant technological advancements often occur.",
+        "title": "355 Days",
+        "value": 3650,
+        "subtitle": "The longest continuous space mission by a single astronaut, which was 355 days by Scott Kelly aboard the International Space Station.",
         "imageName": "time1",
         "isEarned": false,
         "category": "time"

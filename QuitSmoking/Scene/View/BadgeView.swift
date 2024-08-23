@@ -12,7 +12,7 @@ struct BadgeView: View {
     @State private var showCardDetail = false
     @State private var selectedBadge: BadgeModel?
 
-    init(viewModel: BadgeViewModel = BadgeViewModel(badgeRepository: BadgeRepositories())) {
+    init(viewModel: BadgeViewModel = BadgeViewModel(badgeRepository: BadgeRepositories(), badgeUseCase: BadgeUseCase(userRepository: LocalUserRepository(), badgeRepository: BadgeRepositories()))){
         self._viewModel = ObservedObject(initialValue: viewModel)
     }
 
@@ -40,7 +40,9 @@ struct BadgeView: View {
 struct BadgeView_Previews: PreviewProvider {
     static var previews: some View {
         let repository = BadgeRepositories()
-        let viewModel = BadgeViewModel(badgeRepository: repository)
+        let userRepository = LocalUserRepository()
+        let badgeUseCase = BadgeUseCase(userRepository: userRepository, badgeRepository: repository)
+        let viewModel = BadgeViewModel(badgeRepository: repository, badgeUseCase: badgeUseCase)
         BadgeView(viewModel: viewModel)
     }
 }

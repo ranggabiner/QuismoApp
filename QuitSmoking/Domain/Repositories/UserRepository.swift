@@ -42,7 +42,6 @@ class LocalUserRepository: UserRepository{
             localUsers?[0].cigaretteLog.cigarettesSmoked = user.cigaretteLog.cigarettesSmoked
             localUsers?[0].badges = user.badges
             localUsers?[0].companionChatHistory = user.companionChatHistory
-            print(user.badges)
             try container?.mainContext.save()
         } catch{
             fatalError(error.localizedDescription)

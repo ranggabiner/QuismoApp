@@ -89,7 +89,6 @@ struct QuitReasonView: View {
     private func userQuitReason() {
         let selectedReasons = Array(selectedOptions)
         user.onBoarding.quitReason = selectedOptions.joined(separator: ", ")
-        print(user)
     }
 }
 

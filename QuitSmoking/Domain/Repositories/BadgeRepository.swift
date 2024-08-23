@@ -15,10 +15,10 @@ class BadgeRepositories: BadgeRepository {
     private var badges: [BadgeModel] = []
 
     init() {
-        loadBadges()
+        loadBadgesData()
     }
 
-    private func loadBadges() {
+    private func loadBadgesData() {
         guard let url = Bundle.main.url(forResource: "badgesData", withExtension: "json") else {
             print("JSON file not found")
             return
