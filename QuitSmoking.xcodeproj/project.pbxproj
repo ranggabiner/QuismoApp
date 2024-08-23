@@ -39,6 +39,9 @@
 		8F8B13F52C6FB098000C0780 /* OnboardingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */; };
 		8F8B13F92C708375000C0780 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B13F82C708375000C0780 /* DashboardView.swift */; };
 		8FA6AE7C2C6FA7BF00145400 /* CigsPerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */; };
+		8FACF5622C781AB500CEF582 /* ChatBuddyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FACF5612C781AAE00CEF582 /* ChatBuddyUseCase.swift */; };
+		8FACF5642C781B0700CEF582 /* ChatBuddyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FACF5632C781B0100CEF582 /* ChatBuddyViewModel.swift */; };
+		8FACF5662C781B3D00CEF582 /* ChatBuddyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FACF5652C781B3900CEF582 /* ChatBuddyView.swift */; };
 		8FADBE932C774113009149C0 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADBE922C774113009149C0 /* SoundManager.swift */; };
 		8FADBE942C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FADBE912C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 */; };
 		8FADBE962C77411B009149C0 /* CompanionMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADBE952C77411B009149C0 /* CompanionMessageView.swift */; };
@@ -108,6 +111,9 @@
 		8F8B13F42C6FB098000C0780 /* OnboardingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEndView.swift; sourceTree = "<group>"; };
 		8F8B13F82C708375000C0780 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		8FA6AE7B2C6FA7BF00145400 /* CigsPerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerPackView.swift; sourceTree = "<group>"; };
+		8FACF5612C781AAE00CEF582 /* ChatBuddyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBuddyUseCase.swift; sourceTree = "<group>"; };
+		8FACF5632C781B0100CEF582 /* ChatBuddyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBuddyViewModel.swift; sourceTree = "<group>"; };
+		8FACF5652C781B3900CEF582 /* ChatBuddyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBuddyView.swift; sourceTree = "<group>"; };
 		8FADBE912C774113009149C0 /* puppy-barking-felix-blume-1-00-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "puppy-barking-felix-blume-1-00-01.mp3"; sourceTree = "<group>"; };
 		8FADBE922C774113009149C0 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		8FADBE952C77411B009149C0 /* CompanionMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionMessageView.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 		4A7851ED2C7246BF009409B9 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				8FACF5612C781AAE00CEF582 /* ChatBuddyUseCase.swift */,
 				4A3A81FC2C724C85004C27A6 /* CigaretteLogUseCase.swift */,
 				4A655EEF2C749FE500234EDE /* OnBoardingUseCase.swift */,
 				E03A3FF52C75F02F00EBC763 /* BadgeUseCase.swift */,
@@ -230,6 +237,7 @@
 		E03A3F8F2C6B452300EBC763 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8FACF5632C781B0100CEF582 /* ChatBuddyViewModel.swift */,
 				E03A3F902C6B454100EBC763 /* OnBoardingViewModel.swift */,
 				4AEE519C2C772B0C00895BC0 /* DashboardViewModel.swift */,
 				4A3A82042C733E32004C27A6 /* TrackViewModel.swift */,
@@ -253,6 +261,7 @@
 		E03A3FAC2C6C99BC00EBC763 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8FACF5652C781B3900CEF582 /* ChatBuddyView.swift */,
 				8FB2DD192C6DF01E00E9A157 /* GreetingsView.swift */,
 				E03A3FAD2C6C99D700EBC763 /* QuitReasonView.swift */,
 				E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */,
@@ -446,6 +455,7 @@
 				4A7851E52C724176009409B9 /* UserModel.swift in Sources */,
 				8F8B13F12C6FACE6000C0780 /* CommitmentView.swift in Sources */,
 				4ADDBB2D2C6B48A6003531B3 /* AddSmokeView.swift in Sources */,
+				8FACF5622C781AB500CEF582 /* ChatBuddyUseCase.swift in Sources */,
 				8FDDF3BB2C73A43400FB2B80 /* OnboardingView.swift in Sources */,
 				4ADDBB272C6B43EC003531B3 /* BreathingTechniqueView.swift in Sources */,
 				4A7851EA2C724483009409B9 /* SwiftDataManager.swift in Sources */,
@@ -462,6 +472,7 @@
 				E03A3FE32C733C0500EBC763 /* BadgeCardView.swift in Sources */,
 				8F2BAE1C2C662471009F50C3 /* QuitSmokingApp.swift in Sources */,
 				4A3A82052C733E32004C27A6 /* TrackViewModel.swift in Sources */,
+				8FACF5642C781B0700CEF582 /* ChatBuddyViewModel.swift in Sources */,
 				8FADBE962C77411B009149C0 /* CompanionMessageView.swift in Sources */,
 				4A7851E22C724176009409B9 /* CigaretteLogModel.swift in Sources */,
 				8FB2DD1A2C6DF01E00E9A157 /* GreetingsView.swift in Sources */,
@@ -469,6 +480,7 @@
 				4A3A81FF2C725408004C27A6 /* AddSmokeViewModel.swift in Sources */,
 				8FADBE982C774128009149C0 /* CompanionChatHistoryModel.swift in Sources */,
 				E03A3FED2C733D0B00EBC763 /* BadgeView.swift in Sources */,
+				8FACF5662C781B3D00CEF582 /* ChatBuddyView.swift in Sources */,
 				4AEE519F2C772B7B00895BC0 /* DashboardUseCase.swift in Sources */,
 				4A7851E32C724176009409B9 /* MessageModel.swift in Sources */,
 				4A7851E02C724176009409B9 /* BadgeModel.swift in Sources */,
