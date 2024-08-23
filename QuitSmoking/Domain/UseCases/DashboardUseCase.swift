@@ -17,8 +17,6 @@ class DashboardUseCase{
     func getCigaretteAvoided() -> Int {
         let user = repository.fetch()
         
-        print("repo")
-        print(user)
         // Get the cigarette log and set date
         let cigaretteLog = user.cigaretteLog.cigarettesSmoked
         

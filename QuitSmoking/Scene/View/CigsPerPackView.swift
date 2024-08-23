@@ -58,7 +58,6 @@ struct CigsPerPackView: View {
                         } else {
                             user.onBoarding.cigsPerPack = 0
                         }
-                        print(user)
                     }
                 
                 Spacer()

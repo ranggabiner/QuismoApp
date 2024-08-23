@@ -82,7 +82,6 @@ struct PricePerPackView: View {
                             } else {
                                 user.onBoarding.pricePerPack = 0
                             }
-                            print(user)
                         }
                     
                     Spacer()

@@ -186,7 +186,7 @@
         "value": 1,
         "subtitle": "The fastest 100-meter sprint by Usain Bolt, who completed it in 9.58 seconds.",
         "imageName": "time2",
-        "isEarned": false,
+        "isEarned": true,
         "category": "time"
     },
     {

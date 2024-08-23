@@ -36,8 +36,6 @@ struct OnboardingEndView: View {
                 
                 Button(action: {
                     viewModel.saveData(user: user)
-                    print("xxxxxxxx")
-                    print(user)
                     withAnimation {
 //                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             showNextView = true
