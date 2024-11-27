@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1540"
+   LastUpgradeVersion = "1600"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F2BAE172C662471009F50C3"
-               BuildableName = "QuitSmoking.app"
-               BlueprintName = "QuitSmoking"
-               ReferencedContainer = "container:QuitSmoking.xcodeproj">
+               BuildableName = "Quismo.app"
+               BlueprintName = "Quismo"
+               ReferencedContainer = "container:Quismo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,19 +29,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E03A3FA22C6B61E300EBC763"
-               BuildableName = "QuitSmokingTests.xctest"
-               BlueprintName = "QuitSmokingTests"
-               ReferencedContainer = "container:QuitSmoking.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -58,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F2BAE172C662471009F50C3"
-            BuildableName = "QuitSmoking.app"
-            BlueprintName = "QuitSmoking"
-            ReferencedContainer = "container:QuitSmoking.xcodeproj">
+            BuildableName = "Quismo.app"
+            BlueprintName = "Quismo"
+            ReferencedContainer = "container:Quismo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -75,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F2BAE172C662471009F50C3"
-            BuildableName = "QuitSmoking.app"
-            BlueprintName = "QuitSmoking"
-            ReferencedContainer = "container:QuitSmoking.xcodeproj">
+            BuildableName = "Quismo.app"
+            BlueprintName = "Quismo"
+            ReferencedContainer = "container:Quismo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -107,7 +107,7 @@
 		4AEE519C2C772B0C00895BC0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		4AEE519E2C772B7B00895BC0 /* DashboardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardUseCase.swift; sourceTree = "<group>"; };
 		8F12EDC62C735AF300A11D1D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
-		8F2BAE182C662471009F50C3 /* QuitSmoking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmoking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2BAE182C662471009F50C3 /* Quismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2BAE1B2C662471009F50C3 /* QuitSmokingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSmokingApp.swift; sourceTree = "<group>"; };
 		8F2BAE1F2C662473009F50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F2BAE222C662473009F50C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		E03A3F972C6B531A00EBC763 /* QuitReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitReasonViewController.swift; sourceTree = "<group>"; };
 		E03A3F992C6B536600EBC763 /* CigsPerDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerDayViewController.swift; sourceTree = "<group>"; };
 		E03A3F9B2C6B53B100EBC763 /* PricePerPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerPackViewController.swift; sourceTree = "<group>"; };
-		E03A3FA32C6B61E300EBC763 /* QuitSmokingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuitSmokingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03A3FA32C6B61E300EBC763 /* QuismoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuismoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03A3FAD2C6C99D700EBC763 /* QuitReasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitReasonView.swift; sourceTree = "<group>"; };
 		E03A3FAF2C6C9DC800EBC763 /* CigsPerDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigsPerDayView.swift; sourceTree = "<group>"; };
 		E03A3FB12C6C9EE900EBC763 /* PricePerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerPackView.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		8F2BAE0F2C662471009F50C3 = {
 			isa = PBXGroup;
 			children = (
-				8F2BAE1A2C662471009F50C3 /* QuitSmoking */,
+				8F2BAE1A2C662471009F50C3 /* Quismo */,
 				8F2BAE192C662471009F50C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -212,13 +212,13 @@
 		8F2BAE192C662471009F50C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F2BAE182C662471009F50C3 /* QuitSmoking.app */,
-				E03A3FA32C6B61E300EBC763 /* QuitSmokingTests.xctest */,
+				8F2BAE182C662471009F50C3 /* Quismo.app */,
+				E03A3FA32C6B61E300EBC763 /* QuismoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8F2BAE1A2C662471009F50C3 /* QuitSmoking */ = {
+		8F2BAE1A2C662471009F50C3 /* Quismo */ = {
 			isa = PBXGroup;
 			children = (
 				E03A3FF22C75D35000EBC763 /* Resources */,
@@ -234,7 +234,7 @@
 				8F2BAE1F2C662473009F50C3 /* Assets.xcassets */,
 				8F2BAE212C662473009F50C3 /* Preview Content */,
 			);
-			path = QuitSmoking;
+			path = Quismo;
 			sourceTree = "<group>";
 		};
 		8F2BAE212C662473009F50C3 /* Preview Content */ = {
@@ -360,9 +360,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F2BAE172C662471009F50C3 /* QuitSmoking */ = {
+		8F2BAE172C662471009F50C3 /* Quismo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F2BAE262C662473009F50C3 /* Build configuration list for PBXNativeTarget "QuitSmoking" */;
+			buildConfigurationList = 8F2BAE262C662473009F50C3 /* Build configuration list for PBXNativeTarget "Quismo" */;
 			buildPhases = (
 				8F2BAE142C662471009F50C3 /* Sources */,
 				8F2BAE152C662471009F50C3 /* Frameworks */,
@@ -372,17 +372,17 @@
 			);
 			dependencies = (
 			);
-			name = QuitSmoking;
+			name = Quismo;
 			packageProductDependencies = (
 				4ADDBB242C6B425E003531B3 /* OpenAI */,
 			);
 			productName = QuitSmoking;
-			productReference = 8F2BAE182C662471009F50C3 /* QuitSmoking.app */;
+			productReference = 8F2BAE182C662471009F50C3 /* Quismo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E03A3FA22C6B61E300EBC763 /* QuitSmokingTests */ = {
+		E03A3FA22C6B61E300EBC763 /* QuismoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E03A3FA92C6B61E300EBC763 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */;
+			buildConfigurationList = E03A3FA92C6B61E300EBC763 /* Build configuration list for PBXNativeTarget "QuismoTests" */;
 			buildPhases = (
 				E03A3F9F2C6B61E300EBC763 /* Sources */,
 				E03A3FA12C6B61E300EBC763 /* Resources */,
@@ -392,9 +392,9 @@
 			dependencies = (
 				E03A3FA82C6B61E300EBC763 /* PBXTargetDependency */,
 			);
-			name = QuitSmokingTests;
+			name = QuismoTests;
 			productName = QuitSmokingTests;
-			productReference = E03A3FA32C6B61E300EBC763 /* QuitSmokingTests.xctest */;
+			productReference = E03A3FA32C6B61E300EBC763 /* QuismoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -416,7 +416,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8F2BAE132C662471009F50C3 /* Build configuration list for PBXProject "QuitSmoking" */;
+			buildConfigurationList = 8F2BAE132C662471009F50C3 /* Build configuration list for PBXProject "Quismo" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -432,8 +432,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F2BAE172C662471009F50C3 /* QuitSmoking */,
-				E03A3FA22C6B61E300EBC763 /* QuitSmokingTests */,
+				8F2BAE172C662471009F50C3 /* Quismo */,
+				E03A3FA22C6B61E300EBC763 /* QuismoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -541,7 +541,7 @@
 /* Begin PBXTargetDependency section */
 		E03A3FA82C6B61E300EBC763 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F2BAE172C662471009F50C3 /* QuitSmoking */;
+			target = 8F2BAE172C662471009F50C3 /* Quismo */;
 			targetProxy = E03A3FA72C6B61E300EBC763 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -673,7 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Quismo/Preview Content\"";
 				DEVELOPMENT_TEAM = A23N5QDWR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -708,7 +708,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"QuitSmoking/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Quismo/Preview Content\"";
 				DEVELOPMENT_TEAM = A23N5QDWR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -751,7 +751,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuitSmoking";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quismo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quismo";
 			};
 			name = Debug;
 		};
@@ -770,14 +770,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuitSmoking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuitSmoking";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quismo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quismo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F2BAE132C662471009F50C3 /* Build configuration list for PBXProject "QuitSmoking" */ = {
+		8F2BAE132C662471009F50C3 /* Build configuration list for PBXProject "Quismo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F2BAE242C662473009F50C3 /* Debug */,
@@ -786,7 +786,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F2BAE262C662473009F50C3 /* Build configuration list for PBXNativeTarget "QuitSmoking" */ = {
+		8F2BAE262C662473009F50C3 /* Build configuration list for PBXNativeTarget "Quismo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F2BAE272C662473009F50C3 /* Debug */,
@@ -795,7 +795,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E03A3FA92C6B61E300EBC763 /* Build configuration list for PBXNativeTarget "QuitSmokingTests" */ = {
+		E03A3FA92C6B61E300EBC763 /* Build configuration list for PBXNativeTarget "QuismoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E03A3FAA2C6B61E300EBC763 /* Debug */,
