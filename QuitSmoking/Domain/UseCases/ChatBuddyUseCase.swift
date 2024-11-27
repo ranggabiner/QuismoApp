@@ -20,7 +20,7 @@ class ChatBuddyUseCase: ObservableObject {
 
     init(repository: UserRepository) {
         self.repository = repository
-        self.openAI = OpenAI(apiToken: "Secret API")
+        self.openAI = OpenAI(apiToken: "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")
         
         self.poppy = [
             "initialPrompt": """
