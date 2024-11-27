@@ -25,7 +25,7 @@ class ChatController: ObservableObject {
     var modelContext: ModelContext
     private let repository: UserRepository
     
-    let openAI = OpenAI(apiToken: "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")
+    let openAI = OpenAI(apiToken: "api-key")
 
     let sessions = [
         Session(id: 1, initialPrompt: """
