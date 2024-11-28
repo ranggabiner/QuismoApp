@@ -21,7 +21,7 @@ struct OnboardingEndView: View {
             VStack {
                 
                 Spacer()
-                    .padding(.top, 20)
+                    .padding(.top, 30)
                 
                 Text("Well done. You’ve taken the first step toward a smoke-free life. I’m here to support you every step of the way.")
                     .multilineTextAlignment(.center)

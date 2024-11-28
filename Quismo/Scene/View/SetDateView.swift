@@ -58,11 +58,10 @@ struct SetDateView: View {
 
                     }
                     .cornerRadius(10)
-                    .padding()
+                    .padding(.horizontal)
                 }
                 
                 Spacer()
-                    .padding()
                 
                 Button(action: {
                     let dateFormatter = DateFormatter()
@@ -80,7 +79,7 @@ struct SetDateView: View {
                         .cornerRadius(10)
                         .foregroundColor(Color("Blue066ACC"))
                 }
-                .padding(.top, 20)
+//                .padding(.top, 20)
                 //                    .disabled(selectedDate.isEmpty)
             }
         }

@@ -35,7 +35,6 @@ struct OnboardingView: View {
                         }
                     }
                 })
-                .padding(.top, 65) // Adjust top padding as needed (progress bar)
                 
                 // TabView for swipe animation
                 TabView(selection: $currentStep) {
@@ -48,8 +47,6 @@ struct OnboardingView: View {
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)) // Disable page dots
             }
         }
-        .edgesIgnoringSafeArea(.top)
-        .edgesIgnoringSafeArea(.bottom)
     }
     
     @ViewBuilder

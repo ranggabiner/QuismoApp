@@ -63,7 +63,6 @@ struct QuitReasonView: View {
                 }
                 
                 Spacer()
-                    .padding()
                 
                 Button(action: {
                     if !selectedOptions.isEmpty {
@@ -80,6 +79,7 @@ struct QuitReasonView: View {
                         .cornerRadius(10)
                         .foregroundColor(selectedOptions.isEmpty ? Color("White") : Color("Blue066ACC"))
                 }
+                Spacer()
                 .disabled(selectedOptions.isEmpty)
             }
         }

@@ -38,20 +38,20 @@ struct TrackView: View {
                             }
                             
                             //biar ga nyusut
-                            ZStack {
-                                // Container
-                                Rectangle()
-                                    .frame(width: 19, height: 19)
-                                    .foregroundColor(.clear)
-                            }
+//                            ZStack {
+//                                // Container
+//                                Rectangle()
+//                                    .frame(width: 19, height: 19)
+//                                    .foregroundColor(.clear)
+//                            }
                         }
                         
                     }
                 }
             }
-            .padding()
+//            .padding()
             
-            Spacer()
+//            Spacer()
         }
         .onAppear{
             viewModel.fetch()
