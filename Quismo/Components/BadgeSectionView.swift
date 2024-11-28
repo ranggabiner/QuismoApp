@@ -18,7 +18,7 @@ struct BadgeSectionView: View {
             Text(title)
                 .font(.title)
                 .bold()
-                .padding(.vertical, 10)
+                .padding(.bottom, 10)
                 .padding(.horizontal)
                 .foregroundColor(Color(.primary))
             ScrollView(.horizontal, showsIndicators: false) {

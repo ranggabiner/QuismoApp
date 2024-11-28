@@ -87,7 +87,7 @@ struct TabbarView: View {
             .offset(y: 360)
             
         }
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
     }
 }
 
