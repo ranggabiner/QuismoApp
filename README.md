@@ -1,8 +1,8 @@
 # Quismo
 
-**AI-Powered Smoking Cessation Companion**
+**AI Powered Smoking Cessation Companion**
 
-An iOS application that reimagines smoking cessation by transforming Cognitive Behavioral Therapy (CBT) into an always-available AI companion. Built with Swift, SwiftUI, and powered by OpenAI GPT-4o mini.
+An iOS application that reimagines smoking cessation by transforming Cognitive Behavioral Therapy (CBT) into an always available AI companion. Built with Swift, SwiftUI, and powered by OpenAI GPT-4o mini.
 
 ---
 
@@ -23,12 +23,12 @@ An iOS application that reimagines smoking cessation by transforming Cognitive B
 
 ## Overview
 
-While 63.4% of smokers actively want to quit, over 90% fail because they attempt it without a proper plan. Professional counseling is proven effective, yet only 7.3% utilize it—many feel embarrassed by social stigma or find clinical visits too logistically difficult.
+While 63.4% of smokers actively want to quit, over 90% fail because they attempt it without a proper plan. Professional counseling is proven effective, yet only 7.3% utilize it. Many feel embarrassed by social stigma or find clinical visits too logistically difficult.
 
 **Quismo** addresses this gap by providing:
 
-- A judgment-free safe space through an AI companion
-- Real-time trigger identification and pattern recognition
+- A judgment free safe space through an AI companion
+- Realtime trigger identification and pattern recognition
 - Proven coping strategies including guided breathing techniques
 - Instant support when cravings hit
 
@@ -39,19 +39,19 @@ The result is a support system that is both accessible and deeply personal, ensu
 ## Key Features
 
 ### AI Companion Chat (Poppy)
-Powered by OpenAI GPT-4o mini, Poppy is a conversational AI companion that uses CBT techniques to support users through their quit journey with empathetic, non-judgmental responses.
+Powered by OpenAI GPT-4o mini, Poppy is a conversational AI companion that uses CBT techniques to support users through their quit journey with empathetic, nonjudgmental responses.
 
 ### Breathing Technique Exercises
 Guided breathing exercises with video guidance to help manage cravings and reduce withdrawal anxiety, implemented using AVKit video playback.
 
 ### Progress Dashboard
-Comprehensive tracking of smoke-free days, money saved, and overall progress with an intuitive dashboard interface.
+Comprehensive tracking of smoke free days, money saved, and overall progress with an intuitive dashboard interface.
 
 ### Achievement Badge System
 Gamified motivation system with unlockable badges loaded from JSON data to celebrate milestones and encourage continued progress.
 
 ### Personalized Onboarding
-Multi-step onboarding flow collecting user data including quit reasons, smoking habits, and commitment level for personalized support.
+Multistep onboarding flow collecting user data including quit reasons, smoking habits, and commitment level for personalized support.
 
 ### Cigarette Logging & Tracking
 Visual calendar tracker to monitor smoking patterns, identify triggers, and measure improvement over time.
@@ -96,10 +96,10 @@ Visual calendar tracker to monitor smoking patterns, identify triggers, and meas
 
 Quismo implements **Clean Architecture** combined with **MVVM (Model-View-ViewModel)** pattern to ensure:
 
-- **Separation of Concerns** — Clear boundaries between layers
-- **Testability** — Business logic isolated for unit testing
-- **Maintainability** — Modular codebase for efficient updates
-- **Scalability** — Extensible design for new features
+- **Separation of Concerns**: Clear boundaries between layers
+- **Testability**: Business logic isolated for unit testing
+- **Maintainability**: Modular codebase for efficient updates
+- **Scalability**: Extensible design for new features
 
 ### Architecture Diagram
 
@@ -232,7 +232,7 @@ QuismoApp/
 
 ### OpenAI GPT-4o mini Integration
 
-The AI companion leverages OpenAI's GPT-4o mini model with CBT-focused system prompts:
+The AI companion leverages OpenAI's GPT-4o mini model with CBT focused system prompts:
 
 ```swift
 import OpenAI
