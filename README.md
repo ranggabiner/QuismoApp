@@ -354,7 +354,7 @@ UIImpactFeedbackGenerator(style: .medium).impactOccurred()
 
 ## Contributors
 
-- **Rangga Biner** — iOS Developer
+- **Rangga Hadi Putra** — iOS Developer
 - **Michael Chrisandy** — iOS Developer
 - **Nur Nisrina** — iOS Developer
 - **Fadhil Sultan Pasya** — iOS Developer
