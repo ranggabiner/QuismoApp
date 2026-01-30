@@ -354,8 +354,12 @@ UIImpactFeedbackGenerator(style: .medium).impactOccurred()
 
 ## Contributors
 
-- **Rangga Biner** — Lead Developer
+- **Rangga Biner** — iOS Developer
 - **Michael Chrisandy** — iOS Developer
+- **Nur Nisrina** — iOS Developer
+- **Fadhil Sultan Pasya** — iOS Developer
+- **Hario Aji Daniswara** — UI/UX Designer
+- **Alfred Jhonatan** — Project Manager
 
 ---
 
